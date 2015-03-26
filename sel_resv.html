@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>	
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        //alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</head>
+<body>
+假
+<div id="sel-resv" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">iCrew</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 選班預約申請 Start-->
+	<div role="main" class="ui-content">
+		<table id="sel-serv-t">
+			<tr>
+				<th colspan="4">已掛號申請單</th>
+			</tr>
+			<tr>
+				<!-- <td><input type="checkbox" name="1" id="1" value="1"></td> -->
+				<td></td>
+				<td>全勤選班 No.17219</td>
+				<td>處理序號 1</td>
+				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><img src="images/list_icon_info_20px.png"></a></td>
+			</tr>
+		</table>
+
+		<table id="sel-serv-t" style="margin-top: 30px;">
+			<tr>
+				<th colspan="3">未掛號申請單</th>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="1" id="1" value="1"></td>
+				<td>全勤選班 No.17219</td>
+				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><img src="images/list_icon_info_20px.png"></a></td>
+			</tr>
+		</table>
+		
+		<div id="btnApply">
+			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>預約申請</div></a>
+		</div>
+	</div>
+<!-- 選班預約申請 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p>全勤選班 No.17219</p>
+    </div>
+
+    <div data-role="content" class="popup-content">
+        <p>全勤區間 2013/01/07-2014/07/07<br>2013/07/07-2014/01/07, 183 days (留停)</p>
+        <hr>
+        <p>申請日期 2014/12/31 13:51:20.0</p>
+        <a class="ui-btn btnPopOK" data-rel="back"><div>確 認</div></a>
+    </div>
+</div>
+
+<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p>你已提出選班預約申請</p>
+    </div>
+
+    <div data-role="content" class="popup-content">
+        <p>取得之處理序號 : 1號</p>
+        <a class="ui-btn btnPopOK" href="sel_main.html"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>
