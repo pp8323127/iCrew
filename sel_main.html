@@ -3,34 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>iCrew3</title>
+    <title>iCrew</title>
     <link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />
     <link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />
     <link rel="stylesheet" href="jQueryMob/CSS.css">
     <script src="jQueryMob/jquery.js" language="javascript"></script>
     <script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            $("#btn_menu").click(function(e){
-                $.ajax({
-                    type: "POST",
-                    url: "navbar.jsp",
-                    success:function(data){
-                        //alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
-                    },
-                    error:function(xhr, ajaxOptions, thrownError){
-                        console.log(xhr.status);
-                        console.log(thrownError);
-                        alert("Error");
-                    }
-                });
-                e.preventDefault();
-            });
-        });
-    </script>
-
 </head>
 <body>
 <div id="sel-main" data-role="page">
