@@ -213,26 +213,35 @@ table#sel-prog-t td:first-child{
 	padding: 0px 0px 0px 0px;
 	border: 0px;
 }
+.ui-header.popup-header p{
+	margin: 22px 0px 0px;
+}
 .popup-content{
 	background: white;
 }
 .popup-content p{
 	padding: 17px 22px 20px 22px;
+	margin-bottom: 0px !important;
 }
 .ui-btn.btnPopOK{
 	margin: 0px;
+	padding: 0px;
 	height: 44px;
 	font-size: 18px;
 	font-weight: bold;
-	border-radius: .3em;
+	border-bottom-right-radius: .3em;
+	border-bottom-left-radius: .3em;
+/*	border-radius: .3em;
     -moz-border-radius: .3em;
-    -webkit-border-radius: .3em;
+    -webkit-border-radius: .3em;*/
+	background: #fff;
 }
 .ui-btn.btnPopOK div{
 	text-align:center; 
 	height: 44px; 
 	line-height: 44px;
 	color: #007aff;
+	background: #fff;
 }
 
 
