@@ -79,10 +79,13 @@
 			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請選班</div></a>
 		</div>
 	</div>
+	
+	<!-- 定義popup顯示位置 -->
+	<div id="popupSite" />
 <!-- 選班資格申請 End-->
 
 <!-- popup container start -->
-<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
        <p>備註事項</p>
     </div>
@@ -93,7 +96,7 @@
     </div>
 </div>
 
-<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="windows" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
        <p>你已提出選班資格申請</p>
     </div>

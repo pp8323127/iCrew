@@ -200,6 +200,12 @@ table#sel-prog-t td:first-child{
 /*****************/
 /* POPUP彈跳視窗 */
 /*****************/
+#popupSite{
+	position: fixed; 
+	bottom: 0px; 
+	left: 50%;
+}
+
 .ui-content.popupDiv{
 	max-width: 400px;
 	min-width: 300px;
