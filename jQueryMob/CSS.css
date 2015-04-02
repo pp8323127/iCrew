@@ -137,8 +137,8 @@ table#sel-serv-t td {
 	border-color: #000;
 	padding-top: 15px;
 	padding-bottom: 7px;
-	width: 60%;
-	text-align: center;
+	/*width: 60%;*/
+	text-align: left;
 }
 table#sel-serv-t th{
 	background: #e4e4e4;
