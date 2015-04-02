@@ -30,7 +30,7 @@
             </a>
         </li>
         <li>
-            <a href="sel_aply2.html">選班資格查詢</a>
+            <a href="sel_aply.html">選班資格查詢</a>
         </li>
         <li>
             <a href="sel_resv.html">選班預約申請</a>
