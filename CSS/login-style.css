@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/*
+  為了能以中文註解，一定要宣告為UTF-8
+  this css file is generate by sass(scss) and using compass
+*/
+/*------------------------------------------------------------------------*-
+
+/*------------------------------------------------------------------------*-
+    $Header
+-*------------------------------------------------------------------------*/
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.header-bd {
+    background: #FFFFFF !important;
+    background-repeat:repeat-x;
+    background-position:center center;
+    background-size:100% 100%;
+}
+
+.logo-img {
+    height: 44px;
+	text-align: center;
+	background: url(images/navi_CI_Logo.png) center center;
+	background-repeat:no-repeat;    
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.logo-img{ 
+		background: url(images/navi_CI_Logo@2x.png) center center no-repeat;
+		  -webkit-background-size:195px 45px;
+		     -moz-background-size:195px 45px;
+		       -o-background-size:195px 45px;
+          		  background-size:195px 45px;
+			 }
+}
+
+/*------------------------------------------------------------------------*-
+    $Main
+-*------------------------------------------------------------------------*/
+/*登入區域*/
+
+body {
+	font-family: 'Microsoft JhengHei', Helvtica;
+	font-weight: normal;
+	width: 100%;
+}
+
+#loginPage{
+	width: 100%;
+    background:url("images/index_bg_blue@2x.png");
+    background-repeat:repeat-x;
+    background-position:left center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+
+.iCrew-logo {
+	height: 90px;
+	margin-top: 60px;
+	margin-bottom: 130px;
+	text-align: center;
+	background: url(images/index_title_iCrew.png) center center;
+	background-repeat:no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.iCrew-logo{ 
+		background: url(images/index_title_iCrew@2x.png) center center no-repeat;
+		  -webkit-background-size:175px 90px;
+		     -moz-background-size:175px 90px;
+		       -o-background-size:175px 90px;
+          		  background-size:175px 90px;
+			 }
+}
+
+#div_btn_login {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.login-btn {
+	height: 44px;
+	margin-bottom: 68px;
+	text-align: center; 
+}
+
+#sub {
+	width: 260px;
+	height: 44px;
+	background: #0067d9 !important;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: 'Microsoft JhengHei', Helvtica;
+	font-size: 17px;
+	font-weight: normal;
+	color: #FFFFFF;
+	padding-top:10px;
+}
+
+#div_pwd {
+	position: absolute;
+	bottom: 111.5px;
+	width: 100%;
+	text-align: center;
+}
+
+.pwd {
+	height: 38px;
+	margin-bottom:37.5px; 
+}
+
+#txt_password {
+	padding-top: 7px;
+	padding-left: 20px;
+}
+
+#div_uid {
+	position: absolute;
+	bottom: 187px;
+	width: 100%;
+	text-align: center;
+}
+
+.uid {
+	height: 15px;
+	margin-bottom:37.5px;
+	text-align: center; 
+}
+
+#txt_userid {
+	padding-top: 7px;
+	padding-left: 20px;
+}
+
+.alert-title {
+	height: 17px;
+	margin-top: 22.5px;
+	font-family: 'Microsoft JhengHei', Helvtica;
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.alert-content {
+	margin-top: 17.5px;
+	margin-bottom: 20px;
+	margin-right: 22.5px;
+	margin-left: 22.5px;
+	font-family: 'Microsoft JhengHei', Helvtica;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.alert-btn {
+	height: 32px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+#btn_confirm {
+	height: 19px;
+	background: #FFFFFF !important;
+	font-family: 'Microsoft JhengHei', Helvtica;
+	font-size: 18px;
+	font-weight: bold;
+	color: #007aff;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: 0;
+}
+
+/*------------------------------------------------------------------------*-
+    $Footer
+-*------------------------------------------------------------------------*/
