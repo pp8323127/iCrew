@@ -156,13 +156,13 @@ table#sel-serv-t td:last-child{
 	padding-right: 15px;
 	text-align: right;
 }
-div#list_icon_info_20px{
-	background: url("../images/list_icon_info_20px.png") center right no-repeat;
+div#list_icon_info_gray_20px{
+	background: url("../images/list_icon_info_gray_20px.png") center right no-repeat;
 	height: 20px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#list_icon_info_20px{ 
-		background: url("../images/list_icon_info_20px@2x.png") center right no-repeat;
+	#list_icon_info_gray_20px{ 
+		background: url("../images/list_icon_info_gray_20px@2x.png") center right no-repeat;
 		  -webkit-background-size:20px 20px;
 		     -moz-background-size:20px 20px;
 		       -o-background-size:20px 20px;
