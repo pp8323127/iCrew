@@ -152,7 +152,7 @@ table#sel-serv-t td:first-child{
 	width: 20%;
 }
 table#sel-serv-t td:last-child{
-	width: 20%;
+	width: 10%;
 	padding-right: 15px;
 	text-align: right;
 }
