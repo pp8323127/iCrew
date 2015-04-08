@@ -212,6 +212,11 @@ table#sel-prog-t td:first-child{
 	font-size: 17px;
 	padding: 0px;
 }
+.ui-content.popupDiv hr{
+	border: none; 
+	border-bottom: 1px solid #dddddd;
+	margin: 0px;
+}
 .ui-header.popup-header{
 	background: white;
 	text-align: center;
@@ -226,7 +231,8 @@ table#sel-prog-t td:first-child{
 }
 .popup-content p{
 	padding: 17px 22px 20px 22px;
-	margin-bottom: 0px !important;
+	margin: 0px !important;
+	text-align: center;
 }
 .ui-btn.btnPopOK{
 	margin: 0px;
@@ -248,6 +254,7 @@ table#sel-prog-t td:first-child{
 	color: #007aff;
 	background: #fff;
 }
+
 
 
 /**********************/
