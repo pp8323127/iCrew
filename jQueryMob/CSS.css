@@ -152,7 +152,7 @@ table#sel-serv-t td:first-child{
 	width: 20%;
 }
 table#sel-serv-t td:last-child{
-	width: 10%;
+	min-width: 20px;
 	padding-right: 15px;
 	text-align: right;
 }
@@ -446,6 +446,7 @@ div#navbar a#li-noborder{
 div#btnApply{
 	text-align: center;
 	margin-top: 60px;
+
 }
 div#btnApply a{
 	margin: 0px auto;
@@ -455,12 +456,14 @@ div#btnApply a{
 	font-size: 17px;
 	color: #fff;
 	background: #0067d9;
+	padding: 0px 0px 0px 0px;
 }
 div#btnApply div{
 	/*按鈕文字置中*/
 	text-align:center; 
 	height:44px; 
 	line-height:44px;
+
 }
 
 
