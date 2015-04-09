@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-body{
+body,html{
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
 	font-weight: normal !important;
 	width: 100% !important;
@@ -44,7 +44,7 @@ a:active{
 }
 #header-bar-btnBak{
 	padding-left: 12px;
-	width: 20%;
+	width: 12%;
 }
 #naviBar_icon_Back{
 	background: url("../images/naviBar_icon_Back.png") center left;
@@ -61,14 +61,13 @@ a:active{
 			 }
 }
 #header-bar-btnAppname{
-	width: 60%;
+	width: 76%;
 	text-align: center;
 	font-size: 18px;
 	font-weight: bold;
 }
 #header-bar-btnMenu{
-	width: 20%;
-	text-align: right;
+	width: 12%;
 	padding-right: 12px;
 }
 #navi_icon_menu{
@@ -179,21 +178,29 @@ input#ck1{
 /*********************/
 table#sel-prog-t{
 	font-weight: normal;
+	font-size: 16px;
 }
 table#sel-prog-t th{
 	background: #0067d9;
 	color: #fff;
 	text-align: right;
-	padding: 10px;
+	padding: 5px 30px 5px 5px;
+	font-weight: normal;
 }
 table#sel-prog-t td{
-	padding: 10px;
+	padding: 10px 0px 10px 10px;
+	color: #1c1c1c;
 }
 table#sel-prog-t td:first-child{
-	padding: 10px;
-	width: 20%;
-	border-right: solid 1px #a20102;
-	text-align: right;
+	padding-left: 15px;
+	font-weight: bold;
+}
+.td_line{
+	border-left: 1px solid #a20102;
+	padding-left: 10px;
+}
+.tr_bg{
+	background: #e1eef5;
 }
 
 
@@ -214,7 +221,7 @@ table#sel-prog-t td:first-child{
 }
 .ui-content.popupDiv hr{
 	border: none; 
-	border-bottom: 1px solid #dddddd;
+	border-bottom: 1px solid #ddd;
 	margin: 0px;
 }
 .ui-header.popup-header{
