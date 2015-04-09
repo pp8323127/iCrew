@@ -190,10 +190,12 @@ table#sel-prog-t th{
 table#sel-prog-t td{
 	padding: 10px 0px 10px 10px;
 	color: #1c1c1c;
+	border-bottom: 1px solid #a7a7a7;
 }
 table#sel-prog-t td:first-child{
 	padding-left: 15px;
 	font-weight: bold;
+	text-align: right;
 }
 .td_line{
 	border-left: 1px solid #a20102;
