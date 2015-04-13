@@ -43,9 +43,9 @@ img {
 /*登入區域*/
 
 body {
-	font-family: 'Microsoft JhengHei', Helvtica;
-	font-weight: normal;
-	width: 100%;
+	font-family: "微軟正黑體", "Microsoft JhengHei", Helvtica !important;
+	font-weight: normal !important;
+	width: 100% !important;
 }
 
 #loginPage{
@@ -97,8 +97,12 @@ body {
 	font-family: 'Microsoft JhengHei', Helvtica;
 	font-size: 17px;
 	font-weight: normal;
+	text-shadow:none !important;
 	color: #FFFFFF;
 	padding-top:10px;
+	border: none !important;
+	box-shadow: none !important;
+	outline: 0;	
 }
 
 #div_pwd {
@@ -167,7 +171,8 @@ body {
 	background: #FFFFFF !important;
 	font-family: 'Microsoft JhengHei', Helvtica;
 	font-size: 18px;
-	font-weight: bold;
+	font-weight: normal !important;
+	text-shadow:none !important;
 	color: #007aff;
 	margin: 0 !important;
 	padding: 0 !important;

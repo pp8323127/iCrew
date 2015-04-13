@@ -30,7 +30,8 @@ img {
     margin-top: 10px;
     font-family: 'Microsoft JhengHei', Helvtica;
     font-size: 18px;
-	font-weight: bold;  
+	font-weight: bold; 
+	text-shadow:none !important; 
 }
 
 #btn_menu {
@@ -62,25 +63,10 @@ img {
 -*------------------------------------------------------------------------*/
 
 /* 超連結 */
-/* 未連結 */
-a:link{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-/* 已連結過 */
-a:visited{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-/* 滑鼠移至連結 */
-a:hover{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-/* 選擇的連結 */
-a:active{
-    color: #FFFFFF;
-    text-decoration: none;
+a {
+	color: #FFFFFF !important;
+	text-decoration: none !important;
+	text-shadow:none !important;
 }
 
 body {
