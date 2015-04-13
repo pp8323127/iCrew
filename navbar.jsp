@@ -7,7 +7,7 @@
             <p>(17416)</p>
         </li>
         <li data-role="list-divider" class="lidi">
-            <a href="#" id="list-divider-p" data-ajax="false">
+            <a href="change_main.html" id="list-divider-p" data-ajax="false">
                 <div id="menu_icon_changes">
                     <p>換班</p>
                 </div>
@@ -23,20 +23,20 @@
             <a id="li-noborder" href="#" data-ajax="false">換班紀錄查詢</a>
         </li>
         <li data-role="list-divider" class="lidi">
-            <a href="sel_main.html" id="list-divider-p" data-ajax="false">
+            <a href="choose_main.html" id="list-divider-p" data-ajax="false">
                 <div id="menu_icon_airplane">
                     <p>選班</p>
                 </div>
             </a>
         </li>
         <li>
-            <a href="sel_aply.html" data-ajax="false">選班資格查詢</a>
+            <a href="choose_aply.html" data-ajax="false">選班資格查詢</a>
         </li>
         <li>
-            <a href="sel_resv.html" data-ajax="false">選班預約申請</a>
+            <a href="choose_resv.html" data-ajax="false">選班預約申請</a>
         </li>
         <li>
-            <a id="li-noborder" href="sel_prog.html" data-ajax="false">處理進度查詢</a>
+            <a id="li-noborder" href="choose_prog.html" data-ajax="false">處理進度查詢</a>
         </li>
         <li data-role="list-divider" class="lidi">
             <a href="#" id="list-divider-p" data-ajax="false">
@@ -60,7 +60,21 @@
         <li data-role="list-divider" class="lidi lidi_border">
         <a href="#" id="list-divider-p" data-ajax="false">
                 <div id="menu_icon_bubble">
-                    <p>全員即時通</p>
+                    <p>CIA</p>
+                </div>
+        </a>
+        </li>
+        <li data-role="list-divider" class="lidi lidi_border">
+        <a href="#" id="list-divider-p" data-ajax="false">
+                <div id="menu_icon_bubble">
+                    <p>報到接車查詢</p>
+                </div>
+        </a>
+        </li>
+        <li data-role="list-divider" class="lidi lidi_border">
+        <a href="#" id="list-divider-p" data-ajax="false">
+                <div id="menu_icon_bubble">
+                    <p>全員即時通訊</p>
                 </div>
         </a>
         </li>

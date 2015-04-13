@@ -92,9 +92,9 @@ a:active{
 
 
 /**************/
-/* 選班主頁面 */
+/* 選單主頁面 */
 /**************/
-#sel-main{
+.main{
 	width: 100%;
     background:url("../images/index_bg_blue@2x.png");
     background-repeat:repeat-x;
@@ -102,15 +102,15 @@ a:active{
     background-attachment:scroll;
     background-size:100% 100%;
 }
-div#sel-main-content{
+div#main-content{
 	margin-top: 65px;
 }
-div#sel-main-content:first-child p{
+div#main-content:first-child p{
 	font-size:25px;
 	color: #fff;
 	margin-left: 35px;
 }
-div#sel-main-content a{
+div#main-content a{
 	background: none;
 	border: none;
 	color: #fff;
@@ -120,7 +120,7 @@ div#sel-main-content a{
 	padding-left: 35px;
 	font-weight: normal;
 }
-div#sel-main-content a:first-child{
+div#main-content a:first-child{
 	margin-top:42px
 }
 
@@ -132,10 +132,10 @@ table{
 	width: 100%;
 	border-spacing: 0px;
 }
-table#sel-serv-t tr{
+table#choose-serv-t tr{
 	height: 43px;
 }
-table#sel-serv-t td {
+table#choose-serv-t td {
 	border-bottom: solid;
 	border-width: 1px;
 	border-color: #a7a7a7;
@@ -144,19 +144,19 @@ table#sel-serv-t td {
 	/*width: 60%;*/
 	text-align: left;
 }
-table#sel-serv-t th{
+table#choose-serv-t th{
 	background: #e4e4e4;
 	text-align: left;
 	padding-left: 23px;
 	font-size: 18px;
 }
-table#sel-serv-t td:first-child{
+table#choose-serv-t td:first-child{
 	padding-left: 17px;
 	padding-top: 5px;
 	width: 20%;
 	/*position: inherit;*/
 }
-table#sel-serv-t td:last-child{
+table#choose-serv-t td:last-child{
 	min-width: 20px;
 	padding-right: 15px;
 	text-align: right;
@@ -174,7 +174,7 @@ div#list_icon_info_gray_20px{
           		  background-size:20px 20px;
 			 }
 }
-div#sel-edit input{
+div#choose_edit input{
 	position: inherit;
 }
 
@@ -182,23 +182,23 @@ div#sel-edit input{
 /*********************/
 /* prog 處理進度查詢 */
 /*********************/
-table#sel-prog-t{
+table#choose-prog-t{
 	font-weight: normal;
 	font-size: 16px;
 }
-table#sel-prog-t th{
+table#choose-prog-t th{
 	background: #0067d9;
 	color: #fff;
 	text-align: right;
 	padding: 5px 30px 5px 5px;
 	font-weight: normal;
 }
-table#sel-prog-t td{
+table#choose-prog-t td{
 	padding: 10px 0px 10px 10px;
 	color: #1c1c1c;
 	border-bottom: 1px solid #a7a7a7;
 }
-table#sel-prog-t td:first-child{
+table#choose-prog-t td:first-child{
 	padding-left: 15px;
 	font-weight: bold;
 	text-align: right;
@@ -318,6 +318,7 @@ div#navbar p{
 
 a#list-divider-p p{
 	color: #fff;
+	/*padding-top: 2px;*/
 }
 .ui-li-divider.lidi.lidi_border{
 	border-bottom: solid 1px #a7a7a7;
@@ -328,7 +329,7 @@ div#menu_icon_changes{
 	background: url("../images/menu_icon_changes.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	margin-top: -20px;
+	margin-top: -18px;
 	height: 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -345,7 +346,7 @@ div#menu_icon_airplane{
 	background: url("../images/menu_icon_airplane.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	margin-top: -20px;
+	margin-top: -18px;
 	height: 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -362,7 +363,7 @@ div#menu_icon_leave{
 	background: url("../images/menu_icon_leave.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	margin-top: -20px;
+	margin-top: -18px;
 	height: 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -379,7 +380,7 @@ div#menu_icon_bubble{
 	background: url("../images/menu_icon_bubble.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	margin-top: -20px;
+	margin-top: -18px;
 	height: 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -396,7 +397,7 @@ div#menu_icon_mail{
 	background: url("../images/menu_icon_mail.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	margin-top: -20px;
+	margin-top: -18px;
 	height: 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -413,7 +414,7 @@ div#menu_icon_settings{
 	background: url("../images/menu_icon_settings.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	margin-top: -20px;
+	margin-top: -18px;
 	height: 22px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {

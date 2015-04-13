@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
 	<link rel="stylesheet" href="jQueryMob/CSS.css">
 	<script src="jQueryMob/jquery.js" language="javascript"></script>	
-	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>	
     <script type="text/javascript">
         $(document).ready(function () {
             $("#btn_menu").click(function(e){
@@ -16,7 +16,7 @@
                     type: "POST",
                     url: "navbar.jsp",
                     success:function(data){
-                        // alert(data);
+                        //alert(data);
                         $("#right-list li").remove();
                         $("#right-list").append(data).listview("refresh");
                     },
@@ -34,95 +34,62 @@
 </head>
 <body>
 
-<div id="sel-aply" data-role="page">
+<div id="choose_edit" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
 			<tr>
-				<td id="header-bar-btnBak">
-					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
-				</td>
-				<td id="header-bar-btnAppname">選班資格申請</td>
-				<td id="header-bar-btnMenu">
-					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+                <td id="header-bar-btnBak">
+                    <a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+                </td>
+                <td id="header-bar-btnAppname">退/改選班預約申請</td>
+                <td id="header-bar-btnMenu">
+                    <a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
 			</tr>
 		</table>
 	</div>
-<!-- Header bar End -->
+<!-- Header bar Start -->
 
-<!-- 選班資格申請 Start-->
+<!-- 退/改選班預約申請 Start-->
 	<div role="main" class="ui-content">
-		<table id="sel-serv-t">
+		<table id="choose-serv-t">
 			<tr>
-				<th colspan="3">全勤換班權利</th>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="1" id="ck1" value="1"></td>
-				<td>2015/03/01-2015/06/30</td>
+				<td><input type="checkbox" name="1" id="1" value="1"></td>
+				<td>全勤選班 9876543210<br>2015/03/01-2015/06/30</td>
 				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
 			</tr>
 		</table>
 
-		<table id="sel-serv-t" style="margin-top: 15px;">
-			<tr>
-				<th colspan="4">積點選班權利</th>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="1" id="ck1" value="1"></td>
-				<td>飛時破百</td>
-				<td>9876543210</td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="1" id="ck1" value="1"></td>
-				<td>銷售高手</td>
-				<td>9876543210</td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="1" id="ck1" value="1"></td>
-				<td>額外換班單</td>
-				<td>9876543210</td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="1" id="ck1" value="1"></td>
-				<td>其他換班單</td>
-				<td>9876543210</td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
-			</tr>		
-		</table>
-		
-		<div id="btnApply">
-			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請選班</div></a>
-		</div>
+        <div id="btnApply">
+            <a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請選班</div></a>
+        </div>
 	</div>
-	
-	<!-- 定義popup顯示位置 -->
-	<div id="popupSite"></div>
+
+    <!-- 定義popup顯示位置 -->
+    <div id="popupSite"></div>
 <!-- 選班資格申請 End-->
 
 <!-- popup container start -->
 <div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
-       <p>備註事項</p>
+       <p>選班資訊</p>
     </div>
-	<hr style="margin-top: 17px;">
+    <hr style="margin-top: 17px;">
     <div data-role="content" class="popup-content">
-        <p>2015/03/01-2015/06/30, 122 days (留停)</p>
+        <p>CI-563 14/OCT 2014</p>
         <a class="ui-btn btnPopOK" data-rel="back"><div>確 認</div></a>
     </div>
 </div>
 
 <div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
-       <p>你已提出選班資格申請</p>
+       <p>你已提出退/改選班資格申請</p>
     </div>
 
     <div data-role="content" class="popup-content">
-        <p>請至「選班申請預約」取得處理排序號碼，再到派遣內櫃檯依排序號碼辦理選班登記。</p>
-        <a class="ui-btn btnPopOK" href="sel_main.html"><div>確 認</div></a>
+        <p>取得之處理序號 : 1號</p>
+        <a class="ui-btn btnPopOK" href="choose_main.html"><div>確 認</div></a>
     </div>
 </div>
 <!-- popup container end -->
