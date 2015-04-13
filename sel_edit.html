@@ -34,52 +34,51 @@
 </head>
 <body>
 
+<div id="sel-edit" data-role="page">
 <!-- Header bar Start -->
-<div id="sel-serv" data-role="page">
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
 			<tr>
-				<td id="header-bar-btnBak">
-					<a data-rel="back"><img src="images/naviBar_icon_Back.png"></a>
-				</td>
-				<td id="header-bar-btnAppname">退/改選班預約申請</td>
-				<td id="header-bar-btnNavi">
-					<a id="btn_menu" href="#navbar"><img src="images/navi_icon_menu.png"></a>
+                <td id="header-bar-btnBak">
+                    <a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+                </td>
+                <td id="header-bar-btnAppname">退/改選班預約申請</td>
+                <td id="header-bar-btnMenu">
+                    <a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
 			</tr>
-
 		</table>
 	</div>
 <!-- Header bar Start -->
 
-<!-- 選班資格申請 Start-->
+<!-- 退/改選班預約申請 Start-->
 	<div role="main" class="ui-content">
 		<table id="sel-serv-t">
 			<tr>
-				<!-- <th colspan="3">全勤換班權利</th> -->
-			</tr>
-			<tr>
 				<td><input type="checkbox" name="1" id="1" value="1"></td>
-				<td>全勤選班 No.17219<br>2015/03/01-2015/06/30</td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><img src="images/list_icon_info_gray_20px.png"></a></td>
+				<td>全勤選班 9876543210<br>2015/03/01-2015/06/30</td>
+				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
 			</tr>
 		</table>
-		
-		<div id="btnApply">
-			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn">申請選班</a>
-		</div>
+
+        <div id="btnApply">
+            <a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請選班</div></a>
+        </div>
 	</div>
+
+    <!-- 定義popup顯示位置 -->
+    <div id="popupSite"></div>
 <!-- 選班資格申請 End-->
 
 <!-- popup container start -->
-<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
        <p>選班資訊</p>
     </div>
-
+    <hr style="margin-top: 17px;">
     <div data-role="content" class="popup-content">
         <p>CI-563 14/OCT 2014</p>
-        <a class="ui-btn btnPopOK" data-rel="back">確 認</a>
+        <a class="ui-btn btnPopOK" data-rel="back"><div>確 認</div></a>
     </div>
 </div>
 
@@ -90,7 +89,7 @@
 
     <div data-role="content" class="popup-content">
         <p>取得之處理序號 : 1號</p>
-        <a class="ui-btn btnPopOK" href="sel_main.html">確 認</a>
+        <a class="ui-btn btnPopOK" href="sel_main.html"><div>確 認</div></a>
     </div>
 </div>
 <!-- popup container end -->

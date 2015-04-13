@@ -4,6 +4,11 @@ body,html{
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
 	font-weight: normal !important;
 	width: 100% !important;
+	text-shadow: none !important;
+}
+a,p{
+	text-shadow: none !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
 }
 
 .ui-content{
@@ -147,8 +152,9 @@ table#sel-serv-t th{
 }
 table#sel-serv-t td:first-child{
 	padding-left: 17px;
-	padding-top: 10px;
+	padding-top: 5px;
 	width: 20%;
+	/*position: inherit;*/
 }
 table#sel-serv-t td:last-child{
 	min-width: 20px;
@@ -168,8 +174,8 @@ div#list_icon_info_gray_20px{
           		  background-size:20px 20px;
 			 }
 }
-input#ck1{
-	height: 20px;
+div#sel-edit input{
+	position: inherit;
 }
 
 
@@ -217,9 +223,9 @@ table#sel-prog-t td:first-child{
 .ui-content.popupDiv{
 	max-width: 400px;
 	min-width: 300px;
-	background: white;
 	font-size: 17px;
 	padding: 0px;
+	background: #fff;
 }
 .ui-content.popupDiv hr{
 	border: none; 
@@ -227,16 +233,15 @@ table#sel-prog-t td:first-child{
 	margin: 0px;
 }
 .ui-header.popup-header{
-	background: white;
 	text-align: center;
 	padding: 0px 0px 0px 0px;
 	border: 0px;
+	background: #fff;
 }
 .ui-header.popup-header p{
 	margin: 22px 0px 0px;
 }
 .popup-content{
-	background: white;
 }
 .popup-content p{
 	padding: 17px 22px 20px 22px;
@@ -254,7 +259,6 @@ table#sel-prog-t td:first-child{
 /*	border-radius: .3em;
     -moz-border-radius: .3em;
     -webkit-border-radius: .3em;*/
-	background: #fff;
 }
 .ui-btn.btnPopOK div{
 	text-align:center; 
@@ -263,7 +267,6 @@ table#sel-prog-t td:first-child{
 	color: #007aff;
 	background: #fff;
 }
-
 
 
 /**********************/
@@ -440,7 +443,6 @@ div#menu_btn_logout{
 			 }
 }
 
-
 /* 列表文字 */
 div#navbar a{
 	background: #4d4d4d;
@@ -454,15 +456,12 @@ div#navbar a#li-noborder{
 }
 
 
-
-
 /**************/
 /*   button   */
 /**************/
 div#btnApply{
 	text-align: center;
 	margin-top: 60px;
-
 }
 div#btnApply a{
 	margin: 0px auto;
@@ -479,9 +478,7 @@ div#btnApply div{
 	text-align:center; 
 	height:44px; 
 	line-height:44px;
-
 }
-
 
 
 /**********************
