@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="choose_aply" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">換班飛時計算</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 換班飛時計算 Start-->
+	<div role="main" class="ui-content">
+		<table id="choose-serv-t">
+			<tr>
+				<th colspan="3">申請月份</th>
+			</tr>
+			<tr>
+
+			</tr>
+		</table>
+
+		<table id="choose-serv-t" style="margin-top: 15px;">
+			<tr>
+				<th colspan="4">被換者之員工號</th>
+			</tr>	
+		</table>
+		
+		<div id="btnOKCancel">
+			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
+			<a href="#" class="ui-btn ui-corner-all"><div>確認</div></a>
+		</div>
+		
+	</div>
+<!-- 換班飛時計算 End-->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>

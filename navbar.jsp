@@ -14,13 +14,13 @@
             </a>
         </li>
         <li>
-            <a href="#" data-ajax="false">換班飛時試算</a>
+            <a href="change_calc.html" data-ajax="false">換班飛時試算</a>
         </li>
         <li>
-            <a href="#" data-ajax="false">換班申請</a>
+            <a href="change_apply.html" data-ajax="false">換班申請</a>
         </li>
         <li>
-            <a id="li-noborder" href="#" data-ajax="false">換班紀錄查詢</a>
+            <a id="li-noborder" href="change_log.html" data-ajax="false">換班紀錄查詢</a>
         </li>
         <li data-role="list-divider" class="lidi">
             <a href="choose_main.html" id="list-divider-p" data-ajax="false">

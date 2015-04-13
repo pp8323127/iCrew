@@ -125,6 +125,42 @@ div#main-content a:first-child{
 }
 
 
+/***************/
+/* change 頁面 */
+/***************/
+
+/*btn*/
+div#btnOKCancel{
+	text-align: center;
+	margin-top: 40px;
+}
+div#btnOKCancel a{
+	display: inline-block;
+	width: 145px;
+	height: 44px;
+	padding: 0px;
+	margin: 0px;
+	font-size: 17px;
+	border: 1px solid #bbb;
+	background: #fff;
+	color: #1c1c1c;
+	font-weight: normal;
+}
+div#btnOKCancel a:last-child{
+	border: 1px solid #0067d9;
+	background: #0067d9;
+	color: #fff;
+	margin-left: 8px;
+}
+div#btnOKCancel div{
+	/*按鈕文字置中*/
+	text-align:center; 
+	height:44px; 
+	line-height:44px;
+}
+
+
+
 /*******************************/
 /* aply/resv 選班資格/預約申請 */
 /*******************************/
