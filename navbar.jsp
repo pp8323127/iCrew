@@ -65,14 +65,14 @@
         </a>
         </li>
         <li data-role="list-divider" class="lidi lidi_border">
-        <a href="#" data-ajax="false" id="list-divider-p">
+        <a href="#" id="list-divider-p" data-ajax="false">
             <div id="menu_icon_mail">
                 <p>全員信箱</p>
             </div>
         </a>
         </li>
         <li data-role="list-divider" class="lidi lidi_border">
-        <a href="#" data-ajax="false" id="list-divider-p">
+        <a href="#" id="list-divider-p" data-ajax="false">
             <div id="menu_icon_settings">
                 <p>設定</p>
             </div>
