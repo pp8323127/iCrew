@@ -159,6 +159,46 @@ div#btnOKCancel div{
 	line-height:44px;
 }
 
+/* calc */
+table#change_table{
+	font-weight: normal !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
+}
+table#change_table th{
+	height: 45px;
+	padding-left: 23px;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	background: #e4e4e4;
+}
+table#change_table a{
+	margin: 15px 55px 0px 55px;
+	background: #fff;
+	border: 1px solid #a7a7a7;
+	font-weight: normal;
+}
+table#change_table input{
+	text-align: center;
+	font-size: 17px;
+	color: #1c1c1c;
+	border: 1px solid #a7a7a7;
+	/*padding-left: 60px;*/
+	height: 45px;
+}
+div#inputMon{
+	margin: 25px 55px 25px 55px;
+}
+.ui-input-text{
+	box-shadow: none;
+	border: none;
+}
+table#change_table p{
+	margin-right: 55px;
+	text-align: right;
+	font-size: 16px;
+}
+
 
 
 /*******************************/
@@ -169,7 +209,7 @@ table{
 	border-spacing: 0px;
 }
 table#choose-serv-t tr{
-	height: 43px;
+	height: 45px;
 }
 table#choose-serv-t td {
 	border-bottom: solid;
@@ -185,6 +225,7 @@ table#choose-serv-t th{
 	text-align: left;
 	padding-left: 23px;
 	font-size: 18px;
+	font-weight: normal;
 }
 table#choose-serv-t td:first-child{
 	padding-left: 17px;

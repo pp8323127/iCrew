@@ -28,13 +28,19 @@
                 });
                 e.preventDefault();
             });
+
+/*
+			document.getElementById("addEmployee").onclick = function() {
+				document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
+			};
+*/
         });
     </script>
 
 </head>
 <body>
 
-<div id="choose_aply" data-role="page">
+<div id="change_calc" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -42,7 +48,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">換班飛時計算</td>
+				<td id="header-bar-btnAppname">換班飛時試算</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -51,21 +57,33 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 換班飛時計算 Start-->
+<!-- 換班飛時試算 Start-->
 	<div role="main" class="ui-content">
-		<table id="choose-serv-t">
+		<table id="change_table">
 			<tr>
-				<th colspan="3">申請月份</th>
+				<th colspan="1">申請月份</th>
 			</tr>
 			<tr>
-
+				<td>
+					<div id="inputMon">
+						<input id="myDate" type="month">
+					</div>
+				</td>
 			</tr>
-		</table>
 
-		<table id="choose-serv-t" style="margin-top: 15px;">
 			<tr>
-				<th colspan="4">被換者之員工號</th>
-			</tr>	
+				<th colspan="1">被換者之員工號</th>
+			</tr>
+			<tr>
+				<td id = "123">
+					<a href="" id="employee1" value="" class="ui-btn ui-corner-all">被換員工</a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p id="addEmployee">+新增試算人員</p>
+				</td>
+			</tr>
 		</table>
 		
 		<div id="btnOKCancel">
@@ -74,7 +92,7 @@
 		</div>
 		
 	</div>
-<!-- 換班飛時計算 End-->
+<!-- 換班飛時試算 End-->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
