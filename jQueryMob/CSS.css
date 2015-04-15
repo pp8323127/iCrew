@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 body,html{
-	font-family: "å¾®è»Ÿæ­£é»‘é«”","Microsoft JhengHei", Helvtica !important;
+	font-family: "Î¢Ü›ÕıºÚów","Microsoft JhengHei", Helvtica !important;
 	font-weight: normal !important;
 	width: 100% !important;
 	text-shadow: none !important;
 	color: #1c1c1c !important;
 }
 a,p,table{
-	font-family: "å¾®è»Ÿæ­£é»‘é«”","Microsoft JhengHei", Helvtica !important;
+	font-family: "Î¢Ü›ÕıºÚów","Microsoft JhengHei", Helvtica !important;
 	text-decoration: none !important;
 	text-shadow: none !important;
 }
@@ -25,7 +25,7 @@ a,p,table{
 
 
 /********************/
-/* headerBar æ¨™é¡Œåˆ— */
+/* headerBar ˜Ëî}ÁĞ */
 /********************/
 #header-bar{
 	width: 100%;
@@ -77,7 +77,7 @@ a,p,table{
 
 
 /**************/
-/* é¸å–®ä¸»é é¢ */
+/* ßx†ÎÖ÷í“Ãæ */
 /**************/
 .main{
 	width: 100%;
@@ -115,7 +115,7 @@ div#main-content a:first-child{
 
 
 /********************/
-/*   change é é¢    */
+/*   change í“Ãæ    */
 /********************/
 
 /***********/
@@ -144,7 +144,7 @@ div#btnOKCancel a:last-child{
 	margin-left: 8px;
 }
 div#btnOKCancel div{
-	/*æŒ‰éˆ•æ–‡å­—ç½®ä¸­*/
+	/*°´âoÎÄ×ÖÖÃÖĞ*/
 	text-align:center; 
 	height:44px; 
 	line-height:44px;
@@ -155,7 +155,7 @@ div#btnOKCancel div{
 /*************/
 table#change_table{
 	font-weight: normal !important;
-	font-family: "å¾®è»Ÿæ­£é»‘é«”","Microsoft JhengHei", Helvtica !important;
+	font-family: "Î¢Ü›ÕıºÚów","Microsoft JhengHei", Helvtica !important;
 }
 table#change_table th{
 	height: 45px;
@@ -299,7 +299,7 @@ div#personinfoDetail p{
 
 
 /*******************************/
-/* aply/resv é¸ç­è³‡æ ¼/é ç´„ç”³è«‹ */
+/* aply/resv ßx°àÙY¸ñ/îA¼sÉêÕˆ */
 /*******************************/
 table{
 	width: 100%;
@@ -354,7 +354,7 @@ div#choose_edit input{
 
 
 /*********************/
-/* prog è™•ç†é€²åº¦æŸ¥è©¢ */
+/* prog ÌÀíßM¶È²éÔƒ */
 /*********************/
 table#choose-prog-t{
 	font-weight: normal;
@@ -387,7 +387,7 @@ table#choose-prog-t td:first-child{
 
 
 /*****************/
-/* POPUPå½ˆè·³è¦–çª— */
+/* POPUP—ÌøÒ•´° */
 /*****************/
 #popupSite{
 	position: fixed; 
@@ -455,7 +455,7 @@ table#choose-prog-t td:first-child{
   padding: 0px;
 }
 
-/* å§“åtitle */
+/* ĞÕÃûtitle */
 div#navbar li#li-title{
 	background: #4d4d4d;
 	border: none;
@@ -473,7 +473,7 @@ div#navbar li#li-title p:first-child{
 	font-size: 20px;
 }
 
-/* åˆ—è¡¨æ¨™ç±¤divider */
+/* ÁĞ±í˜Ë»`divider */
 ul
 .ui-li-divider.lidi{
 	padding: 0px 0px 0px 45px;
@@ -498,7 +498,7 @@ a#list-divider-p p{
 	border-bottom: solid 1px #a7a7a7;
 }
 
-/* åˆ—è¡¨æ¨™ç±¤icon */
+/* ÁĞ±í˜Ë»`icon */
 div#menu_icon_changes{
 	background: url("../images/menu_icon_changes.png");
 	background-repeat:no-repeat;
@@ -618,7 +618,7 @@ div#menu_btn_logout{
 			 }
 }
 
-/* åˆ—è¡¨æ–‡å­— */
+/* ÁĞ±íÎÄ×Ö */
 div#navbar a{
 	background: #4d4d4d;
 	border: none;
@@ -649,7 +649,7 @@ div#btnApply a{
 	padding: 0px 0px 0px 0px;
 }
 div#btnApply div{
-	/*æŒ‰éˆ•æ–‡å­—ç½®ä¸­*/
+	/*°´âoÎÄ×ÖÖÃÖĞ*/
 	text-align:center; 
 	height:44px; 
 	line-height:44px;
