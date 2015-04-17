@@ -24,9 +24,9 @@ a,p,table,div{
 }
 
 
-/********************/
-/* headerBar 標題列 */
-/********************/
+/*********************/
+/* $headerBar 標題列 */
+/*********************/
 #header-bar{
 	width: 100%;
 	height: 44px;
@@ -76,9 +76,9 @@ a,p,table,div{
 }
 
 
-/**************/
-/* 選單主頁面 */
-/**************/
+/***************/
+/* $選單主頁面 */
+/***************/
 .main{
 	width: 100%;
     background:url("../images/index_bg_blue@2x.png");
@@ -114,13 +114,13 @@ div#main-content a:first-child{
 /*==========================================================*/
 
 
-/********************/
-/*   change 頁面    */
-/********************/
+/*********************/
+/*   $change 頁面    */
+/*********************/
 
-/***********/
-/*   btn   */
-/***********/
+/************/
+/*   $btn   */
+/************/
 div#btnOKCancel{
 	text-align: center;
 	margin-top: 40px;
@@ -150,9 +150,9 @@ div#btnOKCancel div{
 	line-height:44px;
 }
 
-/*************/
-/*    calc   */
-/*************/
+/**************/
+/*    $calc   */
+/**************/
 table#change_table{
 	font-weight: normal !important;
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
@@ -192,9 +192,9 @@ table#change_table p{
 	font-size: 16px;
 }
 
-/**************/
-/* personInfo */
-/**************/
+/***************/
+/* $personInfo */
+/***************/
 div#personinfo{
 	margin: 15px 30px 0px 30px;
 	padding-bottom: 5px;
@@ -296,9 +296,9 @@ div#personinfoDetail p{
 }
 
 
-/***************/
-/* calc_result */
-/***************/
+/****************/
+/* $calc_result */
+/****************/
 ul#result_title{
 	text-align: center;
 	background: #0067d9;
@@ -402,9 +402,9 @@ span#div_result_infoMsg p{
 /*==========================================================*/
 
 
-/*******************************/
-/* aply/resv 選班資格/預約申請 */
-/*******************************/
+/********************************/
+/* $aply/resv 選班資格/預約申請 */
+/********************************/
 table{
 	width: 100%;
 	border-spacing: 0px;
@@ -457,9 +457,9 @@ div#choose_edit input{
 }
 
 
-/*********************/
-/* prog 處理進度查詢 */
-/*********************/
+/**********************/
+/* $prog 處理進度查詢 */
+/**********************/
 table#choose-prog-t{
 	font-weight: normal;
 	font-size: 16px;
@@ -490,9 +490,9 @@ table#choose-prog-t td:first-child{
 }
 
 
-/*****************/
-/* POPUP彈跳視窗 */
-/*****************/
+/******************/
+/* $POPUP彈跳視窗 */
+/******************/
 #popupSite{
 	position: fixed; 
 	bottom: 0px; 
@@ -547,9 +547,9 @@ table#choose-prog-t td:first-child{
 }
 
 
-/**********************/
-/* NavBar_Slide Panel */
-/**********************/
+/***********************/
+/* $NavBar_Slide Panel */
+/***********************/
 .ui-panel{
 	width: 230px;
 	border: none;
@@ -735,9 +735,9 @@ div#navbar a#li-noborder{
 }
 
 
-/**************/
-/*   button   */
-/**************/
+/***************/
+/*   $button   */
+/***************/
 div#btnApply{
 	text-align: center;
 	/*margin-top: 60px;*/
@@ -760,9 +760,9 @@ div#btnApply div{
 }
 
 
-/**********************
- * ui-btn-icon custom 
- *********************/
+/***********************
+ * $ui-btn-icon custom 
+ **********************/
 .ui-icon-menu_btn_arrow_right_white:after{
 	background-image: url("../images/menu_btn_arrow_right_white.png");
 	background-repeat:no-repeat;
