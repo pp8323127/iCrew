@@ -11,6 +11,15 @@
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
+
+        	//今天的日期(yyyy-mm)
+			var today = new Date();
+			thisYear = today.getFullYear();
+			var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
+			var myDate = thisYear + "-" + thisMonth;
+			document.getElementById("myDate").value = myDate;
+			alert(myDate);
+
             $("#btn_menu").click(function(e){
                 $.ajax({
                     type: "POST",
@@ -34,6 +43,13 @@
 				document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
 			};
 */
+
+
+
+
+
+
+
         });
 
 /*
@@ -41,6 +57,9 @@
 			document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
 		};
 */
+
+
+
     </script>
 
 </head>
@@ -72,7 +91,7 @@
 			<tr>
 				<td>
 					<div id="inputMon">
-						<input id="myDate" type="month">
+						<input id="myDate" type="month" />
 					</div>
 				</td>
 			</tr>
@@ -81,7 +100,7 @@
 				<th colspan="1">被換者之員工號</th>
 			</tr>
 			<tr>
-				<td id = "123">
+				<td>
 					<a href="" id="employee1" value="" class="ui-btn ui-corner-all">被換員工</a>
 				</td>
 			</tr>
