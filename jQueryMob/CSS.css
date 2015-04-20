@@ -455,6 +455,9 @@ table#choose-serv-t td:last-child{
 div#choose_edit input{
 	position: inherit;
 }
+.choose_btnApply{
+	margin-top: 60px;
+}
 
 
 /**********************/
