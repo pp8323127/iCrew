@@ -323,6 +323,15 @@ ul#result_personinfo{
 	border-bottom: 1px solid #7dcef4;
 	height: 35px;
 }
+ul#result_personinfo div{
+	line-height: 35px;
+	display: inline-block;
+	font-size: 16px;
+}
+ul#result_personinfo div:first-child{
+	font-size: 14px;
+	font-weight: bold;
+}
 
 #list_btn_profile{
 	background: url("../images/list_btn_profile.png") center center no-repeat;
@@ -379,7 +388,7 @@ span#div_result_infoMsg p{
 	font-size: 14px;
 }
 
-#list_icon_info_20px{
+/*#list_icon_info_20px{
 	background: url("../images/list_icon_info_20px.png") center center no-repeat;
 	height: 20px;
 	width: 20px;
@@ -393,7 +402,7 @@ span#div_result_infoMsg p{
 		       -o-background-size:20px 20px;
           		  background-size:20px 20px;
 			 }
-}
+}*/
 .result_btnApply{
 	margin-top: 30px;
 }
@@ -439,7 +448,9 @@ div.ui-collapsible-content{
 .change_btnApply{
 	margin-top: 30px;
 }
-
+#change_apply_popup p{
+	text-align: left;
+}
 
 /********************************/
 /* $apply_substitle_noauthority */
@@ -459,7 +470,9 @@ div#div_change_apply_substitle_noauthority p{
 #list_icon_info_20px{
 	background: url("../images/list_icon_info_20px.png") center center no-repeat;
 	height: 20px;
+	width: 20px;
 	vertical-align: text-top;
+	display: inline-flex;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#list_icon_info_20px{ 
@@ -576,7 +589,7 @@ table#choose-prog-t td:first-child{
 }
 .ui-content.popupDiv{
 	max-width: 400px;
-	min-width: 300px;
+	min-width: 305px;
 	font-size: 17px;
 	padding: 0px;
 	background: #fff;
@@ -598,7 +611,7 @@ table#choose-prog-t td:first-child{
 .popup-content{
 }
 .popup-content p{
-	padding: 17px 22px 20px 22px;
+	padding: 17.5px 22.5px 20px 22.5px;
 	margin: 0px !important;
 	text-align: center;
 }
