@@ -59,7 +59,7 @@
         </li>
         <li data-role="list-divider" class="lidi lidi_border">
         <a href="#" id="list-divider-p" data-ajax="false">
-                <div id="menu_icon_bubble">
+                <div id="list_btn_sckedule">
                     <p>CIA</p>
                 </div>
         </a>

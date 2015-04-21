@@ -9,18 +9,8 @@
 	<link rel="stylesheet" href="jQueryMob/CSS.css">
 	<script src="jQueryMob/jquery.js" language="javascript"></script>	
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
-
     <script type="text/javascript">
         $(document).ready(function () {
-
-        	//今天的日期(yyyy)
-			var today = new Date();
-			thisYear = today.getFullYear();
-
-			var myDate = thisYear + "年";
-			document.getElementById("myDate").value = myDate;
-			// alert(myDate);
-
             $("#btn_menu").click(function(e){
                 $.ajax({
                     type: "POST",
@@ -41,41 +31,10 @@
         });
     </script>
 
-
-	<!-- Mobiscroll JS and CSS Includes -->
-	<script src="mobiscroll/mobiscroll.core.js"></script>
-	<script src="mobiscroll/mobiscroll.frame.js"></script>
-	<script src="mobiscroll/mobiscroll.scroller.js"></script>
-
-	<script src="mobiscroll/mobiscroll.util.datetime.js"></script>
-	<script src="mobiscroll/mobiscroll.datetimebase.js"></script>
-	<script src="mobiscroll/mobiscroll.datetime.js"></script>
-
-	<link href="mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
-	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
-	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
-	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
-
-	<script>
-		$(function () {
-			$('#myDate').mobiscroll().date({
-				theme: '',
-				mode: 'mode',
-				display: 'modal',
-				lang: 'en',
-				dateFormat: 'yy年',
-				dateOrder: 'yy',
-				setText: '選擇',
-				cancelText: '取消',
-				startYear: 2000
-			});
-		});
-	</script>
-
 </head>
 <body>
 
-<div id="change_log" data-role="page">
+<div id="change_log_list" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -94,23 +53,20 @@
 
 <!-- 換班紀錄查詢 Start-->
 	<div role="main" class="ui-content">
-		<table id="change_table">
-			<tr>
-				<th colspan="1">查詢年份</th>
-			</tr>
-			<tr>
-				<td>
-					<div id="inputMon">
-						<input type="text" id="myDate">
-					</div>
-				</td>
-			</tr>
-		</table>
-		
-		<div id="btnApply" class="change_btnApply">
-			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>查詢</div></a>
-		</div>
-		
+		<ul data-role="listview" id="ul_change_log_list">
+			<li data-role="list-divider" id="ul_change_log_list_divider">
+				<p style="margin-left: 20px;">2014年</p>
+				<p>換班紀錄</p>
+			</li>
+			<li class="li_change_log_list">
+				<a href="" class="ui-btn ui-nodisc-icon ui-btn-icon-right ui-icon-list_btn_arrow_right_gray" data-ajax="false">
+					<p style="width:49%;">B2014090001</p>
+					<p style="width:49%;">蘇晶晶-李珍妮</p>	
+				</a>
+				
+			</li>
+		</ul>
+
 	</div>
 <!-- 換班紀錄查詢 End-->
 

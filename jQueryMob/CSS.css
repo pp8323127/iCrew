@@ -158,7 +158,7 @@ table#change_table{
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
 }
 table#change_table th{
-	height: 45px;
+	height: 35px;
 	padding-left: 23px;
 	font-size: 18px;
 	font-weight: normal;
@@ -485,6 +485,35 @@ div#div_change_apply_substitle_noauthority p{
 }
 
 
+/*******************/
+/*    $log_list    */
+/*******************/
+ul#ul_change_log_list{
+	margin: 0;
+}
+li#ul_change_log_list_divider{
+	height: 37.5px;
+	background: #e4e4e4;
+	padding: 0;
+}
+ul#ul_change_log_list p{
+	display: inline-block;
+	font-size: 18px;
+	margin: 0;
+}
+li.li_change_log_list{
+	height: 44px;
+}
+li.li_change_log_list p{
+	line-height: 44px;
+}
+li.li_change_log_list a{
+	height: 44px !important;
+	padding: 0;
+}
+
+
+
 /*==========================================================*/
 
 /***********/
@@ -514,6 +543,7 @@ table#choose-serv-t th{
 	padding-left: 23px;
 	font-size: 18px;
 	font-weight: normal;
+	height: 35px;
 }
 table#choose-serv-t td:first-child{
 	padding-left: 17px;
@@ -736,6 +766,23 @@ a#list-divider-p p{
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#menu_icon_leave{ 
 		background: url("../images/menu_icon_leave@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#list_btn_sckedule{
+	background: url("../images/list_btn_sckedule.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_btn_sckedule{ 
+		background: url("../images/list_btn_sckedule@2x.png") no-repeat;
 		  -webkit-background-size:22px 22px;
 		     -moz-background-size:22px 22px;
 		       -o-background-size:22px 22px;

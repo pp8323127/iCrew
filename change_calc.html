@@ -16,9 +16,9 @@
 			var today = new Date();
 			thisYear = today.getFullYear();
 			var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
-			var myDate = thisYear + "-" + thisMonth;
+			var myDate = thisYear + "年" + thisMonth + "月";
 			document.getElementById("myDate").value = myDate;
-			alert(myDate);
+			// alert(myDate);
 
             $("#btn_menu").click(function(e){
                 $.ajax({
