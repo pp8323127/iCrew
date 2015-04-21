@@ -62,6 +62,35 @@
 
     </script>
 
+	<!-- Mobiscroll JS and CSS Includes -->
+	<script src="mobiscroll/mobiscroll.core.js"></script>
+	<script src="mobiscroll/mobiscroll.frame.js"></script>
+	<script src="mobiscroll/mobiscroll.scroller.js"></script>
+
+	<script src="mobiscroll/mobiscroll.util.datetime.js"></script>
+	<script src="mobiscroll/mobiscroll.datetimebase.js"></script>
+	<script src="mobiscroll/mobiscroll.datetime.js"></script>
+
+	<link href="mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+
+	<script>
+		$(function () {
+			$('#myDate').mobiscroll().date({
+				theme: '',
+				mode: 'mode',
+				display: 'modal',
+				lang: 'en',
+				dateFormat: 'yy年mm月',
+				dateOrder: 'yymm',
+				setText: '選擇',
+				cancelText: '取消',
+				startYear: 2000
+			});
+		});
+	</script>
 </head>
 <body>
 
@@ -91,7 +120,7 @@
 			<tr>
 				<td>
 					<div id="inputMon">
-						<input id="myDate" type="month" />
+						<input type="text" id="myDate">
 					</div>
 				</td>
 			</tr>
