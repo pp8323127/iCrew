@@ -9,16 +9,17 @@
 	<link rel="stylesheet" href="jQueryMob/CSS.css">
 	<script src="jQueryMob/jquery.js" language="javascript"></script>	
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
 
-        	//今天的日期(yyyy-mm)
+        	//今天的日期(yyyy)
 			var today = new Date();
 			thisYear = today.getFullYear();
-			var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
-			var myDate = thisYear + "年" + thisMonth + "月";
+
+			var myDate = thisYear + "年";
 			document.getElementById("myDate").value = myDate;
-			// alert(myDate);
+			alert(myDate);
 
             $("#btn_menu").click(function(e){
                 $.ajax({
@@ -40,6 +41,7 @@
         });
     </script>
 
+
 	<!-- Mobiscroll JS and CSS Includes -->
 	<script src="mobiscroll/mobiscroll.core.js"></script>
 	<script src="mobiscroll/mobiscroll.frame.js"></script>
@@ -53,6 +55,7 @@
 	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
 	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
 	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="mobiscroll/mobiscroll.icrew.css" rel="stylesheet" type="text/css" /> -->
 
 	<script>
 		$(function () {
@@ -61,18 +64,19 @@
 				mode: 'mode',
 				display: 'modal',
 				lang: 'en',
-				dateFormat: 'yy年mm月',
-				dateOrder: 'yymm',
+				dateFormat: 'yy年',
+				dateOrder: 'yy',
 				setText: '選擇',
 				cancelText: '取消',
 				startYear: 2000
 			});
 		});
 	</script>
+
 </head>
 <body>
 
-<div id="change_apply" data-role="page">
+<div id="change_log" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -80,7 +84,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">換班申請</td>
+				<td id="header-bar-btnAppname">換班紀錄查詢</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -89,11 +93,11 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 換班申請 Start-->
+<!-- 換班紀錄查詢 Start-->
 	<div role="main" class="ui-content">
 		<table id="change_table">
 			<tr>
-				<th colspan="1">申請月份</th>
+				<th colspan="1">查詢年份</th>
 			</tr>
 			<tr>
 				<td>
@@ -119,7 +123,7 @@
 		</div>
 		
 	</div>
-<!-- 換班申請 End-->
+<!-- 換班紀錄查詢 End-->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
