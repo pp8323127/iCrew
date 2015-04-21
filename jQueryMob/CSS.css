@@ -500,15 +500,16 @@ ul#ul_change_log_list p{
 	display: inline-block;
 	font-size: 18px;
 	margin: 0;
+	line-height: 37.5px;
 }
 li.li_change_log_list{
 	height: 44px;
 }
 li.li_change_log_list p{
-	line-height: 44px;
+	line-height: 44px !important;
 }
 li.li_change_log_list a{
-	height: 44px !important;
+	height: 44px;
 	padding: 0;
 }
 
