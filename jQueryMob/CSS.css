@@ -301,7 +301,134 @@ table#change_table p{
 /*****************/
 /* $calc_compare */
 /*****************/
+#calc_compare table{
+	/*border-top: 2px solid #4d4d4d;*/
+	border-bottom: 2px solid #4d4d4d;
+}
+#calc_compare tr{
+	color: #4d4d4d;
+}
 
+/*日期*/
+.tr_yearmonth th{
+	width: 30px;
+	height: 73.5px;
+	padding: 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	background: #e7f4fb;
+	border-right: 2px solid #4d4d4d;
+	border-bottom: 2px solid #4d4d4d;
+	border-top: 2px solid #4d4d4d;
+}
+.tr_date td{
+	width: 30px;
+	height: 35px;
+	padding: 0;
+	text-align: center;.
+	font-size: 15px;
+	background: #f8f8f8;
+	border-right: 2px solid #4d4d4d;
+	border-bottom: 1px solid #959595;
+}
+
+/*選擇試算者*/
+.tr_select_title td{
+	width: 30px;
+	height: 93px;
+	padding: 0;
+	text-align: center;
+	font-size: 14px;
+	font-weight: normal;
+	background: #e7f4fb;
+	border-right: 2px solid #4d4d4d;
+	border-top: 2px solid #4d4d4d;
+	line-height: 15px;
+}
+.tr_chk td{
+	width: 72px;
+	height: 35px;
+	border-right: 2px solid #4d4d4d;
+	padding: 0;
+}
+
+
+/*Applicant/substitle 表頭*/
+.tr_applicant th{
+	width: 72px;
+	height: 18px;
+	font-size: 11px;
+	font-weight: normal;
+	color: #fff;
+	background: #0072ce;
+	padding: 0px;
+	padding-left: 5px;
+	border-right: 2px solid #4d4d4d;
+	border-bottom: 1px solid #4d4d4d;
+	border-top: 2px solid #4d4d4d;
+}
+.tr_substitle th{
+	width: 72px;
+	height: 18px;
+	font-size: 11px;
+	font-weight: normal;
+	color: #fff;
+	background: #0072ce;
+	padding: 0px;
+	padding-left: 5px;
+	border-bottom: 1px solid #4d4d4d;
+	border-top: 2px solid #4d4d4d;
+}
+
+/*姓名*/
+.tr_name td{
+	width: 72px;
+	height: 37px;
+	font-weight: normal;
+	color: #fff;
+	background: #5fb4e5;
+	padding: 0;
+	padding-left: 5px;
+	border-right: 2px solid #4d4d4d;
+	border-bottom: 1px solid #4d4d4d;
+}
+.tr_name p:first-child{
+	font-size: 11px;
+}
+.tr_name p:last-child{
+	font-size: 14px;
+}
+
+/*Fltno/CR*/
+.tr_fltno_cr td{
+	width: 36px;
+	height: 17px;
+	background: #eeeeee;
+	font-size: 11px;
+	text-align: center;
+	padding: 0;
+	border-bottom: 2px solid #4d4d4d;
+}
+.tr_fltno_cr td:last-child{
+	border-right: 2px solid #4d4d4d;
+	border-left: 1px solid #959595;
+}
+
+/*飛時內容*/
+.tr_content td{
+	width: 36px;
+	height: 35px;
+	font-size: 13px;
+	text-align: center;
+	padding: 0;
+	border-bottom: 1px solid #959595;
+}
+.tr_content td:last-child{
+	color: #959595;
+	border-right: 2px solid #4d4d4d;
+	border-left: 1px solid #959595;
+}
 
 
 /***************/
