@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div id="change_calc_result" data-role="page">
+<div id="change_log_result" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -42,7 +42,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">確認換班申請</td>
+				<td id="header-bar-btnAppname">換班紀錄查詢</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -51,8 +51,21 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 確認換班申請 Start-->
+<!-- 換班紀錄查詢 Start-->
 	<div role="main" class="ui-content">
+		<div id="log_result_title">
+			<div>
+			<span><p>Form No :</p>
+			<p>B2014090001</p></span>
+			<br>
+			<p>Apply Date :</p>
+			<p>2014-09-23 16:40:23.0</p>
+			<br>
+			<p>Confirem Date :</p>
+			<p>2014-12-15 10:59:47.0</p>
+			</div>
+		</div>
+
 		<div data-role="navbar">
 			<ul id="result_title">
 				<li>Applicant</li>
@@ -179,28 +192,32 @@
 			</ul>
 			<ul id="result_personinfo" style="border-top: none;">
 				<li>
-					<div>Comments: </div>
+					<div>Comments :</div>
 					<div>已自行查詢，責任自負</div>
 				</li>
 			</ul>
+			<ul id="log_result_info">
+				<li>
+					<span>
+					<p>ED Confirm :</p>
+					<p>N</p>
+					<br>
+					<p>Comments :</p>
+					<p></p>
+					</span>
+				</li>
+			</ul>
 		</div>
-		<div id="result_info">
-			<div id="list_icon_info_20px"></div>
+		<div id="result_info" class="result_info_marginleft5">
 			<span id="div_result_infoMsg">
-				<p>換班者互換班飛時=A</p>
-				<p>被換者互換班飛時=B</p>
-				<p>飛時差額=A-B=X</p>
-				<p>換班後時數=換班前時數±X+AL</p>
+				<p>本人及互換者相互同意換班並保證 :</p>
+				<p>1.本申請日前兩個曆月內全勤。</p>
+				<p>2.本申請單內填寫內容符合申請規定無誤。</p>
 			</span>
-		</div>
-
-		<div id="btnOKCancel">
-			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
-			<a href="#" class="ui-btn ui-corner-all"><div>確認</div></a>
 		</div>
 		
 	</div>
-<!-- 確認換班申請 End-->
+<!-- 換班紀錄查詢 End-->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">

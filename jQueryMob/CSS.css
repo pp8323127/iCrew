@@ -11,6 +11,7 @@ a,p,table,div{
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
 	text-decoration: none !important;
 	text-shadow: none !important;
+	margin: 0;
 }
 ::-webkit-scrollbar{ 
 	display: none;
@@ -110,91 +111,9 @@ div#main-content a:first-child{
 }
 
 
-
-/*==========================================================*/
-
-
-/*********************/
-/*   $change 頁面    */
-/*********************/
-
-/************/
-/*   $btn   */
-/************/
-div#btnOKCancel{
-	text-align: center;
-	margin-top: 40px;
-}
-div#btnOKCancel a{
-	display: inline-block;
-	width: 145px;
-	height: 44px;
-	padding: 0px;
-	margin: 0px;
-	font-size: 17px;
-	border: 1px solid #bbb;
-	background: #fff;
-	color: #1c1c1c;
-	font-weight: normal;
-}
-div#btnOKCancel a:last-child{
-	border: 1px solid #0067d9;
-	background: #0067d9;
-	color: #fff;
-	margin-left: 8px;
-}
-div#btnOKCancel div{
-	/*按鈕文字置中*/
-	text-align:center; 
-	height:44px; 
-	line-height:44px;
-}
-
-/**************/
-/*    $calc   */
-/**************/
-table#change_table{
-	font-weight: normal !important;
-	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
-}
-table#change_table th{
-	height: 35px;
-	padding-left: 23px;
-	font-size: 18px;
-	font-weight: normal;
-	text-align: left;
-	background: #e4e4e4;
-}
-table#change_table a{
-	margin: 15px 55px 0px 55px;
-	background: #fff;
-	border: 1px solid #a7a7a7;
-	font-weight: normal;
-}
-table#change_table input{
-	text-align: center;
-	font-size: 17px;
-	color: #1c1c1c;
-	border: 1px solid #a7a7a7;
-	/*padding-left: 60px;*/
-	height: 45px;
-}
-div#inputMon{
-	margin: 25px 55px 25px 55px;
-}
-.ui-input-text{
-	box-shadow: none;
-	border: none;
-}
-table#change_table p{
-	margin-right: 55px;
-	text-align: right;
-	font-size: 16px;
-}
-
-/***************/
-/* $personInfo */
-/***************/
+/************************/
+/* $personInfo 個人資料 */
+/************************/
 div#personinfo{
 	margin: 15px 30px 0px 30px;
 	padding-bottom: 5px;
@@ -294,6 +213,101 @@ div#personinfoDetail p{
           		  background-size:130px 44px;
 			 }
 }
+
+
+
+/*==========================================================*/
+
+
+/*********************/
+/*   $change 頁面    */
+/*********************/
+
+/************/
+/*   $btn   */
+/************/
+div#btnOKCancel{
+	text-align: center;
+	margin-top: 40px;
+}
+div#btnOKCancel a{
+	display: inline-block;
+	width: 145px;
+	height: 44px;
+	padding: 0px;
+	margin: 0px;
+	font-size: 17px;
+	border: 1px solid #bbb;
+	background: #fff;
+	color: #1c1c1c;
+	font-weight: normal;
+}
+div#btnOKCancel a:last-child{
+	border: 1px solid #0067d9;
+	background: #0067d9;
+	color: #fff;
+	margin-left: 8px;
+}
+div#btnOKCancel div{
+	/*按鈕文字置中*/
+	text-align:center; 
+	height:44px; 
+	line-height:44px;
+}
+
+/**************/
+/*    $calc   */
+/**************/
+table#change_table{
+	font-weight: normal !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
+}
+table#change_table th{
+	height: 35px;
+	padding-left: 23px;
+	font-size: 18px;
+	font-weight: normal;
+	text-align: left;
+	background: #e4e4e4;
+}
+table#change_table a{
+	margin: 15px 55px 0px 55px;
+	background: #fff;
+	border: 1px solid #a7a7a7;
+	font-weight: normal;
+}
+table#change_table input{
+	text-align: center;
+	font-size: 17px;
+	color: #1c1c1c;
+	border: 1px solid #a7a7a7;
+	/*padding-left: 60px;*/
+	height: 45px;
+}
+div#inputMon{
+	margin: 25px 55px 25px 55px;
+}
+.ui-input-text{
+	box-shadow: none;
+	border: none;
+}
+table#change_table p{
+	margin-right: 55px;
+	text-align: right;
+	font-size: 16px;
+}
+
+
+/*****************/
+/* $calc_compare */
+/*****************/
+
+
+
+/***************/
+/* $calc_table */
+/***************/
+
 
 
 /****************/
@@ -488,32 +502,69 @@ div#div_change_apply_substitle_noauthority p{
 /*******************/
 /*    $log_list    */
 /*******************/
-ul#ul_change_log_list{
+ul#log_listview{
 	margin: 0;
 }
-li#ul_change_log_list_divider{
+ul#log_listview li:first-child{
 	height: 37.5px;
-	background: #e4e4e4;
-	padding: 0;
 }
-ul#ul_change_log_list p{
-	display: inline-block;
+ul#log_listview li:first-child p{
+	display: table-cell;
 	font-size: 18px;
-	margin: 0;
 	line-height: 37.5px;
 }
-li.li_change_log_list{
-	height: 44px;
-}
-li.li_change_log_list p{
-	line-height: 44px !important;
-}
-li.li_change_log_list a{
+ul#log_listview li, 
+ul#log_listview a{
 	height: 44px;
 	padding: 0;
+	margin: 0;
+}
+ul#log_listview p{
+	display: inline-block;
+	margin: 0;
+	line-height: 44px;
+	font-size: 16px;
+}
+ul#log_listview p:first-child{
+	padding-left: 20px;
+}
+div#log_list_ask{
+	margin-top: 37.5px;
+	text-align: center;
 }
 
+/**************/
+/* log_result */
+/**************/
+div#log_result_title{
+	height: 75px;
+	text-align: center;
+}
+div#log_result_title div{
+	padding-top: 7px;
+}
+div#log_result_title p{
+	display: inline-block;
+	font-size: 14px;
+}
+div#log_result_title span p{
+	font-size: 16px;
+	font-weight: bold;
+}
 
+ul#log_result_info{
+	padding: 15px 15px 15px 0px;
+	margin: 0px 15px 0px 15px;
+	border-bottom: 1px solid #7dcef4;
+}
+ul#log_result_info p{
+	display: inline-block;
+	font-size: 14px;
+}
+.result_info_marginleft5{
+	margin-left: 5px !important;
+	margin-bottom: 20px !important;
+}
 
 /*==========================================================*/
 
@@ -696,6 +747,12 @@ div#navbar li#li-title p{
 div#navbar li#li-title p:first-child{
 	font-size: 20px;
 }
+div#navbar li#li-title a{
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-bottom: none;
+}
 
 /* 列表標籤divider */
 ul
@@ -720,6 +777,18 @@ a#list-divider-p p{
 }
 .ui-li-divider.lidi.lidi_border{
 	border-bottom: solid 1px #a7a7a7;
+}
+
+/* 列表文字 */
+div#navbar a{
+	background: #4d4d4d;
+	border: none;
+	border-bottom: solid 1px #a7a7a7;
+	font-weight: normal;
+	margin-left: 45px;
+}
+div#navbar a#li-noborder{
+	border: none;
 }
 
 /* 列表標籤icon */
@@ -859,17 +928,6 @@ a#list-divider-p p{
 			 }
 }
 
-/* 列表文字 */
-div#navbar a{
-	background: #4d4d4d;
-	border: none;
-	border-bottom: solid 1px #a7a7a7;
-	font-weight: normal;
-	margin-left: 45px;
-}
-div#navbar a#li-noborder{
-	border: none;
-}
 
 
 /***************/
