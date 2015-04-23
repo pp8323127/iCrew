@@ -42,7 +42,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">換班飛時試算</td>
+				<td id="header-bar-btnAppname">換班申請</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -51,7 +51,7 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 換班飛時試算-表格 Start-->
+<!-- 換班班表 Start-->
 	<div role="main" class="ui-content">
 	
 <div data-role="navbar" id="calc_navbar">
@@ -102,7 +102,7 @@
 				<td>1111</td>
 				<td class="fontgray">20</td>
 				<td class="tr_chk">
-					<div id="list_btn_square"><div id="list_icon_checkmark_blue"></div></div>
+					<div id="list_btn_square"></div>
 				</td>
 			</tr>
 			<tr class="tr_content_table">
@@ -152,7 +152,7 @@
 				<td>1111</td>
 				<td class="fontgray">20</td>
 				<td class="tr_chk">
-					<div id="list_btn_square"></div>
+					<div id="list_btn_square"><div id="list_icon_checkmark_blue"></div></div>
 				</td>
 			</tr>
 		</table>
@@ -160,17 +160,57 @@
 </li>
 
 </ul>
-</div>
-		<div id="input_calc_table">
+
+		<div id="div_select_comments">
+			<label>Comments</label>
+			<select id="select_comments" data-icon="list_btn_arrow_down_gray">
+				<option value="已自行查詢，責任自負">已自行查詢，責任自負</option>
+			</select>
+		</div>
+
+		<div id="input_calc_table" class="margintop10">
 			<input type="text" placeholder="放棄特休假請輸入申請者(A)或被換者(R)+日期">
 		</div>
 
 		<div id="btnApply" class="btn_calc_table">
-			<a href="" class="ui-btn ui-corner-all"><div>換班飛時試算</div></a>
+			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>送出任務互換資訊</div></a>
 		</div>
 
 	</div>
-<!-- 換班飛時試算-表格 End-->
+<!-- 換班班表 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true" style="text-align: center;">
+    <div data-role="header" class="popup-header" id="change_apply_list_header">
+       <p>Tripno:3141437</p>
+    </div>
+
+    <div data-role="content" class="popup-content" id="change_apply_list_popup">
+		<p>班表時間為起訖站當地時間</p>
+		<p>跨月班次之飛時，僅計算至當月底</p>
+
+		<hr>
+
+		<p>2015/01/01　Fltno: 2161</p>
+		<p>Dpt: ICN　Arv: TPE</p>
+		<p>Btime: 2015/01/01 09:15px</p>
+		<p>Etime: 2015/01/01 10:59</p>
+		<p>Cr(HHMM): 0244</p>
+		<p>Rest Hour: 10　　Sp Code: ---</p>
+		
+		<hr>
+
+		<p>2015/01/01　Fltno: 2161</p>
+		<p>Dpt: ICN　Arv: TPE</p>
+		<p>Btime: 2015/01/01 09:15px</p>
+		<p>Etime: 2015/01/01 10:59</p>
+		<p>Cr(HHMM): 0244</p>
+		<p>Rest Hour: 10　　Sp Code: ---</p>
+
+        <a class="ui-btn btnPopOK" href="#" data-rel="back" data-ajax="false"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">

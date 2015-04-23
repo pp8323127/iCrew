@@ -386,6 +386,7 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 	border-right: 2px solid #4d4d4d;
 	padding: 0;
 	margin: 0;
+	text-align: center;
 }
 .tr_chk div{
 	margin: 0px auto;
@@ -542,16 +543,15 @@ div#change_calc_table div#calc_navbar .ui-grid-b>.ui-block-c{
 
 /*inputbox*/
 div#input_calc_table div{
-	margin: 0;
+	margin: 0px auto;
 	margin-top: 35px;
+	width: 80%;
 }
 div#input_calc_table input{
 	border: 1px solid #959595;
 	height: 35px;
-	width: 80%;
 	margin: 0px auto;
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
-
 }
 
 /*按鈕*/
@@ -749,6 +749,46 @@ div#div_change_apply_substitle_noauthority p{
 		       -o-background-size:20px 20px;
           		  background-size:20px 20px;
 			 }
+}
+
+/*******************/
+/*  $apply_list    */
+/*******************/
+div#div_select_comments{
+	width: 80%;
+	margin: 0px auto;
+	margin-top: 35px;
+}
+div#div_select_comments #select_comments-button{
+	padding: 8px;
+	padding-left: 12px;
+	background: #fff;
+	border: 1px solid #959595;
+}
+div#div_select_comments span{
+	font-size: 14px;
+	font-weight: normal;
+	text-align: left;
+}
+.margintop10 div{
+	margin-top: 10px !important;
+}
+
+/* popup */
+div#change_apply_list_header p{
+	margin-bottom: 10px;
+}
+div#change_apply_list_popup p{
+	text-align: center !important;
+	font-size: 14px;
+	padding: 0;
+}
+div#change_apply_list_popup hr{
+	margin-bottom: 10px; 
+	margin-top: 10px;
+}
+div#change_apply_list_popup a{
+	margin-top: 10px;
 }
 
 
@@ -1243,11 +1283,51 @@ div#btnApply div{
 .ui-icon-list_btn_arrow_down_gray:after{
 	background-image: url("../images/list_btn_arrow_down_gray.png");
 	background-repeat:no-repeat;
+	background-color: transparent !important;
 	height: 16px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	.ui-icon-list_btn_arrow_down_gray:after{ 
 		background: url("../images/list_btn_arrow_down_gray@2x.png") no-repeat;
+		  -webkit-background-size:16px 16px;
+		     -moz-background-size:16px 16px;
+		       -o-background-size:16px 16px;
+          		  background-size:16px 16px;
+			 }
+}
+
+
+/***************/
+/*    image    */
+/***************/
+#list_btn_square{
+	background: url("../images/list_btn_square.png") center center no-repeat;
+	height: 20px;
+	width: 20px;
+	vertical-align: text-top;
+	display: inline-flex;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_btn_square{ 
+		background: url("../images/list_btn_square@2x.png") center center no-repeat;
+		  -webkit-background-size:20px 20px;
+		     -moz-background-size:20px 20px;
+		       -o-background-size:20px 20px;
+          		  background-size:20px 20px;
+			 }
+}
+
+#list_icon_checkmark_blue{
+	background: url("../images/list_icon_checkmark_blue.png") center center no-repeat;
+	height: 16px;
+	width: 16px;
+	margin: 2px 0px 0px 2px;
+	vertical-align: text-top;
+	display: inline-flex;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_checkmark_blue{ 
+		background: url("../images/list_icon_checkmark_blue@2x.png") center center no-repeat;
 		  -webkit-background-size:16px 16px;
 		     -moz-background-size:16px 16px;
 		       -o-background-size:16px 16px;
