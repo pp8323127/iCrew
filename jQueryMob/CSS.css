@@ -298,16 +298,50 @@ table#change_table p{
 }
 
 
-/*****************/
-/* $calc_compare */
-/*****************/
-#calc_compare table{
+/****************/
+/* $calc_navbar */
+/****************/
+#calc_navbar table{
 	/*border-top: 2px solid #4d4d4d;*/
 	border-bottom: 2px solid #4d4d4d;
 }
-#calc_compare tr{
+#calc_navbar tr{
 	color: #4d4d4d;
 }
+
+/*navbar Width setting*/
+/*1to1*/
+div#change_calc_compare div#calc_navbar .ui-grid-b>.ui-block-a{
+	width: 12%;
+}
+div#change_calc_compare div#calc_navbar .ui-grid-b>.ui-block-b,
+div#change_calc_compare div#calc_navbar .ui-grid-b>.ui-block-c{
+	width: 44%;
+}
+/*1to2*/
+div#change_calc_compare div#calc_navbar .ui-grid-c>.ui-block-a{
+	width: 12%;
+}
+div#change_calc_compare div#calc_navbar .ui-grid-c>.ui-block-b,
+div#change_calc_compare div#calc_navbar .ui-grid-c>.ui-block-c,
+div#change_calc_compare div#calc_navbar .ui-grid-c>.ui-block-d{
+	width: 29.333%;
+}
+/*1to3*/
+div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-a{
+	width: 12%;
+}
+div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-b,
+div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-c,
+div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-d,
+div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
+	width: 22%;
+}
+
+
+/*****************/
+/* $calc_compare */
+/*****************/
 
 /*日期*/
 .tr_yearmonth th{
@@ -435,11 +469,98 @@ table#change_table p{
 	border-left: 1px solid #959595;
 }
 
+div.btn_calc_compare{
+	margin-top: 60px !important;
+}
+
 
 /***************/
 /* $calc_table */
 /***************/
+/*navbar Width setting*/
+/* 1to1 */
+div#change_calc_table div#calc_navbar .ui-grid-b>.ui-block-a{
+	width: 12%;
+}
+div#change_calc_table div#calc_navbar .ui-grid-b>.ui-block-b,
+div#change_calc_table div#calc_navbar .ui-grid-b>.ui-block-c{
+	width: 44%;
+}
 
+/*姓名*/
+.tr_name_table td{
+	width: 72px;
+	height: 37px;
+	font-weight: normal;
+	color: #fff;
+	background: #5fb4e5;
+	padding: 0;
+	padding-left: 5px;
+	border-right: 2px solid #4d4d4d;
+	border-bottom: 1px solid #4d4d4d;
+}
+.tr_name_table p{
+	display: inline-block;
+	font-size: 11px;
+}
+.tr_name_table p:first-child{
+	font-size: 14px;
+}
+
+
+/*Fltno/CR/RestHr/Selcet*/
+.tr_fltno_cr_resthr_select td{
+	width: 36px;
+	height: 17px;
+	background: #eeeeee;
+	font-size: 11px;
+	text-align: center;
+	padding: 0;
+	border-right: 1px solid #959595;
+	border-bottom: 2px solid #4d4d4d;
+}
+.tr_fltno_cr_resthr_select td:last-child{
+	border-right: 2px solid #4d4d4d;
+}
+
+/*飛時內容Table*/
+.tr_content_table td{
+	width: 36px;
+	height: 35px;
+	font-size: 13px;
+	text-align: center;
+	padding: 0;
+	border-bottom: 1px solid #959595;
+	border-right: 1px solid #959595;
+}
+.tr_content_table td:last-child{
+	border-right: 2px solid #4d4d4d;
+}
+.fontgray{
+	color: #959595;
+}
+
+/*inputbox*/
+div#input_calc_table div{
+	margin: 0;
+	margin-top: 35px;
+}
+div#input_calc_table input{
+	border: 1px solid #959595;
+	height: 35px;
+	width: 80%;
+	margin: 0px auto;
+	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
+
+}
+
+/*按鈕*/
+div.btn_calc_table{
+	margin-top: 35px;
+}
+div.btn_calc_table a{
+	width: 180px !important;
+}
 
 
 /****************/

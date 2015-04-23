@@ -34,7 +34,7 @@
 </head>
 <body>
 
-<div id="change_calc_compare" data-role="page">
+<div id="change_calc_table" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -51,7 +51,7 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 換班飛時試算-對照 Start-->
+<!-- 換班飛時試算-表格 Start-->
 	<div role="main" class="ui-content">
 	
 <div data-role="navbar" id="calc_navbar">
@@ -74,16 +74,6 @@
 			<tr class="tr_date">
 				<td>02</td>
 			</tr>
-
-			<tr class="tr_select_title">
-				<td>
-				<p>選</p>
-				<p>擇</p>
-				<p>試</p>
-				<p>算</p>
-				<p>者</p>
-				</td>
-			</tr>
 		</table>
 	</div>
 </li>
@@ -91,41 +81,36 @@
 	<div id="compare_applicant1">
 		<table>
 			<tr class="tr_applicant">
-				<th colspan="2">Applicant</th>
+				<th colspan="4">Applicant /</th>
 			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654320</p>
+			<tr class="tr_name_table">
+				<td colspan="4">
 					<p>歐陽晶晶</p>
+					<p>654320</p>
+					<p>(17416)</p>
 				</td>
 			</tr>
-			<tr class="tr_fltno_cr">
+			<tr class="tr_fltno_cr_resthr_select">
 				<td>Fltno</td>
 				<td>CR</td>
+				<td>RestHr</td>
+				<td>Select</td>
 			</tr>
 
-			<tr class="tr_content">
+			<tr class="tr_content_table">
 				<td>0000</td>
 				<td>1111</td>
-			</tr>
-			<tr class="tr_content">
-				<td>0000</td>
-				<td>1111</td>
-			</tr>
-
-			<!-- 表格尾 -->
-			<tr class="tr_applicant">
-				<th colspan="2">Applicant</th>
-			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654320</p>
-					<p>歐陽晶晶</p>
+				<td class="fontgray">20</td>
+				<td class="tr_chk">
+					<input type="checkbox">
 				</td>
 			</tr>
-			<tr class="tr_chk">
-				<td colspan="2">
-				
+			<tr class="tr_content_table">
+				<td>0000</td>
+				<td>1111</td>
+				<td class="fontgray">20</td>
+				<td class="tr_chk">
+					<input type="checkbox">
 				</td>
 			</tr>
 		</table>
@@ -137,131 +122,37 @@
 	<div id="compare_substitle1">
 		<table>
 			<tr class="tr_substitle">
-				<th colspan="2">Substitle</th>
+				<th colspan="4">Substitle /</th>
 			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654321</p>
-					<p>蘇晶晶</p>
+			<tr class="tr_name_table">
+				<td colspan="4">
+					<p>歐陽晶晶</p>
+					<p>654320</p>
+					<p>(17416)</p>
 				</td>
 			</tr>
-			<tr class="tr_fltno_cr">
+			<tr class="tr_fltno_cr_resthr_select">
 				<td>Fltno</td>
 				<td>CR</td>
+				<td>RestHr</td>
+				<td>Select</td>
 			</tr>
 
-			<tr class="tr_content">
+
+			<tr class="tr_content_table">
 				<td>0000</td>
 				<td>1111</td>
+				<td class="fontgray">20</td>
+				<td class="tr_chk">
+					<input type="checkbox">
+				</td>
 			</tr>
-			<tr class="tr_content">
+			<tr class="tr_content_table">
 				<td>0000</td>
 				<td>1111</td>
-			</tr>
-
-			<!-- 表格尾 -->
-			<tr class="tr_substitle">
-				<th colspan="2">Substitle</th>
-			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654320</p>
-					<p>歐陽晶晶</p>
-				</td>
-			</tr>
-			<tr class="tr_chk">
-				<td colspan="2">
-					<input type="checkbox" name="1" id="ck1" value="1">
-				</td>
-			</tr>
-		</table>
-	</div>
-</li>
-
-<li>
-	<div id="compare_substitle2">
-		<table>
-			<tr class="tr_substitle">
-				<th colspan="2"></th>
-			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654321</p>
-					<p>蘇晶晶</p>
-				</td>
-			</tr>
-			<tr class="tr_fltno_cr">
-				<td>Fltno</td>
-				<td>CR</td>
-			</tr>
-
-			<tr class="tr_content">
-				<td>0000</td>
-				<td>1111</td>
-			</tr>
-			<tr class="tr_content">
-				<td>0000</td>
-				<td>1111</td>
-			</tr>
-
-			<!-- 表格尾 -->
-			<tr class="tr_substitle">
-				<th colspan="2"></th>
-			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654320</p>
-					<p>歐陽晶晶</p>
-				</td>
-			</tr>
-			<tr class="tr_chk">
-				<td colspan="2">
-					<input type="checkbox" name="1" id="ck1" value="1">
-				</td>
-			</tr>
-		</table>
-	</div>
-</li>
-
-<li>
-	<div id="compare_substitle3">
-		<table>
-			<tr class="tr_substitle">
-				<th colspan="2"></th>
-			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654321</p>
-					<p>蘇晶晶</p>
-				</td>
-			</tr>
-			<tr class="tr_fltno_cr">
-				<td>Fltno</td>
-				<td>CR</td>
-			</tr>
-
-			<tr class="tr_content">
-				<td>0000</td>
-				<td>1111</td>
-			</tr>
-			<tr class="tr_content">
-				<td>0000</td>
-				<td>1111</td>
-			</tr>
-
-			<!-- 表格尾 -->
-			<tr class="tr_substitle">
-				<th colspan="2"></th>
-			</tr>
-			<tr class="tr_name">
-				<td colspan="2">
-					<p>654320</p>
-					<p>歐陽晶晶</p>
-				</td>
-			</tr>
-			<tr class="tr_chk">
-				<td colspan="2">
-					<input type="checkbox" name="1" id="ck1" value="1">
+				<td class="fontgray">20</td>
+				<td class="tr_chk">
+					<input type="checkbox">
 				</td>
 			</tr>
 		</table>
@@ -270,14 +161,16 @@
 
 </ul>
 </div>
+		<div id="input_calc_table">
+			<input type="text" placeholder="放棄特休假請輸入申請者(A)或被換者(R)+日期">
+		</div>
 
-		<div id="btnOKCancel" class="btn_calc_compare">
-			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
-			<a href="#" class="ui-btn ui-corner-all"><div>確認</div></a>
+		<div id="btnApply" class="btn_calc_table">
+			<a href="" class="ui-btn ui-corner-all"><div>換班飛時試算</div></a>
 		</div>
 
 	</div>
-<!-- 換班飛時試算-對照 End-->
+<!-- 換班飛時試算-表格 End-->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
