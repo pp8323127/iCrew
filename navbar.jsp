@@ -33,13 +33,13 @@
 			</a>
 		</li>
 		<li>
-			<a href="choose_aply.html" data-ajax="false">選班資格查詢</a>
+			<a href="choose_apply.html" data-ajax="false">選班資格查詢</a>
 		</li>
 		<li>
-			<a href="choose_resv.html" data-ajax="false">選班預約申請</a>
+			<a href="choose_reserve.html" data-ajax="false">選班預約申請</a>
 		</li>
 		<li>
-			<a id="li-noborder" href="choose_prog.html" data-ajax="false">處理進度查詢</a>
+			<a id="li-noborder" href="choose_progress.html" data-ajax="false">處理進度查詢</a>
 		</li>
 		<li data-role="list-divider" class="lidi">
 			<a href="#" id="list-divider-p" data-ajax="false">
