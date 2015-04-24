@@ -42,23 +42,23 @@
 			<a id="li-noborder" href="choose_progress.html" data-ajax="false">處理進度查詢</a>
 		</li>
 		<li data-role="list-divider" class="lidi">
-			<a href="#" id="list-divider-p" data-ajax="false">
+			<a href="leave_main.html" id="list-divider-p" data-ajax="false">
 				<div id="menu_icon_leave">
 					<p>請假</p>
 				</div>
 			</a>
 		</li>
 		<li>
-			<a href="#" data-ajax="false">特休假查詢</a>
+			<a href="leave_search.html" data-ajax="false">特休假查詢</a>
 		</li>
 		<li>
-			<a href="#" data-ajax="false">特休假配額查詢</a>
+			<a href="leave_quota.html" data-ajax="false">特休假配額查詢</a>
 		</li>
 		<li>
-			<a href="#" data-ajax="false">特休假申請</a>
+			<a href="leave_apply.html" data-ajax="false">特休假申請</a>
 		</li>
 		<li>
-			<a id="li-noborder" href="#" data-ajax="false">假單查詢與刪除</a>
+			<a id="li-noborder" href="leave_delete.html" data-ajax="false">假單查詢與刪除</a>
 		</li>
 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">
@@ -96,7 +96,7 @@
 		</a>
 		</li>
 		<li>
-			<a id="li-noborder" href="#" data-ajax="false">
+			<a id="li-noborder" href="login.html" data-ajax="false">
 				<div id="menu_btn_logout"></div>
 			</a>  
 		</li>

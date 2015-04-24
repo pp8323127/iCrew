@@ -336,6 +336,12 @@ div#navbar li#li-title p{
 div#navbar li#li-title p:first-child{
 	font-size: 20px;
 }
+div#navbar li#li-title a{
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	border-bottom: none;
+}
 
 /* 列表標籤divider */
 ul
@@ -356,131 +362,11 @@ div#navbar p{
 
 a#list-divider-p p{
 	color: #fff;
+	/*padding-top: 2px;*/
 }
 .ui-li-divider.lidi.lidi_border{
 	border-bottom: solid 1px #a7a7a7;
 }
-
-/* 列表標籤icon */
-div#menu_icon_changes{
-	background: url("images/menu_icon_changes.png");
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -20px;
-	height: 22px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_icon_changes{ 
-		background: url("images/menu_icon_changes@2x.png") no-repeat;
-		  -webkit-background-size:22px 22px;
-		     -moz-background-size:22px 22px;
-		       -o-background-size:22px 22px;
-          		  background-size:22px 22px;
-			 }
-}
-
-div#menu_icon_airplane{
-	background: url("images/menu_icon_airplane.png");
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -20px;
-	height: 22px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_icon_airplane{ 
-		background: url("images/menu_icon_leave@2x.png") no-repeat;
-		  -webkit-background-size:22px 22px;
-		     -moz-background-size:22px 22px;
-		       -o-background-size:22px 22px;
-          		  background-size:22px 22px;
-			 }
-}
-
-div#menu_icon_leave{
-	background: url("images/menu_icon_leave.png");
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -20px;
-	height: 22px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_icon_leave{ 
-		background: url("images/menu_icon_leave@2x.png") no-repeat;
-		  -webkit-background-size:22px 22px;
-		     -moz-background-size:22px 22px;
-		       -o-background-size:22px 22px;
-          		  background-size:22px 22px;
-			 }
-}
-
-div#menu_icon_bubble{
-	background: url("images/menu_icon_bubble.png");
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -20px;
-	height: 22px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_icon_bubble{ 
-		background: url("images/menu_icon_bubble@2x.png") no-repeat;
-		  -webkit-background-size:22px 22px;
-		     -moz-background-size:22px 22px;
-		       -o-background-size:22px 22px;
-          		  background-size:22px 22px;
-			 }
-}
-
-div#menu_icon_mail{
-	background: url("images/menu_icon_mail.png");
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -20px;
-	height: 22px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_icon_mail{ 
-		background: url("images/menu_icon_mail@2x.png") no-repeat;
-		  -webkit-background-size:22px 22px;
-		     -moz-background-size:22px 22px;
-		       -o-background-size:22px 22px;
-          		  background-size:22px 22px;
-			 }
-}
-
-div#menu_icon_settings{
-	background: url("images/menu_icon_settings.png");
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -20px;
-	height: 22px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_icon_settings{ 
-		background: url("images/menu_icon_settings@2x.png") no-repeat;
-		  -webkit-background-size:22px 22px;
-		     -moz-background-size:22px 22px;
-		       -o-background-size:22px 22px;
-          		  background-size:22px 22px;
-			 }
-}
-
-div#menu_btn_logout{
-	background: url("images/menu_btn_logout.png");
-	background-repeat:no-repeat;
-	height: 33px;
-	margin-top: 65px;
-	margin-left: -16.5px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#menu_btn_logout{ 
-		background: url("images/menu_btn_logout@2x.png") no-repeat;
-		  -webkit-background-size:143px 33px;
-		     -moz-background-size:143px 33px;
-		       -o-background-size:143px 33px;
-          		  background-size:143px 33px;
-			 }
-}
-
 
 /* 列表文字 */
 div#navbar a{
@@ -492,6 +378,143 @@ div#navbar a{
 }
 div#navbar a#li-noborder{
 	border: none;
+}
+
+/* 列表標籤icon */
+#menu_icon_changes{
+	background: url("../images/menu_icon_changes.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_changes{ 
+		background: url("../images/menu_icon_changes@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_airplane{
+	background: url("../images/menu_icon_airplane.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_airplane{ 
+		background: url("../images/menu_icon_leave@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_leave{
+	background: url("../images/menu_icon_leave.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_leave{ 
+		background: url("../images/menu_icon_leave@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#list_btn_sckedule{
+	background: url("../images/list_btn_sckedule.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_btn_sckedule{ 
+		background: url("../images/list_btn_sckedule@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_bubble{
+	background: url("../images/menu_icon_bubble.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_bubble{ 
+		background: url("../images/menu_icon_bubble@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_mail{
+	background: url("../images/menu_icon_mail.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_mail{ 
+		background: url("../images/menu_icon_mail@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_settings{
+	background: url("../images/menu_icon_settings.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_settings{ 
+		background: url("../images/menu_icon_settings@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_btn_logout{
+	background: url("../images/menu_btn_logout.png");
+	background-repeat:no-repeat;
+	height: 33px;
+	margin-top: 65px;
+	margin-left: -17px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_btn_logout{ 
+		background: url("../images/menu_btn_logout@2x.png") no-repeat;
+		  -webkit-background-size:143px 33px;
+		     -moz-background-size:143px 33px;
+		       -o-background-size:143px 33px;
+          		  background-size:143px 33px;
+			 }
 }
 
 
