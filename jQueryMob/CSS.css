@@ -7,7 +7,7 @@ body,html{
 	text-shadow: none !important;
 	color: #1c1c1c !important;
 }
-a,p,table,div{
+a,p,table,div,input{
 	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
 	text-decoration: none !important;
 	text-shadow: none !important;
@@ -23,6 +23,7 @@ a,p,table,div{
 .ui-page{
 	background: #fff;
 }
+
 
 
 /*********************/
@@ -952,6 +953,89 @@ table#choose-prog-t td:first-child{
 .tr_bg{
 	background: #e1eef5;
 }
+
+
+
+
+
+/*==========================================================*/
+
+/***********/
+/* $leave */
+/****************/
+/* $leave_search*/
+/****************/
+div.search_title{
+	padding: 20px 0px 20px 40px;
+	border-bottom: 1px solid #cccccc;
+}
+div.search_title p{
+	display: inline-block;
+	line-height: 25px;
+	font-size: 14px;
+}
+div.search_title p:first-child{
+	margin-right: 15px;
+}
+
+div.search_content{
+	padding: 0px 0px 0px 20px;
+	margin: 20px 0px 0px 35px;
+	border-left: 1px solid #a20102;
+}
+div.search_content p{
+	display: inline-block;
+	line-height: 25px;
+	font-size: 16px;
+}
+
+/****************/
+/* $leave_quota */
+/****************/
+div#leave_quota_popup p{
+	text-align: left;
+}
+
+
+
+
+
+
+
+.font_20_bold{
+	font-size: 20px !important;
+	font-weight: bold !important;
+}
+.font_16_bold{
+	font-size: 16px !important;
+	font-weight: bold !important;
+}
+.font_bold{
+	font-weight: bold !important;
+}
+.font_14_707070{
+	font-size: 14px !important;
+	color: #707070;
+}
+.font_18_bold{
+	font-size: 18px !important;
+	font-weight: bold !important;
+}
+.font_18_a40000{
+	font-size: 18px;
+	color: #a40000;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 /******************/

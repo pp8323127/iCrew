@@ -12,10 +12,11 @@
     <script type="text/javascript">
         $(document).ready(function () {
 
-        	//今天的日期(yyyy-mm)
+        	//今天的日期(yyyy-m)
 			var today = new Date();
 			thisYear = today.getFullYear();
-			var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
+			// var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
+			thisMonth = today.getMonth();
 			var myDate = thisYear + "年" + thisMonth + "月";
 			document.getElementById("myDate").value = myDate;
 			// alert(myDate);
@@ -61,8 +62,8 @@
 				mode: 'mode',
 				display: 'modal',
 				lang: 'en',
-				dateFormat: 'yy年mm月',
-				dateOrder: 'yymm',
+				dateFormat: 'yy年m月',
+				dateOrder: 'yym',
 				setText: '選擇',
 				cancelText: '取消',
 				startYear: 2000

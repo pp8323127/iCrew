@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="jQueryMob/CSS.css">
 	<script src="jQueryMob/jquery.js" language="javascript"></script>	
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -38,30 +39,9 @@
                 });
                 e.preventDefault();
             });
-
-/*
-			document.getElementById("addEmployee").onclick = function() {
-				document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
-			};
-*/
-
-
-
-
-
-
-
         });
-
-/*
-        function addEmp(){
-			document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
-		};
-*/
-
-
-
     </script>
+
 
 	<!-- Mobiscroll JS and CSS Includes -->
 	<script src="mobiscroll/mobiscroll.core.js"></script>
@@ -92,10 +72,11 @@
 			});
 		});
 	</script>
+
 </head>
 <body>
 
-<div id="change_calc" data-role="page">
+<div id="leave_quota" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -103,7 +84,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">換班飛時試算</td>
+				<td id="header-bar-btnAppname">特休假配額查詢</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -112,11 +93,11 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 換班飛時試算 Start-->
+<!-- 特休假配額查詢 Start-->
 	<div role="main" class="ui-content">
 		<table id="change_table">
 			<tr>
-				<th colspan="1">申請月份</th>
+				<th colspan="1">查詢月份</th>
 			</tr>
 			<tr>
 				<td>
@@ -125,29 +106,30 @@
 					</div>
 				</td>
 			</tr>
-
-			<tr>
-				<th colspan="1">被換者之員工號</th>
-			</tr>
-			<tr>
-				<td>
-					<a href="" id="employee1" value="" class="ui-btn ui-corner-all">被換員工</a>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<p id="addEmployee" onclick="addEmp()">+新增試算人員</p>
-				</td>
-			</tr>
 		</table>
 		
-		<div id="btnOKCancel">
-			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
-			<a href="change_calc_compare.html" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
+		<div id="btnApply" class="change_btnApply">
+			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>確認</div></a>
 		</div>
 		
 	</div>
-<!-- 換班飛時試算 End-->
+<!-- 特休假配額查詢 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p>年假配額查詢注意事項</p>
+    </div>
+
+    <div data-role="content" class="popup-content" id="leave_quota_popup">
+        <p>此表僅供查詢，以實際遞單為準</p>
+        <p>當AL Quota為零，每月遞單截止為前五天22:00至遞單截止日23:59期間，進紙上網取消退回已申請之AL其餘時段正常作業。</p>
+        <p>每月遞單截止日前五天23:00，可自行上網申請是放出額度之AL</p>
+
+        <a class="ui-btn btnPopOK" data-rel="back" href="#" data-ajax="false"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
