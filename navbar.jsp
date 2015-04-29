@@ -58,7 +58,7 @@
 			<a href="leave_apply.html" data-ajax="false">特休假申請</a>
 		</li>
 		<li>
-			<a id="li-noborder" href="leave_delete.html" data-ajax="false">假單查詢與刪除</a>
+			<a id="li-noborder" href="leave_manage.html" data-ajax="false">假單查詢與刪除</a>
 		</li>
 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">

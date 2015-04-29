@@ -19,7 +19,7 @@
 			// var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
 			thisMonth = today.getMonth();
 			var myDate = thisYear + "年" + thisMonth + "月";
-			document.getElementById("myDate").value = myDate;
+			//document.getElementById("myDate").value = myDate;
 			// alert(myDate);
 
             $("#btn_menu").click(function(e){
@@ -59,13 +59,13 @@
 
 	<script>
 		$(function () {
-			$('#myDate').mobiscroll().date({
+			$('.myDate').mobiscroll().date({
 				theme: '',
 				mode: 'mode',
 				display: 'modal',
 				lang: 'en',
-				dateFormat: 'yy年m月',
-				dateOrder: 'yym',
+				dateFormat: 'yy/mm/dd',
+				dateOrder: 'yymmdd',
 				setText: '選擇',
 				cancelText: '取消',
 				startYear: 2000
@@ -76,7 +76,7 @@
 </head>
 <body>
 
-<div id="leave_quota" data-role="page">
+<div id="leave_quota_result" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -84,7 +84,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">特休假配額查詢</td>
+				<td id="header-bar-btnAppname">特休假申請</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -93,40 +93,60 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 特休假配額查詢 Start-->
+<!-- 特休假申請 Start-->
 	<div role="main" class="ui-content">
-		<table id="change_table">
+
+		<div>
+			<p class="p_al_btn">AL特休假</p>
+		</div>
+
+	<div>
+		<table class="leave_apply_table">
 			<tr>
-				<th colspan="1">查詢月份</th>
+				<td class="leave_td_label">From</td>
+				<td><input type="text" class="myDate" id=""></td>
+				<td><div id="list_btn_sckedule"></div></td>
 			</tr>
 			<tr>
-				<td>
-					<div id="inputMon">
-						<input type="text" id="myDate">
-					</div>
-				</td>
+				<td class="leave_td_label">To</td>
+				<td><input type="text" class="myDate" id=""></td>
+				<td><div id="list_btn_sckedule"></div></td>
+			</tr>
+			<tr>
+				<td class="leave_td_label">Off Days</td>
+				<td><input type="text" id=""></td>
 			</tr>
 		</table>
+
+
+		<div id="result_info">
+			<div id="list_icon_info_20px"></div>
+			<span id="div_result_infoMsg">
+				<p>未扣假天數+預請假天數，不得大於30日</p>
+				<p>AL每筆連續不得超過六日，</p>
+				<p>兩筆之間至少間隔一日。</p>
+			</span>
+		</div>
 		
 		<div id="btnApply" class="change_btnApply">
 			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>確認</div></a>
 		</div>
 		
 	</div>
-<!-- 特休假配額查詢 End-->
+<!-- 特休假申請 End-->
 
 <!-- popup container start -->
 <div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
-       <p>年假配額查詢注意事項</p>
+       <p>您已提出特休假申請</p>
     </div>
 
-    <div data-role="content" class="popup-content" id="leave_quota_popup">
-        <p>此表僅供查詢，以實際遞單為準</p>
-        <p>當AL Quota為零，每月遞單截止為前五天22:00至遞單截止日23:59期間，進紙上網取消退回已申請之AL其餘時段正常作業。</p>
-        <p>每月遞單截止日前五天23:00，可自行上網申請是放出額度之AL</p>
-
-        <a class="ui-btn btnPopOK" href="leave_quota_result.html" data-ajax="false"><div>確 認</div></a>
+    <div data-role="content" class="popup-content" id="leave_apply_popup">
+        <p>AL特休假</p>
+        <p>2015/01/15-2015/01/16</p>
+        <p>申請成功</p>
+        
+        <a class="ui-btn btnPopOK" href="leave_main.html" data-ajax="false"><div>確 認</div></a>
     </div>
 </div>
 <!-- popup container end -->

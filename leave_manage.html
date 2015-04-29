@@ -9,7 +9,6 @@
 	<link rel="stylesheet" href="jQueryMob/CSS.css">
 	<script src="jQueryMob/jquery.js" language="javascript"></script>	
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
-
     <script type="text/javascript">
         $(document).ready(function () {
 
@@ -18,7 +17,7 @@
 			thisYear = today.getFullYear();
 			// var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
 			thisMonth = today.getMonth();
-			var myDate = thisYear + "年" + thisMonth + "月";
+			var myDate = thisYear + "年";
 			document.getElementById("myDate").value = myDate;
 			// alert(myDate);
 
@@ -42,7 +41,6 @@
         });
     </script>
 
-
 	<!-- Mobiscroll JS and CSS Includes -->
 	<script src="mobiscroll/mobiscroll.core.js"></script>
 	<script src="mobiscroll/mobiscroll.frame.js"></script>
@@ -64,19 +62,18 @@
 				mode: 'mode',
 				display: 'modal',
 				lang: 'en',
-				dateFormat: 'yy年m月',
-				dateOrder: 'yym',
+				dateFormat: 'yy年',
+				dateOrder: 'yy',
 				setText: '選擇',
 				cancelText: '取消',
 				startYear: 2000
 			});
 		});
 	</script>
-
 </head>
 <body>
 
-<div id="leave_quota" data-role="page">
+<div id="leave_manage" data-role="page">
 <!-- Header bar Start -->
 	<div data-role="header" data-position="fixed">
 		<table id="header-bar">
@@ -84,7 +81,7 @@
 				<td id="header-bar-btnBak">
 					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
 				</td>
-				<td id="header-bar-btnAppname">特休假配額查詢</td>
+				<td id="header-bar-btnAppname">假單查詢與刪除</td>
 				<td id="header-bar-btnMenu">
 					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
 				</td>
@@ -93,11 +90,11 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 特休假配額查詢 Start-->
+<!-- 假單查詢與刪除 Start-->
 	<div role="main" class="ui-content">
 		<table id="change_table">
 			<tr>
-				<th colspan="1">查詢月份</th>
+				<th colspan="1">查詢年份</th>
 			</tr>
 			<tr>
 				<td>
@@ -106,30 +103,24 @@
 					</div>
 				</td>
 			</tr>
+
+			<tr>
+				<th colspan="1">查詢類型</th>
+			</tr>
+			<tr>
+				<td>
+					<a href="" id="employee1" value="" class="ui-btn ui-corner-all">不扣</a>
+				</td>
+			</tr>
 		</table>
 		
-		<div id="btnApply" class="change_btnApply">
-			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>確認</div></a>
+		<div id="btnOKCancel">
+			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
+			<a href="leave_manage_search.html" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
 		</div>
 		
 	</div>
-<!-- 特休假配額查詢 End-->
-
-<!-- popup container start -->
-<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
-    <div data-role="header" class="popup-header">
-       <p>年假配額查詢注意事項</p>
-    </div>
-
-    <div data-role="content" class="popup-content" id="leave_quota_popup">
-        <p>此表僅供查詢，以實際遞單為準</p>
-        <p>當AL Quota為零，每月遞單截止為前五天22:00至遞單截止日23:59期間，進紙上網取消退回已申請之AL其餘時段正常作業。</p>
-        <p>每月遞單截止日前五天23:00，可自行上網申請是放出額度之AL</p>
-
-        <a class="ui-btn btnPopOK" href="leave_quota_result.html" data-ajax="false"><div>確 認</div></a>
-    </div>
-</div>
-<!-- popup container end -->
+<!-- 假單查詢與刪除 End-->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
