@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="leave_manage_result" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">假單查詢與刪除</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 假單查詢與刪除 Start-->
+	<div role="main" class="ui-content">
+		
+		<div class="leave_result_title">
+			<p class="font_20_bold">蘇晶晶</p>
+			<p class="font_16_bold" style="margin:0px 7px;">空服五部</p>
+			<p class="font_14">633020</p>
+			<p class="font_14">(11803)</p>
+			<br>
+			<p class="font_16">AL effective Date :</p>
+			<p class="font_16">1991/05/23</p>
+		</div>
+
+		<div class="leave_result_title">
+			<p class="font_18">(AL)2013/08/16-2015/08/15</p>
+			<br>
+			<p class="font_16">進假天數 :</p>
+			<p class="font_18_bold">28</p>
+			<p class="font_16" style="margin-left:15px;">已使用天數 :</p>
+			<p class="font_18_bold">0</p>
+			<br>
+			<p class="font_16">未扣除特休假總天數 :</p>
+			<p class="font_18_a40000">7</p>
+		</div>
+
+		<div class="leave_result_help">
+			<div data-role="navbar">
+				<ul>
+					<li>
+						<div id="list_icon_used_small">已扣除假單</div>
+					</li>
+					<li>
+						<div id="list_icon_nonused_small">未扣除假單</div>
+					</li>
+					<li>
+						<div id="list_icon_delete_small">已刪除假單</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="leave_result_content">
+			<p>teset</p>
+		</div>
+
+
+
+		
+	</div>
+
+	<!-- 定義popup顯示位置 -->
+	<div id="popupSite"></div>
+<!-- 假單查詢與刪除 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p style="margin-bottom: 22px;">請選擇查詢類別</p>
+    </div>
+
+    <div data-role="content" class="popup-content">
+		<a class="ui-btn btnCate" href="" data-ajax="false"><div>扣薪假</div></a>
+		<a class="ui-btn btnCate" href="" data-ajax="false"><div>不扣薪假</div></a>
+		<a class="ui-btn btnCate" href="" data-ajax="false"><div>其他</div></a>
+
+        <a class="ui-btn btnPopOK" href="leave_manage_result.html" data-ajax="false"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>
