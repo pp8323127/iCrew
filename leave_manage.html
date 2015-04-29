@@ -109,18 +109,37 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="" id="employee1" value="" class="ui-btn ui-corner-all">不扣</a>
+					<a href="#alert-popup-info" id="employee1" value="" class="ui-btn ui-corner-all" data-rel="popup" data-transition="pop">不扣薪假</a>
 				</td>
 			</tr>
 		</table>
 		
 		<div id="btnOKCancel">
 			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
-			<a href="leave_manage_search.html" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
+			<a href="leave_manage_result.html" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
 		</div>
 		
 	</div>
+
+	<!-- 定義popup顯示位置 -->
+	<div id="popupSite"></div>
 <!-- 假單查詢與刪除 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p style="margin-bottom: 22px;">請選擇查詢類別</p>
+    </div>
+
+    <div data-role="content" class="popup-content">
+		<a class="ui-btn btnCate" href="" data-ajax="false"><div>扣薪假</div></a>
+		<a class="ui-btn btnCate" href="" data-ajax="false"><div>不扣薪假</div></a>
+		<a class="ui-btn btnCate" href="" data-ajax="false"><div>其他</div></a>
+
+        <a class="ui-btn btnPopOK" href="" data-rel="back" data-ajax="false"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
 
 <!-- navbar Slide Panel -->
     <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">

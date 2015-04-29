@@ -110,6 +110,10 @@ div#main-content a{
 div#main-content a:first-child{
 	margin-top:42px
 }
+div#main-content hr{
+	border: 1px solid #9BD2E9 !important;
+	opacity: 0.4;
+}
 
 
 /************************/
@@ -1041,6 +1045,61 @@ div#leave_quota_popup p{
 div#leave_apply_popup p{
 	padding: 2px;
 }
+div#leave_apply_popup_content{
+	margin: 10px 0px 10px 0px;
+}
+
+div#leave_apply_add{
+	text-align: right;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.leave_apply_btnApply{
+	margin-top: 50px;
+}
+
+/*****************/
+/* $leave_manage */
+/*****************/
+.ui-btn.btnCate{
+	margin: 0px;
+	padding: 0px;
+	height: 44px;
+	font-size: 18px;
+
+	font-weight: bold;
+	border-bottom-right-radius: .3em;
+	border-bottom-left-radius: .3em;
+/*	border-radius: .3em;
+    -moz-border-radius: .3em;
+    -webkit-border-radius: .3em;*/
+}
+.ui-btn.btnCate div{
+	text-align:center; 
+	height: 44px; 
+	line-height: 44px;
+	background: #fff;
+		font-weight: normal;
+}
+
+/************************/
+/* $leave_manage_result */
+/************************/
+.leave_result_title{
+	margin: 0px 30px;
+	padding: 8px;
+	border-bottom: 1px solid #7ccff2;
+}
+.leave_result_title p{
+	display: inline-block;
+}
+.leave_result_help{
+	border-bottom: 3px solid #0266DB;
+	padding: 15px 30px 20px 35px;
+	font-size: 11px;
+	color: #707070;
+}
+
 
 
 
@@ -1053,12 +1112,21 @@ div#leave_apply_popup p{
 	font-size: 16px !important;
 	font-weight: bold !important;
 }
+.font_16{
+	font-size: 16px !important;
+}
 .font_bold{
 	font-weight: bold !important;
+}
+.font_14{
+	font-size: 14px !important;
 }
 .font_14_707070{
 	font-size: 14px !important;
 	color: #707070;
+}
+.font_18{
+	font-size: 18px !important;
 }
 .font_18_bold{
 	font-size: 18px !important;
@@ -1460,5 +1528,55 @@ div#btnApply div{
 		     -moz-background-size:16px 16px;
 		       -o-background-size:16px 16px;
           		  background-size:16px 16px;
+			 }
+}
+
+
+/* leave 請假會用到的 */
+#list_icon_used_small{
+	background: url("../images/list_icon_used_small.png") center left no-repeat;
+	height: 12px;
+	padding-left: 14px;
+	padding-bottom: 2px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_used_small{ 
+		background: url("../images/list_icon_used_small@2x.png") center left no-repeat;
+		  -webkit-background-size:12px 12px;
+		     -moz-background-size:12px 12px;
+		       -o-background-size:12px 12px;
+          		  background-size:12px 12px;
+			 }
+}
+
+#list_icon_nonused_small{
+	background: url("../images/list_icon_nonused_small.png") center left no-repeat;
+	height: 12px;
+	padding-left: 14px;
+	padding-bottom: 2px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_nonused_small{ 
+		background: url("../images/list_icon_nonused_small@2x.png") center left no-repeat;
+		  -webkit-background-size:12px 12px;
+		     -moz-background-size:12px 12px;
+		       -o-background-size:12px 12px;
+          		  background-size:12px 12px;
+			 }
+}
+
+#list_icon_delete_small{
+	background: url("../images/list_icon_delete_small.png") center left no-repeat;
+	height: 12px;
+	padding-left: 14px;
+	padding-bottom: 2px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_delete_small{ 
+		background: url("../images/list_icon_delete_small@2x.png") center left no-repeat;
+		  -webkit-background-size:12px 12px;
+		     -moz-background-size:12px 12px;
+		       -o-background-size:12px 12px;
+          		  background-size:12px 12px;
 			 }
 }

@@ -117,22 +117,26 @@
 				<td><input type="text" id=""></td>
 			</tr>
 		</table>
-
-
-		<div id="result_info">
-			<div id="list_icon_info_20px"></div>
-			<span id="div_result_infoMsg">
-				<p>未扣假天數+預請假天數，不得大於30日</p>
-				<p>AL每筆連續不得超過六日，</p>
-				<p>兩筆之間至少間隔一日。</p>
-			</span>
-		</div>
-		
-		<div id="btnApply" class="change_btnApply">
-			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>確認</div></a>
-		</div>
-		
 	</div>
+
+	<div id="leave_apply_add">
+		<p>+新增其他休假</p>
+	</div>
+
+	<div id="result_info">
+		<div id="list_icon_info_20px"></div>
+		<span id="div_result_infoMsg">
+			<p>未扣假天數+預請假天數，不得大於30日</p>
+			<p>AL每筆連續不得超過六日，</p>
+			<p>兩筆之間至少間隔一日。</p>
+		</span>
+	</div>
+	
+	<div id="btnApply" class="leave_apply_btnApply">
+		<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>確認</div></a>
+	</div>
+		
+	
 <!-- 特休假申請 End-->
 
 <!-- popup container start -->
@@ -142,10 +146,12 @@
     </div>
 
     <div data-role="content" class="popup-content" id="leave_apply_popup">
-        <p>AL特休假</p>
-        <p>2015/01/15-2015/01/16</p>
-        <p>申請成功</p>
-        
+		<div id="leave_apply_popup_content">
+	        <p>AL特休假</p>
+	        <p>2015/01/15-2015/01/16</p>
+	        <p>申請成功</p>
+		</div>
+
         <a class="ui-btn btnPopOK" href="leave_main.html" data-ajax="false"><div>確 認</div></a>
     </div>
 </div>
