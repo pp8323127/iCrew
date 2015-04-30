@@ -62,14 +62,14 @@
 		</li>
 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">
-				<div id="list_btn_sckedule">
+				<div id="menu_icon_CIA">
 					<p>CIA</p>
 				</div>
 		</a>
 		</li>
 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">
-				<div id="menu_icon_bubble">
+				<div id="menu_icon_bus">
 					<p>報到接車查詢</p>
 				</div>
 		</a>

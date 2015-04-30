@@ -365,7 +365,7 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 	width: 30px;
 	height: 35px;
 	padding: 0;
-	text-align: center;.
+	text-align: center;
 	font-size: 15px;
 	background: #f8f8f8;
 	border-right: 2px solid #4d4d4d;
@@ -1055,7 +1055,7 @@ div#leave_apply_add{
 	margin-right: 20px;
 }
 .leave_apply_btnApply{
-	margin-top: 50px;
+	margin: 50px 0;
 }
 
 /*****************/
@@ -1100,7 +1100,87 @@ div#leave_apply_add{
 	color: #707070;
 }
 
+.leave_result_used{
+	padding: 15px 30px 15px 47px;
+	border-bottom: 1px solid #a7a7a7;
+}
+.leave_result_used p{
+	display: inline-block;
+}
 
+.leave_result_nonused{
+	padding: 15px 30px 15px 47px;
+	border-bottom: 1px solid #a7a7a7;
+	background: #DAF4FD;
+}
+.leave_result_nonused p{
+	display: inline-block;
+}
+.leave_result_nonused span{
+	position: absolute;
+	left: 20px;
+}
+
+.leave_result_delete{
+	padding: 15px 30px 15px 47px;
+	border-bottom: 1px solid #a7a7a7;
+	background: #FFF2EE;
+}
+.leave_result_delete p{
+	display: inline-block;
+}
+
+
+#leave_result_info{
+	display: inline-flex;
+	margin: 25px 0px 0px 20px;
+	line-height: 20px;
+}
+
+
+
+
+
+
+
+#list_icon_used{
+	background: url("../images/list_icon_used.png") center right no-repeat;
+	background-size: 19px;
+	height: 19px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_used{ 
+		background: url("../images/list_icon_used@2x.png") center right no-repeat;
+		background-size: 19px;
+		height: 19px;
+			 }
+}
+
+#list_icon_nonusedl{
+	background: url("../images/list_icon_nonusedl.png") center right no-repeat;
+	background-size: 19px;
+	height: 19px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_nonusedl{ 
+		background: url("../images/list_icon_nonusedl@2x.png") center right no-repeat;
+		background-size: 19px;
+		height: 19px;
+			 }
+}
+
+#list_icon_delete{
+	background: url("../images/list_icon_delete.png") center right no-repeat;
+	background-size: 19px;
+	height: 19px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_icon_delete{ 
+		background: url("../images/list_icon_delete@2x.png") center right no-repeat;
+		background-size: 19px;
+		height: 19px;
+			 }
+}
 
 
 
@@ -1331,24 +1411,6 @@ div#navbar a#li-noborder{
 			 }
 }
 
-#list_btn_sckedule{
-	background: url("../images/list_btn_sckedule.png");
-	background-color: transparent;
-	background-repeat:no-repeat;
-	margin-left: -30px;
-	margin-top: -18px;
-	height: 24px;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#list_btn_sckedule{ 
-		background: url("../images/list_btn_sckedule@2x.png") no-repeat;
-		  -webkit-background-size:24px 24px;
-		     -moz-background-size:24px 24px;
-		       -o-background-size:24px 24px;
-          		  background-size:24px 24px;
-			 }
-}
-
 #menu_icon_bubble{
 	background: url("../images/menu_icon_bubble.png");
 	background-repeat:no-repeat;
@@ -1359,6 +1421,40 @@ div#navbar a#li-noborder{
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#menu_icon_bubble{ 
 		background: url("../images/menu_icon_bubble@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_CIA{
+	background: url("../images/menu_icon_CIA.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_CIA{ 
+		background: url("../images/menu_icon_CIA@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
+#menu_icon_bus{
+	background: url("../images/menu_icon_bus.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_bus{ 
+		background: url("../images/menu_icon_bus@2x.png") no-repeat;
 		  -webkit-background-size:22px 22px;
 		     -moz-background-size:22px 22px;
 		       -o-background-size:22px 22px;
@@ -1417,6 +1513,27 @@ div#navbar a#li-noborder{
 			 }
 }
 
+
+
+
+
+#list_btn_sckedule{
+	background: url("../images/list_btn_sckedule.png");
+	background-color: transparent;
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 24px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#list_btn_sckedule{ 
+		background: url("../images/list_btn_sckedule@2x.png") no-repeat;
+		  -webkit-background-size:24px 24px;
+		     -moz-background-size:24px 24px;
+		       -o-background-size:24px 24px;
+          		  background-size:24px 24px;
+			 }
+}
 
 
 /***************/
