@@ -170,17 +170,31 @@
 <!-- 假單查詢與刪除 End-->
 
 <!-- popup container start -->
-<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
+<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
     <div data-role="header" class="popup-header">
-       <p style="margin-bottom: 22px;">請選擇查詢類別</p>
+       <p style="margin-bottom: 22px;">確認刪除以下假單?</p>
     </div>
 
-    <div data-role="content" class="popup-content">
-		<a class="ui-btn btnCate" href="" data-ajax="false"><div>扣薪假</div></a>
-		<a class="ui-btn btnCate" href="" data-ajax="false"><div>不扣薪假</div></a>
-		<a class="ui-btn btnCate" href="" data-ajax="false"><div>其他</div></a>
+    <div data-role="content" class="popup-content" id="leave_manage_result_popup">
+	    <div class="leave_manage_result_popup1">
+			<p>001553_1 , 1 Day</p>
+			<p>(AL)2014/05/22-2014/05/22</p>
+		</div>
+	    <div class="leave_manage_result_popup1">
+			<p>001553_1 , 1 Day</p>
+			<p>(AL)2014/05/22-2014/05/22</p>
+		</div>
 
-        <a class="ui-btn btnPopOK" href="leave_manage_result.html" data-ajax="false"><div>確 認</div></a>
+		<div data-role="navbar">
+			<ul>
+				<li>
+					<a class="ui-btn btnPopOK" href="" data-rel="back" data-ajax="false"><div>取 消</div></a>
+				</li>
+				<li>
+		        	<a class="ui-btn btnPopOK" href="leave_manage_result.html" data-ajax="false"><div>確 認</div></a>
+		        </li>
+	        </ul>
+		</div>
     </div>
 </div>
 <!-- popup container end -->
