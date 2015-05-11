@@ -301,6 +301,16 @@ table#change_table p{
 	text-align: right;
 	font-size: 16px;
 }
+div.inputEMP{
+	margin: 15px 55px 20px 55px;
+}
+div.inputEMP input, div.inputEMP div{
+	display: inline-block;
+}
+div#delEmpno{
+	margin-left: 10px;
+}
+
 
 
 /****************/
@@ -1000,6 +1010,58 @@ div#leave_quota_popup p{
 	text-align: left;
 }
 
+/***********************/
+/* $leave_quota_result */
+/***********************/
+.bg_f8{
+	background-color: #f8f8f8;
+}
+div.quota_result_title{
+	font-size: 16px;
+	color: #1c1c1c;
+	text-align: center;
+	margin-top: 15px;
+}
+div.quota_result_title p{
+	display: inline;
+	line-height: 22px;
+}
+
+/* 月曆的 */
+div.quota_result_calendar ul{
+	list-style-type: none;
+	padding: 0;
+	display: inline-flex;
+	width:100%;
+	margin-bottom: 5px;
+}
+div.quota_result_calendar li{
+	width: 14.285%;
+	text-align: center;
+	color: #1c1c1c;
+}
+div.quota_result_calendar hr{
+	margin: 0;
+}
+
+ul.calendar_week li:first-child,
+ul.calendar_week li:last-child{
+	color: #959595;
+}
+
+
+
+ul.calendar_day{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+ul.calendar_day li:first-child,
+ul.calendar_day li:last-child{
+	color: #959595;
+}
+
+
+
 /****************/
 /* $leave_apply */
 /****************/
@@ -1193,6 +1255,11 @@ div#leave_apply_add{
 .font_20_bold{
 	font-size: 20px !important;
 	font-weight: bold !important;
+}
+.font_16_bold_a40000{
+	font-size: 16px !important;
+	font-weight: bold !important;
+	color: #a40000 !important;
 }
 .font_16_bold{
 	font-size: 16px !important;
