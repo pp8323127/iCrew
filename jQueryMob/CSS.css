@@ -1016,6 +1016,8 @@ div#leave_quota_popup p{
 .bg_f8{
 	background-color: #f8f8f8;
 }
+
+/* quota標題 */
 div.quota_result_title{
 	font-size: 16px;
 	color: #1c1c1c;
@@ -1044,22 +1046,48 @@ div.quota_result_calendar hr{
 	margin: 0;
 }
 
+/* 星期 */
 ul.calendar_week li:first-child,
 ul.calendar_week li:last-child{
 	color: #959595;
 }
+ul.calendar_week li{
+	font-size: 10px;
+}
 
-
-
+/* 日期 */
 ul.calendar_day{
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-ul.calendar_day li:first-child,
-ul.calendar_day li:last-child{
+ul.calendar_day li:first-child p:first-child,
+ul.calendar_day li:last-child p:first-child{
 	color: #959595;
 }
+ul.calendar_day li p{
+	color: #555555;
+	font-size: 14px;
+	line-height: 15px;
+}
+ul.calendar_day li p:first-child{
+	color: #1c1c1c;
+	font-size: 16px;
+	line-height: 20px;
+}
 
+.today_circle{
+	font-size: 16px;
+	line-height: 20px;
+	width: 20px;
+	height: 20px;
+	border-radius: 99em;
+	-moz-border-radius: 99em;
+	-webkit-border-radius: 99em;
+	background: #0066d9;
+	color: #fff !important;
+	text-align: center;
+	margin: 0 auto;
+}
 
 
 /****************/
@@ -1276,7 +1304,11 @@ div#leave_apply_add{
 }
 .font_14_707070{
 	font-size: 14px !important;
-	color: #707070;
+	color: #707070 !important;
+}
+.font_14_a40000{
+	font-size: 14px !important;
+	color: #a40000 !important;
 }
 .font_18{
 	font-size: 18px !important;
