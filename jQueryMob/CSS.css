@@ -304,8 +304,17 @@ table#change_table p{
 div.inputEMP{
 	margin: 15px 55px 20px 55px;
 }
-div.inputEMP input, div.inputEMP div{
+div.inputEMP input{
 	display: inline-block;
+}
+div.inputEMP div{
+	display: inline-block;
+}
+div.inputEMP div:first-child{
+	min-width: 88%;
+}
+div.inputEMP div:last-child{
+	width: 1%;
 }
 div#delEmpno{
 	margin-left: 10px;
@@ -1139,7 +1148,7 @@ div#leave_apply_popup_content{
 	margin: 10px 0px 10px 0px;
 }
 
-div#leave_apply_add{
+div.leave_apply_add{
 	text-align: right;
 	margin-top: 10px;
 	margin-right: 20px;

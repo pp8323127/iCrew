@@ -38,6 +38,21 @@
                 });
                 e.preventDefault();
             });
+
+
+            /* 休假查詢類型 選單 */
+			document.getElementById("type1").onclick = function() {
+				document.getElementById("leave_type").innerHTML="扣薪假";
+			};
+
+			document.getElementById("type2").onclick = function() {
+				document.getElementById("leave_type").innerHTML="不扣薪假";
+			};
+
+			document.getElementById("type_other").onclick = function() {
+				document.getElementById("leave_type").innerHTML="其他";
+			};
+
         });
     </script>
 
@@ -69,6 +84,8 @@
 				startYear: 2000
 			});
 		});
+
+
 	</script>
 </head>
 <body>
@@ -109,7 +126,7 @@
 			</tr>
 			<tr>
 				<td>
-					<a href="#alert-popup-info" id="employee1" value="" class="ui-btn ui-corner-all" data-rel="popup" data-transition="pop">不扣薪假</a>
+					<a href="#alert-popup-info" id="leave_type" class="ui-btn ui-corner-all" data-rel="popup" data-transition="pop">不扣薪假</a>
 				</td>
 			</tr>
 		</table>
@@ -131,12 +148,13 @@
        <p style="margin-bottom: 22px;">請選擇查詢類別</p>
     </div>
 
-    <div data-role="content" class="popup-content">
-		<a class="ui-btn btnCate" href="" data-ajax="false"><div>扣薪假</div></a>
-		<a class="ui-btn btnCate" href="" data-ajax="false"><div>不扣薪假</div></a>
-		<a class="ui-btn btnCate" href="" data-ajax="false"><div>其他</div></a>
+    <div data-role="content" class="popup-content">	
+    	<!-- 這裡面的ID沒有寫CSS，只是用來跑JS而已 -->
+		<a class="ui-btn btnCate" href="#" id="type1" data-rel="back"><div>扣薪假</div></a>
+		<a class="ui-btn btnCate" href="#" id="type2" data-rel="back"><div>不扣薪假</div></a>
+		<a class="ui-btn btnCate" href="#" id="type_other" data-rel="back"><div>其他</div></a>
 
-        <a class="ui-btn btnPopOK" href="" data-rel="back" data-ajax="false"><div>確 認</div></a>
+        <a class="ui-btn btnPopOK" href="" data-rel="back" data-ajax="false"><div>取 消</div></a>
     </div>
 </div>
 <!-- popup container end -->
