@@ -318,7 +318,7 @@ div.inputEMP div:last-child{
 	width: 1%;
 }
 div.delEmpno{
-	margin-left: 10px;
+	margin-left: 5px;
 	width: 1%;
 }
 
@@ -1603,7 +1603,7 @@ div#navbar a#li-noborder{
 	background: url("../images/menu_icon_settings.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	-webkit-margin-top: 0px;
+	/*-webkit-margin-top: 0px;*/
 	margin-top: -18px;
 	height: 22px;
 }
@@ -1614,7 +1614,7 @@ div#navbar a#li-noborder{
 		     -moz-background-size:22px 22px;
 		       -o-background-size:22px 22px;
           		  background-size:22px 22px;
-          		  -webkit-margin-top: 0px;
+          		  /*-webkit-margin-top: 0px;*/
 			 }
 }
 
