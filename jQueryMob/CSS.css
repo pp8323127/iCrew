@@ -306,18 +306,20 @@ div.inputEMP{
 }
 div.inputEMP input{
 	display: inline-block;
+	min-width: 90%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	min-width: 88%;
+	min-width: 90%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
 }
-div#delEmpno{
+div.delEmpno{
 	margin-left: 10px;
+	width: 1%;
 }
 
 
@@ -370,7 +372,8 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 /*日期*/
 .tr_yearmonth th{
 	width: 30px;
-	height: 73.5px;
+	/*height: 73.5px;*/
+	height: 87px;
 	padding: 0;
 	text-align: center;
 	font-size: 14px;
@@ -394,7 +397,8 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 /*選擇試算者*/
 .tr_select_title td{
 	width: 30px;
-	height: 93px;
+	/*height: 93px;*/
+	height: 106px;
 	padding: 0;
 	text-align: center;
 	font-size: 14px;
@@ -448,7 +452,8 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 /*姓名*/
 .tr_name td{
 	width: 72px;
-	height: 37px;
+	/*height: 37px;*/
+	height: 51px;
 	font-weight: normal;
 	color: #fff;
 	background: #5fb4e5;
@@ -515,7 +520,8 @@ div#change_calc_table div#calc_navbar .ui-grid-b>.ui-block-c{
 /*姓名*/
 .tr_name_table td{
 	width: 72px;
-	height: 37px;
+	/*height: 37px;*/
+	height: 51px;
 	font-weight: normal;
 	color: #fff;
 	background: #5fb4e5;
@@ -1102,7 +1108,7 @@ ul.calendar_day li p:first-child{
 /****************/
 /* $leave_apply */
 /****************/
-.p_al_btn{
+.title_al{
 	text-align: center;
 	border: 1px solid #9c9c9c;
 	border-radius: .3em;
@@ -1125,7 +1131,7 @@ ul.calendar_day li p:first-child{
 	border: 1px solid #9c9c9c;
 	width: 95%;
 }
-.leave_apply_table div#list_btn_sckedule{
+.leave_apply_table div.list_btn_sckedule{
 	position: relative;
 	top: 2px;
 	width: 24px;
@@ -1597,6 +1603,7 @@ div#navbar a#li-noborder{
 	background: url("../images/menu_icon_settings.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
+	-webkit-margin-top: 0px;
 	margin-top: -18px;
 	height: 22px;
 }
@@ -1607,6 +1614,7 @@ div#navbar a#li-noborder{
 		     -moz-background-size:22px 22px;
 		       -o-background-size:22px 22px;
           		  background-size:22px 22px;
+          		  -webkit-margin-top: 0px;
 			 }
 }
 
@@ -1631,7 +1639,7 @@ div#navbar a#li-noborder{
 
 
 
-#list_btn_sckedule{
+.list_btn_sckedule{
 	background: url("../images/list_btn_sckedule.png");
 	background-color: transparent;
 	background-repeat:no-repeat;
@@ -1640,7 +1648,7 @@ div#navbar a#li-noborder{
 	height: 24px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#list_btn_sckedule{ 
+	.list_btn_sckedule{ 
 		background: url("../images/list_btn_sckedule@2x.png") no-repeat;
 		  -webkit-background-size:24px 24px;
 		     -moz-background-size:24px 24px;

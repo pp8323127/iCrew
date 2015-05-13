@@ -96,21 +96,24 @@
 <!-- 特休假申請 Start-->
 	<div role="main" class="ui-content">
 
-		<div>
-			<p class="p_al_btn">AL特休假</p>
-		</div>
+<!-- 一整個AL_form的div，是一張休假單的表格 -->
+<div class="AL_form">
+
+	<div>
+		<p class="title_al">AL特休假</p>
+	</div>
 
 	<div>
 		<table class="leave_apply_table">
 			<tr>
 				<td class="leave_td_label">From</td>
 				<td><input type="text" class="myDate" id=""></td>
-				<td><div id="list_btn_sckedule"></div></td>
+				<td><div class="list_btn_sckedule"></div></td>
 			</tr>
 			<tr>
 				<td class="leave_td_label">To</td>
 				<td><input type="text" class="myDate" id=""></td>
-				<td><div id="list_btn_sckedule"></div></td>
+				<td><div class="list_btn_sckedule"></div></td>
 			</tr>
 			<tr>
 				<td class="leave_td_label">Off Days</td>
@@ -118,6 +121,13 @@
 			</tr>
 		</table>
 	</div>
+
+</div>
+
+
+
+
+
 
 	<div class="leave_apply_add">
 		<p>+新增其他休假</p>
