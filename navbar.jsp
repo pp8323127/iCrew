@@ -17,7 +17,7 @@
 	sBrowser = "Microsoft Internet Explorer";
 	}
 
-	// alert(sUsrAg);
+	// alert(navigator.userAgent);
 
 	var b = document.documentElement;
 	b.setAttribute('data-useragent',navigator.userAgent);

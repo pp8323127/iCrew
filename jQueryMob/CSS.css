@@ -1481,7 +1481,7 @@ div#navbar a#li-noborder{
 }
 
 /* 列表標籤icon */
-html[data-useragent*='534.24'] #menu_icon_changes{
+html[data-useragent*='534'] #menu_icon_changes{
 	margin-top: 0px;
 }
 #menu_icon_changes{
@@ -1501,7 +1501,7 @@ html[data-useragent*='534.24'] #menu_icon_changes{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_airplane{
+html[data-useragent*='534'] #menu_icon_airplane{
 	margin-top: 0px;
 }
 #menu_icon_airplane{
@@ -1521,7 +1521,7 @@ html[data-useragent*='534.24'] #menu_icon_airplane{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_leave{
+html[data-useragent*='534'] #menu_icon_leave{
 	margin-top: 0px;
 }
 #menu_icon_leave{
@@ -1541,7 +1541,7 @@ html[data-useragent*='534.24'] #menu_icon_leave{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_bubble{
+html[data-useragent*='534'] #menu_icon_bubble{
 	margin-top: 0px;
 }
 #menu_icon_bubble{
@@ -1561,7 +1561,7 @@ html[data-useragent*='534.24'] #menu_icon_bubble{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_CIA{
+html[data-useragent*='534'] #menu_icon_CIA{
 	margin-top: 0px;
 }
 #menu_icon_CIA{
@@ -1581,7 +1581,7 @@ html[data-useragent*='534.24'] #menu_icon_CIA{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_bus{
+html[data-useragent*='534'] #menu_icon_bus{
 	margin-top: 0px;
 }
 #menu_icon_bus{
@@ -1601,7 +1601,7 @@ html[data-useragent*='534.24'] #menu_icon_bus{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_mail{
+html[data-useragent*='534'] #menu_icon_mail{
 	margin-top: 0px;
 }
 #menu_icon_mail{
@@ -1621,7 +1621,7 @@ html[data-useragent*='534.24'] #menu_icon_mail{
 			 }
 }
 
-html[data-useragent*='534.24'] #menu_icon_settings{
+html[data-useragent*='534'] #menu_icon_settings{
 	margin-top: 0px;
 }
 #menu_icon_settings{
