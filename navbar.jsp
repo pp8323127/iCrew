@@ -1,32 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!-- data-ajex="false" -->
-<script type="text/javascript">
-	
-	var sBrowser, sUsrAg = navigator.userAgent;
-
-	if(sUsrAg.indexOf("Chrome") > -1) {
-	    sBrowser = "Google Chrome";
-	} else if (sUsrAg.indexOf("Safari") > -1) {
-	    sBrowser = "Apple Safari";
-	} else if (sUsrAg.indexOf("Opera") > -1) {
-	    sBrowser = "Opera";
-	} else if (sUsrAg.indexOf("Firefox") > -1) {
-	    sBrowser = "Mozilla Firefox";
-	} else if (sUsrAg.indexOf("MSIE") > -1) {
-	    sBrowser = "Microsoft Internet Explorer";
-	}
-
-	alert(sUsrAg);
-
-
-	var b = document.documentElement;
-	b.setAttribute('data-useragent',  navigator.userAgent);
-	b.setAttribute('data-platform', navigator.platform );
-	b.className += ((!!('ontouchstart' in window) || !!('onmsgesturechange' in window))?' touch':'');
-
-</script>
-
 
 		<li id="li-title">
 			<a href="personInfo.html" data-ajax="false">
