@@ -1481,6 +1481,9 @@ div#navbar a#li-noborder{
 }
 
 /* 列表標籤icon */
+html[data-useragent*='534.24'] #menu_icon_changes{
+	margin-top: 0px;
+}
 #menu_icon_changes{
 	background: url("../images/menu_icon_changes.png");
 	background-repeat:no-repeat;
@@ -1498,6 +1501,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_airplane{
+	margin-top: 0px;
+}
 #menu_icon_airplane{
 	background: url("../images/menu_icon_airplane.png");
 	background-repeat:no-repeat;
@@ -1515,6 +1521,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_leave{
+	margin-top: 0px;
+}
 #menu_icon_leave{
 	background: url("../images/menu_icon_leave.png");
 	background-repeat:no-repeat;
@@ -1532,6 +1541,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_bubble{
+	margin-top: 0px;
+}
 #menu_icon_bubble{
 	background: url("../images/menu_icon_bubble.png");
 	background-repeat:no-repeat;
@@ -1549,6 +1561,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_CIA{
+	margin-top: 0px;
+}
 #menu_icon_CIA{
 	background: url("../images/menu_icon_CIA.png");
 	background-repeat:no-repeat;
@@ -1566,6 +1581,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_bus{
+	margin-top: 0px;
+}
 #menu_icon_bus{
 	background: url("../images/menu_icon_bus.png");
 	background-repeat:no-repeat;
@@ -1583,6 +1601,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_mail{
+	margin-top: 0px;
+}
 #menu_icon_mail{
 	background: url("../images/menu_icon_mail.png");
 	background-repeat:no-repeat;
@@ -1600,6 +1621,9 @@ div#navbar a#li-noborder{
 			 }
 }
 
+html[data-useragent*='534.24'] #menu_icon_settings{
+	margin-top: 0px;
+}
 #menu_icon_settings{
 	background: url("../images/menu_icon_settings.png");
 	background-repeat:no-repeat;
