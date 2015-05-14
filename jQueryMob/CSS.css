@@ -373,7 +373,7 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 .tr_yearmonth th{
 	width: 30px;
 	/*height: 73.5px;*/
-	height: 87px;
+	height: 88px;
 	padding: 0;
 	text-align: center;
 	font-size: 14px;
@@ -1053,7 +1053,8 @@ div.quota_result_calendar ul{
 	margin-bottom: 5px;
 }
 div.quota_result_calendar li{
-	width: 14.285%;
+	/*width: 14.285%;*/
+	width:100%;
 	text-align: center;
 	color: #1c1c1c;
 }
@@ -1603,7 +1604,6 @@ div#navbar a#li-noborder{
 	background: url("../images/menu_icon_settings.png");
 	background-repeat:no-repeat;
 	margin-left: -30px;
-	/*-webkit-margin-top: 0px;*/
 	margin-top: -18px;
 	height: 22px;
 }
@@ -1614,7 +1614,6 @@ div#navbar a#li-noborder{
 		     -moz-background-size:22px 22px;
 		       -o-background-size:22px 22px;
           		  background-size:22px 22px;
-          		  /*-webkit-margin-top: 0px;*/
 			 }
 }
 
