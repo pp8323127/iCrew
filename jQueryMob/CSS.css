@@ -1045,18 +1045,50 @@ div.quota_result_title p{
 }
 
 /* 月曆的 */
+
+/*	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(1) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(2) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(3) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(4) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(5) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(6) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(7) {-webkit-flex-grow: 1;}
+
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(1) {flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(2) {flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(3) {flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(4) {flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(5) {flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(6) {flex-grow: 1;}
+	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(7) {flex-grow: 1;}
+*/
+
+/*html[data-useragent*='534'] div.quota_result_calendar ul{
+    display: -webkit-flex; 
+    display: flex;
+}*/
+
+div.quota_result_calendar{
+	display: table;
+	margin-top: 20px;
+}
 div.quota_result_calendar ul{
 	list-style-type: none;
 	padding: 0;
-	display: inline-flex;
-	width:100%;
+/*	display: inline-flex;
+	display: -webkit-inline-flex;*/
+	display: table-row;
+	/*width:100%;*/
 	margin-bottom: 5px;
+	border-bottom: 1px solid #1c1c1c;
 }
 div.quota_result_calendar li{
 	/*width: 14.285%;*/
-	width:100%;
+	width: 1%;
 	text-align: center;
 	color: #1c1c1c;
+	display: table-cell;
+	border-bottom: 1px solid #1c1c1c;
 }
 div.quota_result_calendar hr{
 	margin: 0;
@@ -1069,16 +1101,21 @@ ul.calendar_week li:last-child{
 }
 ul.calendar_week li{
 	font-size: 10px;
+	height: 17px;
 }
 
 /* 日期 */
 ul.calendar_day{
 	margin-top: 5px;
 	margin-bottom: 5px;
+	height: 70px;
 }
 ul.calendar_day li:first-child p:first-child,
 ul.calendar_day li:last-child p:first-child{
 	color: #959595;
+}
+ul.calendar_day li{
+	padding: 10px 0px 10px 0px;
 }
 ul.calendar_day li p{
 	color: #555555;
