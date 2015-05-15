@@ -1257,7 +1257,8 @@ div.leave_apply_add{
 }
 .leave_result_nonused span{
 	position: absolute;
-	left: 20px;
+	left: 10px;
+	margin-top: 5px;
 }
 
 .leave_result_delete{
