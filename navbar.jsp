@@ -1,15 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 
-
 		<li id="li-title">
-
-		<script type="text/javascript">
-			var b = document.documentElement;
-			b.setAttribute('data-useragent',navigator.userAgent);
-			// alert(navigator.userAgent);
-		</script>
-
 			<a href="personInfo.html" data-ajax="false">
 				<p>蘇晶晶</p>
 				<p>654321</p>

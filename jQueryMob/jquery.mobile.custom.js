@@ -8,6 +8,10 @@
 *
 */
 
+var b = document.documentElement;
+b.setAttribute('data-useragent',navigator.userAgent);
+// alert(navigator.userAgent);
+
 (function ( root, doc, factory ) {
 	if ( typeof define === "function" && define.amd ) {
 		// AMD. Register as an anonymous module.
