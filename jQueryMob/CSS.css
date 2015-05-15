@@ -1046,24 +1046,24 @@ div.quota_result_title p{
 
 /* 月曆的 */
 
-/*	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(1) {-webkit-flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(2) {-webkit-flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(3) {-webkit-flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(4) {-webkit-flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(5) {-webkit-flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(6) {-webkit-flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(7) {-webkit-flex-grow: 1;}
+/*	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(1) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(2) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(3) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(4) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(5) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(6) {-webkit-flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(7) {-webkit-flex-grow: 1;}
 
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(1) {flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(2) {flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(3) {flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(4) {flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(5) {flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(6) {flex-grow: 1;}
-	html[data-useragent*='534'] div.quota_result_calendar ul>li:nth-of-type(7) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(1) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(2) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(3) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(4) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(5) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(6) {flex-grow: 1;}
+	html[data-useragent*='534.24'] div.quota_result_calendar ul>li:nth-of-type(7) {flex-grow: 1;}
 */
 
-/*html[data-useragent*='534'] div.quota_result_calendar ul{
+/*html[data-useragent*='534.24'] div.quota_result_calendar ul{
     display: -webkit-flex; 
     display: flex;
 }*/
@@ -1514,7 +1514,7 @@ div#navbar a#li-noborder{
 }
 
 /* 列表標籤icon */
-html[data-useragent*='534'] #menu_icon_changes{
+html[data-useragent*='534.24'] #menu_icon_changes{
 	margin-top: 0px;
 }
 #menu_icon_changes{
@@ -1534,7 +1534,7 @@ html[data-useragent*='534'] #menu_icon_changes{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_airplane{
+html[data-useragent*='534.24'] #menu_icon_airplane{
 	margin-top: 0px;
 }
 #menu_icon_airplane{
@@ -1554,7 +1554,7 @@ html[data-useragent*='534'] #menu_icon_airplane{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_leave{
+html[data-useragent*='534.24'] #menu_icon_leave{
 	margin-top: 0px;
 }
 #menu_icon_leave{
@@ -1574,7 +1574,7 @@ html[data-useragent*='534'] #menu_icon_leave{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_bubble{
+html[data-useragent*='534.24'] #menu_icon_bubble{
 	margin-top: 0px;
 }
 #menu_icon_bubble{
@@ -1594,7 +1594,7 @@ html[data-useragent*='534'] #menu_icon_bubble{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_CIA{
+html[data-useragent*='534.24'] #menu_icon_CIA{
 	margin-top: 0px;
 }
 #menu_icon_CIA{
@@ -1614,7 +1614,7 @@ html[data-useragent*='534'] #menu_icon_CIA{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_bus{
+html[data-useragent*='534.24'] #menu_icon_bus{
 	margin-top: 0px;
 }
 #menu_icon_bus{
@@ -1634,7 +1634,7 @@ html[data-useragent*='534'] #menu_icon_bus{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_mail{
+html[data-useragent*='534.24'] #menu_icon_mail{
 	margin-top: 0px;
 }
 #menu_icon_mail{
@@ -1654,7 +1654,7 @@ html[data-useragent*='534'] #menu_icon_mail{
 			 }
 }
 
-html[data-useragent*='534'] #menu_icon_settings{
+html[data-useragent*='534.24'] #menu_icon_settings{
 	margin-top: 0px;
 }
 #menu_icon_settings{
