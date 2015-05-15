@@ -1079,8 +1079,6 @@ div.quota_result_calendar ul{
 	display: -webkit-inline-flex;*/
 	display: table-row;
 	/*width:100%;*/
-	margin-bottom: 5px;
-	border-bottom: 1px solid #1c1c1c;
 }
 div.quota_result_calendar li{
 	/*width: 14.285%;*/
@@ -1088,10 +1086,10 @@ div.quota_result_calendar li{
 	text-align: center;
 	color: #1c1c1c;
 	display: table-cell;
-	border-bottom: 1px solid #1c1c1c;
+	border-bottom: 1px solid #ccc;
 }
-div.quota_result_calendar hr{
-	margin: 0;
+div.quota_result_calendar ul:last-child li{
+	border-bottom: none;
 }
 
 /* 星期 */
@@ -1106,8 +1104,6 @@ ul.calendar_week li{
 
 /* 日期 */
 ul.calendar_day{
-	margin-top: 5px;
-	margin-bottom: 5px;
 	height: 70px;
 }
 ul.calendar_day li:first-child p:first-child,
@@ -1877,5 +1873,292 @@ div#btnApply div{
 		     -moz-background-size:12px 12px;
 		       -o-background-size:12px 12px;
           		  background-size:12px 12px;
+			 }
+}
+
+
+
+/********************/
+/* 學長寫的MainPage */
+/********************/
+.header-bd {
+    background: #FFFFFF !important;
+    background-repeat:repeat-x;
+    background-position:center center;
+    background-size:100% 100%;
+}
+
+.main-navi {
+    height: 44px;
+	text-align: center;    
+}
+
+.navbar {
+    height: 31px;
+    margin-top: 10px;
+    font-family: 'Microsoft JhengHei', Helvtica;
+    font-size: 18px;
+	font-weight: bold; 
+	text-shadow:none !important; 
+}
+
+#btn_menu {
+	width: 25px;
+    height: 25px;
+    background: url("../images/navi_icon_menu.png") center center;
+	background-repeat:no-repeat;
+	margin-top: 6px;
+	margin-right: 12.5px; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_menu{ 
+		background: url("../images/navi_icon_menu@2x.png") center center no-repeat;
+		  -webkit-background-size:25px 25px;
+		     -moz-background-size:25px 25px;
+		       -o-background-size:25px 25px;
+          		  background-size:25px 25px;
+			 }
+}
+
+#MainPage{
+	width: 100%;
+    background:url("../images/index_bg_blue@2x.png");
+    background-repeat:repeat-x;
+    background-position:left center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+
+.div_change {
+	width: 100%;
+	height: 90px;
+	margin-top: 50px;
+	text-align: center;
+}
+
+#btn_change {
+    height: 55px;
+    background: url("../images/menu_btn_change.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_change{ 
+		background: url("../images/menu_btn_change@2x.png") center center no-repeat;
+		  -webkit-background-size:150px 55px;
+		     -moz-background-size:150px 55px;
+		       -o-background-size:150px 55px;
+          		  background-size:150px 55px;
+			 }
+}
+
+.div_choose {
+	width: 100%;
+	height: 90px;
+	text-align: center;
+}
+
+#btn_choose {
+    height: 55px;
+    background: url("../images/menu_btn_choose.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_choose{ 
+		background: url("../images/menu_btn_choose@2x.png") center center no-repeat;
+		  -webkit-background-size:150px 55px;
+		     -moz-background-size:150px 55px;
+		       -o-background-size:150px 55px;
+          		  background-size:150px 55px;
+			 }
+}
+
+.div_leave {
+	width: 100%;
+	height: 90px;
+	text-align: center;
+}
+
+#btn_leave {
+    height: 55px;
+    background: url("../images/menu_btn_leave.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_leave{ 
+		background: url("../images/menu_btn_leave@2x.png") center center no-repeat;
+		  -webkit-background-size:150px 55px;
+		     -moz-background-size:150px 55px;
+		       -o-background-size:150px 55px;
+          		  background-size:150px 55px;
+			 }
+}
+
+
+
+.div_communicate_mailM {
+	width: 100%;
+	height: 40px;
+	margin-bottom: 52.5px;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+
+.div_communicateM {
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+#btn_communicateM {
+    height: 40px;
+    background: url("../images/menu_btn_communicate.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_communicateM{ 
+		background: url("../images/menu_btn_communicate@2x.png") center center no-repeat;
+		  -webkit-background-size:130px 40px;
+		     -moz-background-size:130px 40px;
+		       -o-background-size:130px 40px;
+          		  background-size:130px 40px;
+			 }
+}
+
+.div_mailM {
+	display: inline-block;
+	width: 130px;
+	height: 40px;
+	margin-left: 5px;
+	text-align: center;
+}
+
+#btn_mailM {
+    height: 40px;
+    background: url("../images/menu_btn_mail.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_mailM{ 
+		background: url("../images/menu_btn_mail@2x.png") center center no-repeat;
+		  -webkit-background-size:130px 40px;
+		     -moz-background-size:130px 40px;
+		       -o-background-size:130px 40px;
+          		  background-size:130px 40px;
+			 }
+}
+
+
+
+
+.div_cia_bus {
+	width: 100%;
+	height: 44px;
+	margin-bottom: 15px;
+	position: absolute;
+	bottom: 92.5px;
+	text-align: center;
+}
+
+.div_cia {
+	display: inline-block;
+	width: 130px;
+	height: 44px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+#btn_cia {
+    height: 44px;
+    background: url("../images/menu_btn_CIA.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_cia{ 
+		background: url("../images/menu_btn_CIA@2x.png") center center no-repeat;
+		  -webkit-background-size:130px 44px;
+		     -moz-background-size:130px 44px;
+		       -o-background-size:130px 44px;
+          		  background-size:130px 44px;
+			 }
+}
+
+.div_bus {
+	display: inline-block;
+	width: 130px;
+	height: 44px;
+	margin-left: 5px;
+	text-align: center;
+}
+
+#btn_bus {
+    height: 44px;
+    background: url("../images/menu_btn_bus.png") center center;
+	background-repeat:no-repeat;
+	margin: 0 !important; 
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	outline: 0;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#btn_bus{ 
+		background: url("../images/menu_btn_bus@2x.png") center center no-repeat;
+		  -webkit-background-size:130px 44px;
+		     -moz-background-size:130px 44px;
+		       -o-background-size:130px 44px;
+          		  background-size:130px 44px;
 			 }
 }
