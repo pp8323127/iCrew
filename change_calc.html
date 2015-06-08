@@ -11,7 +11,6 @@
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-
         	//今天的日期(yyyy-m)
 			var today = new Date();
 			thisYear = today.getFullYear();
@@ -20,7 +19,6 @@
 			var myDate = thisYear + "年" + thisMonth + "月";
 			document.getElementById("myDate").value = myDate;
 			// alert(myDate);
-
             $("#btn_menu").click(function(e){
                 $.ajax({
                     type: "POST",
@@ -38,29 +36,17 @@
                 });
                 e.preventDefault();
             });
-
 /*
 			document.getElementById("addEmployee").onclick = function() {
 				document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
 			};
 */
-
-
-
-
-
-
-
         });
-
 /*
         function addEmp(){
 			document.getElementById("123").innerHTML+="<a href=\"\" id=\"employee2\" value=\"\" class=\"ui-btn ui-corner-all\">被換員工</a>";
 		};
 */
-
-
-
     </script>
 
 	<!-- Mobiscroll JS and CSS Includes -->
@@ -130,10 +116,10 @@
 				<th colspan="1">被換者之員工號</th>
 			</tr>
 			<tr>
-				<td>
+				<td id="divEmpno">
 					<div class="inputEMP">
 						<input type="text" class="uid" name="rEmpno" id="employee0" value="635863">
-						<div class="delEmpno">X</div>
+						<div class="delEmpno"></div>
 					</div>
 				</td>
 			</tr>
