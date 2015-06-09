@@ -28,7 +28,7 @@ img {
 .navbar {
     height: 31px;
     margin-top: 10px;
-    font-family: 'Microsoft JhengHei', Helvtica;
+    font-family: 'Microsoft JhengHei', helvetica;
     font-size: 18px;
 	font-weight: bold; 
 	text-shadow:none !important; 
@@ -70,7 +70,7 @@ a {
 }
 
 body {
-	font-family: 'Microsoft JhengHei', Helvtica;
+	font-family: 'Microsoft JhengHei', helvetica;
 	font-weight: normal;
 	width: 100%;
 }
@@ -318,7 +318,15 @@ body {
 .ui-panel-inner {
   padding: 0px;
 }
-
+/*選單滑出後，背景變灰*/
+.ui-panel-dismiss{
+	position: absolute; 
+	top: 0; 
+	z-index: 1000; 
+	height: 989px; 
+	width: 100%;
+	background-color: rgba(69, 69, 69, 0.6);
+}
 /* 姓名title */
 div#navbar li#li-title{
 	background: #4d4d4d;

@@ -1,5 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 
 		<li id="li-title">
 			<a href="personInfo.html" data-ajax="false">
@@ -87,13 +85,20 @@
 			</div>
 		</a>
 		</li>
-		<li data-role="list-divider" class="lidi lidi_border">
+<!-- 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">
 			<div id="menu_icon_settings">
 				<p>設定</p>
 			</div>
 		</a>
-		</li>
+		</li> -->
+        <li data-role="list-divider" class="lidi lidi_border">
+        <a href="MainPage.html" id="list-divider-p" data-ajax="false">
+            <div id="menu_icon_home">
+                <p>回首頁</p>
+            </div>
+        </a>
+        </li>
 		<li>
 			<a id="li-noborder" href="login.html" data-ajax="false">
 				<div id="menu_btn_logout"></div>

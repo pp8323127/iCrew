@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
 body,html{
-	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-weight: normal !important;
 	width: 100% !important;
 	text-shadow: none !important;
 	color: #1c1c1c !important;
 }
 a,p,table,div,input{
-	font-family: "微軟正黑體","Microsoft JhengHei", Helvtica !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	text-decoration: none !important;
 	text-shadow: none !important;
 	margin: 0;
@@ -29,6 +29,10 @@ a,p,table,div,input{
 /*********************/
 /* $headerBar 標題列 */
 /*********************/
+div.ui-header.ui-bar-inherit.ui-header-fixed.slidedown{
+	padding:0;
+	border:0;
+}
 #header-bar{
 	width: 100%;
 	height: 44px;
@@ -96,6 +100,7 @@ a,p,table,div,input{
     background-position:left center;
     background-attachment:scroll;
     background-size:100% 100%;
+    background-color: #cdf9f6;
 }
 div#main-content{
 	margin-top: 65px;
@@ -110,7 +115,7 @@ div#main-content a{
 	border: none;
 	color: #fff;
 	font-size: 18px;
-	line-height: 30px;
+	line-height: 23px;
 	text-align: left;
 	padding-left: 35px;
 	font-weight: normal;
@@ -119,7 +124,10 @@ div#main-content a:first-child{
 	margin-top:42px
 }
 div#main-content hr{
-	border: 1px solid #9BD2E9 !important;
+	border:0; 
+	height:1px; 
+	background-color:#9BD2E9;
+	color:#9BD2E9;
 	opacity: 0.7;
 }
 
@@ -242,6 +250,7 @@ div#personinfoDetail p{
 div#btnOKCancel{
 	text-align: center;
 	margin-top: 40px;
+	margin-bottom: 40px;
 }
 div#btnOKCancel a{
 	display: inline-block;
@@ -648,30 +657,30 @@ ul#result_personinfo div:first-child{
 
 #list_btn_profile{
 	background: url("../images/list_btn_profile.png") center center no-repeat;
-	height: 16px;
+	height: 20px;
 	border: none;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#list_btn_profile{ 
 		background: url("../images/list_btn_profile@2x.png") center center no-repeat;
-		  -webkit-background-size:68px 16px;
-		     -moz-background-size:68px 16px;
-		       -o-background-size:68px 16px;
-          		  background-size:68px 16px;
+		  -webkit-background-size:100px 20px;
+		     -moz-background-size:100px 20px;
+		       -o-background-size:100px 20px;
+          		  background-size:100px 20px;
 			 }
 }
 .list_btn_profile{
 	background: url("../images/list_btn_profile.png") center center no-repeat;
-	height: 16px;
+	height: 20px;
 	border: none;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	.list_btn_profile{ 
 		background: url("../images/list_btn_profile@2x.png") center center no-repeat;
-		  -webkit-background-size:68px 16px;
-		     -moz-background-size:68px 16px;
-		       -o-background-size:68px 16px;
-          		  background-size:68px 16px;
+		  -webkit-background-size:100px 20px;
+		     -moz-background-size:100px 20px;
+		       -o-background-size:100px 20px;
+          		  background-size:100px 20px;
 			 }
 }
 /*文字內容*/
@@ -681,7 +690,7 @@ ul.result_content p{
 }
 .noborder p{
 	text-align: right;
-	width: 80px;
+	width: 81px;
 	font-size: 14px;
 }
 .pbold{
@@ -702,7 +711,7 @@ ul.result_content p{
 	font-size: 14px;
 }
 div#result_info{
-	display: inline-flex;
+	display: inline-block;
 	margin: 20px 0px 0px 20px;
 }
 span#div_result_infoMsg{
@@ -789,6 +798,7 @@ div#div_change_apply_substitle_noauthority p{
 	margin: 0;
 	display: inline-block;
 	font-size: 18px;
+	width: 80%;
 }
 .change_btnApply2{
 	margin-top: 45px;
@@ -798,7 +808,10 @@ div#div_change_apply_substitle_noauthority p{
 	height: 20px;
 	width: 20px;
 	vertical-align: text-top;
-	display: inline-flex;
+	/*display: inline-flex;*/
+	display: inline-block;
+	position: relative;
+	top: -50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#list_icon_info_20px{ 
@@ -867,19 +880,23 @@ ul#log_listview li:first-child p{
 }
 ul#log_listview li, 
 ul#log_listview a{
-	height: 44px;
+	/*height: 44px;*/
 	padding: 0;
 	margin: 0;
 }
-ul#log_listview p{
-	display: inline-block;
-	margin: 0;
-	line-height: 44px;
-	font-size: 16px;
+ul#log_listview a{
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
-ul#log_listview p:first-child{
+ul#log_listview p{
+	margin: 0;
+	line-height: 25px;
+	font-size: 16px;
 	padding-left: 20px;
 }
+/*ul#log_listview p:first-child{
+	padding-left: 20px;
+}*/
 div#log_list_ask{
 	margin-top: 37.5px;
 	text-align: center;
@@ -1030,7 +1047,7 @@ div.search_title{
 div.search_title p{
 	display: inline-block;
 	line-height: 25px;
-	font-size: 14px;
+	font-size: 16px;
 }
 div.search_title p:first-child{
 	margin-right: 15px;
@@ -1181,10 +1198,14 @@ ul.calendar_day li p:first-child{
 }
 .leave_apply_table{
 	margin: 0px auto;
-	padding: 30px 15px 15px 15px;
+	padding: 30px 0px 15px 0px;
 	width: 100%;
 	text-align: center;
 	border-bottom: 1px solid #9c9c9c;
+}
+.AL_form{
+	margin-left: 15px;
+	margin-right: 15px;
 }
 .leave_apply_table div{
 	display: inline-block;
@@ -1306,7 +1327,7 @@ div.leave_apply_add{
 
 
 #leave_result_info{
-	display: inline-flex;
+	/*display: inline-flex;*/
 	margin: 25px 0px 0px 20px;
 	line-height: 20px;
 }
@@ -1428,7 +1449,7 @@ div.leave_apply_add{
 }
 .ui-content.popupDiv{
 	max-width: 400px;
-	min-width: 305px;
+	min-width: 290px;
 	font-size: 17px;
 	padding: 0px;
 	background: #fff;
@@ -1453,6 +1474,9 @@ div.leave_apply_add{
 	padding: 17.5px 22.5px 20px 22.5px;
 	margin: 0px !important;
 	text-align: center;
+}
+.popup-content #strMsg p{
+	padding: 0;
 }
 .ui-btn.btnPopOK{
 	margin: 0px;
@@ -1486,7 +1510,15 @@ div.leave_apply_add{
 .ui-panel-inner {
   padding: 0px;
 }
-
+/*選單滑出後，背景變灰*/
+.ui-panel-dismiss{
+	position: absolute; 
+	top: 0; 
+	z-index: 1000; 
+	height: 989px; 
+	width: 100%;
+	background-color: rgba(69, 69, 69, 0.6);
+}
 /* 姓名title */
 div#navbar li#li-title{
 	background: #4d4d4d;
@@ -1726,6 +1758,23 @@ html[data-useragent*='534.24'] #menu_icon_settings{
 			 }
 }
 
+#menu_icon_home{
+	background: url("../images/menu_icon_home.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_home{ 
+		background: url("../images/menu_icon_home@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
+
 
 
 
@@ -1791,6 +1840,7 @@ html[data-useragent*='534.24'] #menu_icon_settings{
 div#btnApply{
 	text-align: center;
 	/*margin-top: 60px;*/
+	margin-bottom: 40px;
 }
 div#btnApply a{
 	margin: 0px auto;

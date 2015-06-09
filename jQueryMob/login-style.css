@@ -43,7 +43,7 @@ img {
 /*登入區域*/
 
 body {
-	font-family: 'Microsoft JhengHei', Helvtica !important;
+	font-family: 'Microsoft JhengHei', helvetica !important;
 	font-weight: normal !important;
 	width: 100% !important;
 }
@@ -94,7 +94,7 @@ body {
 	background: #0067d9 !important;
 	margin-right: auto;
 	margin-left: auto;
-	font-family: 'Microsoft JhengHei', Helvtica;
+	font-family: 'Microsoft JhengHei', helvetica;
 	font-size: 17px;
 	font-weight: normal;
 	text-shadow:none !important;
@@ -143,7 +143,7 @@ body {
 .alert-title {
 	height: 17px;
 	margin-top: 22.5px;
-	font-family: 'Microsoft JhengHei', Helvtica;
+	font-family: 'Microsoft JhengHei', helvetica;
 	font-size: 17px;
 	font-weight: bold;
 	text-shadow:none !important;
@@ -155,7 +155,7 @@ body {
 	margin-bottom: 20px;
 	margin-right: 22.5px;
 	margin-left: 22.5px;
-	font-family: 'Microsoft JhengHei', Helvtica;
+	font-family: 'Microsoft JhengHei', helvetica;
 	font-size: 15px;
 	font-weight: normal;
 	text-shadow:none !important;
@@ -171,7 +171,7 @@ body {
 #btn_confirm {
 	height: 19px;
 	background: #FFFFFF !important;
-	font-family: 'Microsoft JhengHei', Helvtica;
+	font-family: 'Microsoft JhengHei', helvetica;
 	font-size: 18px;
 	font-weight: bold !important;
 	text-shadow:none !important;
