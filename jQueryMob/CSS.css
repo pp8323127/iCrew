@@ -326,13 +326,13 @@ div.inputEMP{
 }
 div.inputEMP input{
 	display: inline-block;
-	min-width: 94%;
+	min-width: 96%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	min-width: 94%;
+	min-width: 96%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
