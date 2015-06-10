@@ -307,10 +307,10 @@ table#change_table input{
 	height: 45px;
 }
 div#inputMon{
-	margin: 25px 55px 25px 55px;
+	margin: 25px 45px 25px 55px;
 }
 div#inputMon div, div#inputMon input{
-	width: 99%;
+	width: 97.5%;
 }
 .ui-input-text{
 	box-shadow: none;
@@ -322,17 +322,17 @@ table#change_table p{
 	font-size: 16px;
 }
 div.inputEMP{
-	margin: 15px 55px 20px 55px;
+	margin: 15px 45px 20px 55px;
 }
 div.inputEMP input{
 	display: inline-block;
-	min-width: 96%;
+	width: 94%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	min-width: 96%;
+	width: 94%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
@@ -1519,7 +1519,7 @@ div.leave_apply_add{
 	position: absolute; 
 	top: 0; 
 	z-index: 1000; 
-	height: 940px; 
+	height: 944px; 
 	width: 100%;
 	background-color: rgba(69, 69, 69, 0.6);
 }
