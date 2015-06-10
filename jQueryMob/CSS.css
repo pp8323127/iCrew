@@ -307,7 +307,7 @@ table#change_table input{
 	height: 45px;
 }
 div#inputMon{
-	margin: 25px 45px 25px 55px;
+	margin: 25px 55px 25px 55px;
 }
 div#inputMon div, div#inputMon input{
 	width: 97.5%;
@@ -322,17 +322,17 @@ table#change_table p{
 	font-size: 16px;
 }
 div.inputEMP{
-	margin: 15px 45px 20px 55px;
+	margin: 15px 55px 20px 55px;
 }
 div.inputEMP input{
 	display: inline-block;
-	width: 94%;
+	min-width: 94%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	width: 94%;
+	min-width: 94%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
