@@ -332,7 +332,7 @@ div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	min-width: 94%;
+	width: 94%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
