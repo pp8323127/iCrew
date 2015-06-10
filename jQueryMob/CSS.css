@@ -326,21 +326,24 @@ div.inputEMP{
 }
 div.inputEMP input{
 	display: inline-block;
-	min-width: 96%;
+	min-width: 94%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	min-width: 96%;
+	min-width: 94%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
 }
 #divEmpno div.delEmpno{
 	position: relative;
-	margin-right: 5px;
+	/*margin-right: 5px;*/
+	margin: 0px;
+	margin-left: -35px;
 	top: 5px;
+	/*right: 5px;*/
 	width: 24px;
 }
 
