@@ -28,7 +28,7 @@ img {
 .navbar {
     height: 31px;
     margin-top: 10px;
-    font-family: 'Microsoft JhengHei', helvetica;
+    font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
     font-size: 18px;
 	font-weight: bold; 
 	text-shadow:none !important; 
@@ -70,9 +70,12 @@ a {
 }
 
 body {
-	font-family: 'Microsoft JhengHei', helvetica;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-weight: normal;
 	width: 100%;
+}
+a,p,table,div,input{
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 }
 
 #MainPage{
@@ -323,7 +326,7 @@ body {
 	position: absolute; 
 	top: 0; 
 	z-index: 1000; 
-	height: 989px; 
+	height: 940px; 
 	width: 100%;
 	background-color: rgba(69, 69, 69, 0.6);
 }
@@ -567,7 +570,22 @@ html[data-useragent*='534.24'] #menu_icon_settings{
 }
 
 
-
+#menu_icon_home{
+	background: url("../images/menu_icon_home.png");
+	background-repeat:no-repeat;
+	margin-left: -30px;
+	margin-top: -18px;
+	height: 22px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#menu_icon_home{ 
+		background: url("../images/menu_icon_home@2x.png") no-repeat;
+		  -webkit-background-size:22px 22px;
+		     -moz-background-size:22px 22px;
+		       -o-background-size:22px 22px;
+          		  background-size:22px 22px;
+			 }
+}
 
 
 .list_btn_sckedule{
@@ -624,30 +642,6 @@ html[data-useragent*='534.24'] #menu_icon_settings{
           		  background-size:24px 24px;
 			 }
 }
-/***************/
-/*   $button   */
-/***************/
-div#btnApply{
-	text-align: center;
-	/*margin-top: 60px;*/
-}
-div#btnApply a{
-	margin: 0px auto;
-	width: 145px;
-	height: 44px;
-	font-weight: normal;
-	font-size: 17px;
-	color: #fff;
-	background: #0067d9;
-	padding: 0px 0px 0px 0px;
-}
-div#btnApply div{
-	/*按鈕文字置中*/
-	text-align:center; 
-	height:44px; 
-	line-height:44px;
-}
-
 
 /*------------------------------------------------------------------------*-
     $Footer

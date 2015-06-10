@@ -326,13 +326,13 @@ div.inputEMP{
 }
 div.inputEMP input{
 	display: inline-block;
-	min-width: 98%;
+	min-width: 96%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	min-width: 98%;
+	min-width: 96%;
 }
 div.inputEMP div:last-child{
 	width: 1%;
@@ -659,9 +659,11 @@ ul#result_personinfo div:first-child{
 	background: url("../images/list_btn_profile.png") center center no-repeat;
 	height: 20px;
 	border: none;
+	background-color: transparent !important;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#list_btn_profile{ 
+		background-color: transparent !important;
 		background: url("../images/list_btn_profile@2x.png") center center no-repeat;
 		  -webkit-background-size:100px 20px;
 		     -moz-background-size:100px 20px;
@@ -673,9 +675,11 @@ ul#result_personinfo div:first-child{
 	background: url("../images/list_btn_profile.png") center center no-repeat;
 	height: 20px;
 	border: none;
+	background-color: transparent !important;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	.list_btn_profile{ 
+		background-color: transparent !important;
 		background: url("../images/list_btn_profile@2x.png") center center no-repeat;
 		  -webkit-background-size:100px 20px;
 		     -moz-background-size:100px 20px;
@@ -1515,7 +1519,7 @@ div.leave_apply_add{
 	position: absolute; 
 	top: 0; 
 	z-index: 1000; 
-	height: 989px; 
+	height: 940px; 
 	width: 100%;
 	background-color: rgba(69, 69, 69, 0.6);
 }

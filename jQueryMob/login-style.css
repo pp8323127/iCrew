@@ -23,7 +23,7 @@ img {
 .logo-img {
     height: 44px;
 	text-align: center;
-	background: url(../images/navi_CI_Logo.png) center center;
+	background: url("../images/navi_CI_Logo.png") center center;
 	background-repeat:no-repeat;    
 }
 
@@ -43,9 +43,12 @@ img {
 /*登入區域*/
 
 body {
-	font-family: 'Microsoft JhengHei', helvetica !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-weight: normal !important;
 	width: 100% !important;
+}
+a,p,table,div,input{
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 }
 
 #loginPage{
@@ -94,7 +97,7 @@ body {
 	background: #0067d9 !important;
 	margin-right: auto;
 	margin-left: auto;
-	font-family: 'Microsoft JhengHei', helvetica;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-size: 17px;
 	font-weight: normal;
 	text-shadow:none !important;
@@ -143,7 +146,7 @@ body {
 .alert-title {
 	height: 17px;
 	margin-top: 22.5px;
-	font-family: 'Microsoft JhengHei', helvetica;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-size: 17px;
 	font-weight: bold;
 	text-shadow:none !important;
@@ -155,7 +158,7 @@ body {
 	margin-bottom: 20px;
 	margin-right: 22.5px;
 	margin-left: 22.5px;
-	font-family: 'Microsoft JhengHei', helvetica;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-size: 15px;
 	font-weight: normal;
 	text-shadow:none !important;
@@ -171,7 +174,7 @@ body {
 #btn_confirm {
 	height: 19px;
 	background: #FFFFFF !important;
-	font-family: 'Microsoft JhengHei', helvetica;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
 	font-size: 18px;
 	font-weight: bold !important;
 	text-shadow:none !important;

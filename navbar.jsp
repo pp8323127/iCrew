@@ -71,13 +71,13 @@
 				</div>
 		</a>
 		</li>
-		<li data-role="list-divider" class="lidi lidi_border">
+<!-- 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">
 				<div id="menu_icon_bubble">
 					<p>全員即時通訊</p>
 				</div>
 		</a>
-		</li>
+		</li> -->
 		<li data-role="list-divider" class="lidi lidi_border">
 		<a href="#" id="list-divider-p" data-ajax="false">
 			<div id="menu_icon_mail">
