@@ -364,7 +364,7 @@ div.delEmpno{
 }
 .inputEMP2 input{
 	height: 45px;
-	width: 85%;
+	/*width: 85%;*/
 	text-align: center;
 	font-size: 17px;
 	color: #1c1c1c;
@@ -372,6 +372,9 @@ div.delEmpno{
 }
 div.inputEMP2{
 	margin: 15px 15px 20px 55px;
+}
+div.inputEMP2 div{
+	width: 85%;
 }
 
 
