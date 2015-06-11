@@ -424,7 +424,7 @@ html[data-useragent*='534.24'] #menu_icon_airplane{
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#menu_icon_airplane{ 
-		background: url("../images/menu_icon_leave@2x.png") no-repeat;
+		background: url("../images/menu_icon_airplane@2x.png") no-repeat;
 		  -webkit-background-size:22px 22px;
 		     -moz-background-size:22px 22px;
 		       -o-background-size:22px 22px;

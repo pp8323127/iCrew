@@ -1,56 +1,235 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" data-useragent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5" class="ui-mobile"><head><base href="http://hdqfjuap01:9901/webfz/m/change_calc.jsp">
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css">	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css">	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script><style type="text/css"></style>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        	initDate();
+        	addEmpno();
+        	$("#addEmployee").click(addEmpno);
+        	
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+            
+          //submit
+          $("#sub").click(function(e){
+            	var yymm = $("#myDate").val();
+            	var rEmpno =  GetInputValue("rEmpno");//document.getElementsByName("rEmpno").value;
+				//var rEmpnoArr2 = document.getElementsByName("rEmpno");
+				console.log(rEmpno);
+				//console.log(rEmpnoArr2[0]);
+            	if("" != yymm && ""!= rEmpno){
+            		
+            		$.ajax({
+	        			type: "POST",
+	        			url: "chkChange_calc.jsp",
+	        			data: {rEmpno:rEmpno,myDate:yymm},
+	        			success:function(data){	
+	        				if(data.indexOf("Y") > -1){
+				            	$("#CrossMutiform").attr("action", "change_calc_compare.jsp");
+								$("#CrossMutiform").submit();
+		        			}else{
+		        				$("#strMsg").html(data);
+		        				$("#backData").val("");
+		        				$("#alert-popup-apply").popup("open");
+		        			}
+	        			},
+	        			error:function(xhr, ajaxOptions, thrownError){
+	        				console.log(xhr.status);
+	        				console.log(thrownError);
+	        				$("#strMsg").html("Error");
+	        				$("#backData").val("");
+	        				$("#alert-popup-apply").popup("open");
+	        			}
+	        		});
+	        		e.preventDefault();
+	        		
+            	}else{
+            		$("#strMsg").html("請輸入被換者");
+    				$("#backData").val("");
+    				$("#alert-popup-apply").popup("open");
+            	}
+            });      
+          //confirm
+			$("#popConf").click(function(e){
+				$("#alert-popup-apply").popup("close");
+         	});       
 
+        });
+		
 
-<style type="text/css">
+        function addEmpno(){
+  	  		var rEmpnoArr =  document.getElementsByName("rEmpno");
+  	  		//console.log(rEmpnoArr.length);
+  	  		//var countR = $("#countR").val();
+  	  		var countR = rEmpnoArr.length;
+  	  		if(countR == 0){
+  	  			$("#divEmpno:last").append("<div class='inputEMP'><input type='text' name ='rEmpno' id='employee"+countR+"'  maxlength='6'>");
+  	  			$("#employee"+countR).collapsibleset();
+  	  		}else if(countR > 0 && countR < 3){
+       			$("#divEmpno:last").append("<div class='inputEMP2'><input type='text' name ='rEmpno' id='employee"+countR+"' maxlength='6'><div id='del"+countR+"' class='delEmpno' onClick='delEmpno(\"employee"+countR+"\",\"del"+countR+"\")'></div></div>");
+       			$("#employee"+countR).collapsibleset();
+        	}else{
+        		$("#strMsg").html("試算者至多三位");
+				$("#backData").val("");
+				$("#alert-popup-apply").popup("open");
+        	}
+        	//$("#countR").val(++countR);
+    	}
+		function initDate(){
+			//今天的日期(yyyy-m)
+			var today = new Date();
+			thisYear = today.getFullYear();
+			var thisMonth = ('0'+(today.getMonth()+1)).slice(-2);
+//			thisMonth = today.getMonth();
+			var myDate = thisYear + "/" + thisMonth;
+			document.getElementById("myDate").value = myDate;
+			// alert(myDate);
+		}
+		function GetInputValue(InputName){                	
+         	return $('input[name=' + InputName + ']').map(function ()
+         	{
+         		return $(this).val();
+         	}).get().join(',');
+         }
+         function delEmpno(Idname,Idname2){
+ 			$("#"+Idname+"").remove();
+ 			$("#"+Idname2+"").remove();
+ 		}
 
+    </script>
 
-#list_btn_square{
-	background: url("./images/list_btn_square.png") center center no-repeat;
-	height: 20px;
-	width: 20px;
-	vertical-align: text-top;
-	display: inline-flex;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#list_btn_square{ 
-		background: url("./images/list_btn_square@2x.png") center center no-repeat;
-		  -webkit-background-size:20px 20px;
-		     -moz-background-size:20px 20px;
-		       -o-background-size:20px 20px;
-          		  background-size:20px 20px;
-			 }
-}
+	<!-- Mobiscroll JS and CSS Includes -->
+	<script src="mobiscroll/mobiscroll.core.js"></script>
+	<script src="mobiscroll/mobiscroll.frame.js"></script>
+	<script src="mobiscroll/mobiscroll.scroller.js"></script>
 
-#list_icon_checkmark_blue{
-	background: url("./images/list_icon_checkmark_blue.png") center center no-repeat;
-	height: 16px;
-	width: 16px;
-	margin: 2px 0px 0px 2px;
-	vertical-align: text-top;
-	display: inline-flex;
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#list_icon_checkmark_blue{ 
-		background: url("./images/list_icon_checkmark_blue@2x.png") center center no-repeat;
-		  -webkit-background-size:16px 16px;
-		     -moz-background-size:16px 16px;
-		       -o-background-size:16px 16px;
-          		  background-size:16px 16px;
-			 }
-}
+	<script src="mobiscroll/mobiscroll.util.datetime.js"></script>
+	<script src="mobiscroll/mobiscroll.datetimebase.js"></script>
+	<script src="mobiscroll/mobiscroll.datetime.js"></script>
 
+	<link href="mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css">
+	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css">
 
-</style>
-
+	<script>
+		$(function () {
+			$('#myDate').mobiscroll().date({
+				theme: '',
+				mode: 'mode',
+				display: 'modal',
+				lang: 'en',
+				dateFormat: 'yy/mm',
+				dateOrder: 'yymm',
+				setText: '選擇',
+				cancelText: '取消',
+				startYear: 2000
+			});
+		});
+	</script>
 </head>
-<body>
-<div id="list_btn_square">
-	<div id="list_icon_checkmark_blue">
+<body class="ui-mobile-viewport ui-overlay-a">
+
+<div id="change_calc" data-role="page" data-url="change_calc" tabindex="0" class="ui-page ui-page-theme-a ui-page-header-fixed ui-page-active" style="padding-top: 44px;">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-inherit ui-header-fixed slidedown ui-fixed-hidden">
+		<table id="header-bar">
+			<tbody><tr>
+				<td id="header-bar-btnBak">
+					<a href="change_main.jsp" class="ui-link"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">換班飛時試算</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar" class="ui-link"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</tbody></table>
 	</div>
-</div>
-</body>
-</html>
+<!-- Header bar End -->
+
+<!-- 換班飛時試算 Start-->
+	<div role="main" class="ui-content">
+	 <form id="CrossMutiform" method="POST" action="" data-ajax="false">
+		<table id="change_table">
+			<tbody><tr>
+				<th colspan="1">申請月份</th>
+			</tr>
+			<tr>
+				<td>
+					<div id="inputMon">
+						<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="text" id="myDate" name="myDate" readonly=""></div>
+					</div>
+				</td>
+			</tr>
+
+			<tr>
+				<th colspan="1">被換者之員工號</th>
+			</tr>
+			<tr>
+				<td id="divEmpno">
+					<!-- <a href="" id="employee1" value="" class="ui-btn ui-corner-all">被換員工</a> 
+					<input type="hidden" id= "countR" value= "1">
+					<div class="inputEMP"><input type="text" name = "rEmpno" id="employee0" value="635863"><div  id="del0"  onClick="delEmpno('employee0','del0')">X</div></div>-->
+				<div class="inputEMP"><input type="text" name="rEmpno" id="employee0" maxlength="6" class="ui-collapsible-set ui-group-theme-inherit ui-corner-all"></div><div class="inputEMP"><input type="text" name="rEmpno" id="employee1" maxlength="6" class="ui-collapsible-set ui-group-theme-inherit ui-corner-all"><div id="del1" class="delEmpno" onclick="delEmpno(&quot;employee1&quot;,&quot;del1&quot;)"></div></div><div class="inputEMP"></div></td>
+			</tr>
+			<tr>
+				<td><p id="addEmployee">+ 新增試算人員</p></td>
+			</tr>
+		</tbody></table>
+		
+		<div id="btnOKCancel">
+			<a href="change_main.jsp" class="ui-btn ui-corner-all" data-ajax="false"><div>取消</div></a>
+			<a id="sub" href="#" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
+		</div>
+	  </form>
+	</div>
+<!-- 換班飛時試算 End-->
+
+<!-- popup container start -->
+<div style="display: none;" id="alert-popup-apply-placeholder"><!-- placeholder for alert-popup-apply --></div>
+<!-- popup container end -->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b" class="ui-panel ui-panel-position-right ui-panel-display-overlay ui-panel-closed ui-body-b ui-panel-animate">
+        <div class="ui-panel-inner"><ul id="right-list" data-role="listview" data-inset="true" data-icon="false" class="ui-listview ui-listview-inset ui-corner-all ui-shadow">
+        </ul></div>
+    </div>
+<!-- navbar Slide Panel -->
+
+<div class="ui-screen-hidden ui-popup-screen ui-overlay-b" id="alert-popup-apply-screen"></div><div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="alert-popup-apply-popup"><div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header ui-header ui-bar-inherit" role="banner">
+       <p>換班飛時試算</p>
+    </div>
+
+    <div data-role="content" class="popup-content ui-content" role="main">    
+    	<input type="hidden" id="backData">	
+        <p id="strMsg"></p>
+        <a id="popConf" class="ui-btn btnPopOK" href="#" data-ajax="false"><div>確 認</div></a><!--  -->
+    </div>
+</div></div></div>
+
+
+
+
+<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div><div class="ui-panel-dismiss"></div></body></html>
