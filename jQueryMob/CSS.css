@@ -37,6 +37,7 @@ div.ui-header.ui-bar-inherit.ui-header-fixed.slidedown{
 	width: 100%;
 	height: 44px;
 	background: #fff;
+	border-bottom: 1px solid #cccccc;
 }
 #header-bar-btnBak{
 	padding:0;
@@ -155,7 +156,7 @@ div#personinfo p.personinfo_p2{
 	font-weight: normal;
 }
 div#personinfoDetail{
-	margin: 17.5px 30px 0px 30px;
+	margin: 10px 30px 0px 30px;
 }
 div#personinfoDetail p{
 	display: inline-block;
@@ -164,6 +165,78 @@ div#personinfoDetail p{
 	margin: 0px;
 	padding-bottom: 10px;
 }
+
+
+/* btn_icon */
+.profile_btn_mail{
+    background: url("../images/profile_btn_mail.png") center center no-repeat;
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#profile_btn_mail{ 
+		background-color: transparent;
+		background: url("../images/profile_btn_mail@2x.png") center center no-repeat;
+		  -webkit-background-size:50px 50px;
+		     -moz-background-size:50px 50px;
+		       -o-background-size:50px 50px;
+          		  background-size:50px 50px;
+			 }
+}
+
+.profile_btn_phone{
+    background: url("../images/profile_btn_phone.png") center center no-repeat;
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#profile_btn_phone{ 
+		background-color: transparent;
+		background: url("../images/profile_btn_phone@2x.png") center center no-repeat;
+		  -webkit-background-size:50px 50px;
+		     -moz-background-size:50px 50px;
+		       -o-background-size:50px 50px;
+          		  background-size:50px 50px;
+			 }
+}
+
+.profile_btn_home{
+    background: url("../images/profile_btn_home.png") center center no-repeat;
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#profile_btn_home{ 
+		background-color: transparent;
+		background: url("../images/profile_btn_home@2x.png") center center no-repeat;
+		  -webkit-background-size:50px 50px;
+		     -moz-background-size:50px 50px;
+		       -o-background-size:50px 50px;
+          		  background-size:50px 50px;
+			 }
+}
+
+.profile_btn_msg{
+    background: url("../images/profile_btn_msg.png") center center no-repeat;
+	background-color: transparent;
+	width: 50px;
+	height: 50px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#profile_btn_msg{ 
+		background-color: transparent;
+		background: url("../images/profile_btn_msg@2x.png") center center no-repeat;
+		  -webkit-background-size:50px 50px;
+		     -moz-background-size:50px 50px;
+		       -o-background-size:50px 50px;
+          		  background-size:50px 50px;
+			 }
+}
+
+
 
 /* icon */
 .div_communicate_mail {
@@ -351,6 +424,8 @@ div.inputEMP div:first-child{
 
 
 
+
+/*給選班試算的ipnut用的*/
 div.delEmpno{
 	position: relative;
 	/*margin-right: 5px;*/
@@ -379,8 +454,39 @@ div.inputEMP2 div{
 
 
 
-
-
+div.delEmpno{
+	position: relative;
+	/*margin-right: 5px;*/
+	margin: 0px;
+	/*margin-left: -35px;*/
+	top: 5px;
+	right: 35px;
+}
+.inputEMP_calc input, .inputEMP_calc div{
+	display: inline-block;
+}
+.inputEMP_calc input{
+	height: 45px;
+	/*width: 85%;*/
+	text-align: center;
+	font-size: 17px;
+	color: #1c1c1c;
+	border: 1px solid #a7a7a7;
+}
+div.inputEMP_calc{
+	margin: 15px 15px 20px 55px;
+}
+div.inputEMP_calc div{
+	width: 85%;
+}
+div.inputMon_calc{
+	margin: 25px 15px 25px 55px;
+}
+div.inputMon_calc{
+	width: 85%;
+}
+/*inputEMP2改成inputEMP_calc，inputMon margin15改成55、width 100%*/
+/*change_calc.JSP的地方，都改成EMP_calc，Mon_calc*/
 
 /****************/
 /* $calc_navbar */
@@ -1293,6 +1399,11 @@ div.leave_apply_add{
 .leave_apply_btnApply{
 	margin: 50px 0;
 }
+table.leave_apply_table input{
+	text-align: center;
+}
+
+
 
 /*****************/
 /* $leave_manage */
@@ -1518,7 +1629,8 @@ div.leave_apply_add{
 	text-align: center;
 }
 .popup-content #strMsg p{
-	padding: 0;
+	padding: 5px 5px 5px 15px;
+	text-indent: -12px;	 /*單行縮排*/
 }
 .ui-btn.btnPopOK{
 	margin: 0px;
