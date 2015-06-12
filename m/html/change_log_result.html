@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="change_log_result" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">換班紀錄查詢</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 換班紀錄查詢 Start-->
+	<div role="main" class="ui-content">
+		<div id="log_result_title">
+			<div>
+			<span><p>Form No :</p>
+			<p>B2014090001</p></span>
+			<br>
+			<p>Apply Date :</p>
+			<p>2014-09-23 16:40:23.0</p>
+			<br>
+			<p>Confirem Date :</p>
+			<p>2014-12-15 10:59:47.0</p>
+			</div>
+		</div>
+
+		<div data-role="navbar">
+			<ul id="result_title">
+				<li>Applicant</li>
+				<li>Substitle</li>
+			</ul>
+			
+			<ul class="result_content">
+				<li>
+					<div>	<!--申請者第1欄-->
+						<p style="font-size: 18px; font-weight: bold;">蘇晶晶</p>
+						<p style="font-size: 11px;">(FA)</p>
+						<br>
+						<span class="span_font11px">
+							<p>654321</p>
+							<p>(17416)</p>
+							<br>
+							<p>Section</p>
+							<p>2</p>
+						</span>
+						<span class="span_Exchange_Qualification">
+							<p>Exchange Count :</p>
+							<p>1</p>
+							<br>
+							<p>Qualification :</p>
+							<p>FF</p>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div>	<!--被換者第1欄-->
+						<p style="font-size: 18px; font-weight: bold;">櫻桃美代子</p>
+						<p style="font-size: 11px;">(FA)</p>
+						<br>
+						<span class="span_font11px">
+							<p>654321</p>
+							<p>(17402)</p>
+							<br>
+							<p>Section</p>
+							<p>5</p>
+						</span>
+						<span class="span_Exchange_Qualification">
+							<p>Exchange Count :</p>
+							<p>1</p>
+							<br>
+							<p>Qualification :</p>
+							<p>FF</p>
+						</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="result_content">
+				<li>
+					<div>	<!--申請者第2欄-->
+						<p style="font-size: 11px;">Trip No.</p>
+						<p style="font-size: 18px;">3094040</p>
+						<br>
+						<p style="font-size: 18px; font-weight: bold; color: #c22727;">2014/12/29</p>
+						<br>
+						<p style="font-size: 20px; font-weight: bold;">CI0527</p>
+						<br>
+						<span class="span_Flying">
+							<p>Flying Time :</p>
+							<p>0340</p>
+						</span>
+					</div>
+				</li>
+				<li>
+					<div>	<!--被換者第2欄-->
+						<p style="font-size: 11px;">Trip No.</p>
+						<p style="font-size: 18px;">3094016</p>
+						<br>
+						<p style="font-size: 18px; font-weight: bold; color: #c22727;">2014/12/29</p>
+						<br>
+						<p style="font-size: 20px; font-weight: bold;">CI0521</p>
+						<br>
+						<span class="span_Flying">
+							<p>Flying Time :</p>
+							<p>0405</p>
+						</span>
+					</div>
+				</li>
+			</ul>
+			<ul class="result_content">
+				<li>
+					<div class="noborder">	<!--申請者第3欄-->
+						<p>互換班飛時 :</p>
+						<p class="pbold">0405</p>
+						<br>
+						<p>飛時差額 :</p>
+						<p class="pbold">-0025</p>
+						<br>
+						<p>換班前時數 :</p>
+						<p class="pbold">18125</p>
+						<br>
+						<p>放棄AL時數 :</p>
+						<p class="pbold">-0000</p>
+						<br>
+						<p>換班後時數 :</p>
+						<p class="pbold">18100</p>
+					</div>
+				</li>
+				<li>
+					<div class="noborder">	<!--被換者第3欄-->
+						<p>互換班飛時 :</p>
+						<p class="pbold">0430</p>
+						<br>
+						<p>飛時差額 :</p>
+						<p class="pbold">0025</p>
+						<br>
+						<p>換班前時數 :</p>
+						<p class="pbold">12000</p>
+						<br>
+						<p>放棄AL時數 :</p>
+						<p class="pbold">-0000</p>
+						<br>
+						<p>換班後時數 :</p>
+						<p class="pbold">12025</p>
+					</div>
+				</li>
+			</ul>
+			<ul id="result_personinfo">
+				<li><a href="personInfo.html" id="list_btn_profile" data-ajax="false"></a></li>
+				<li><a href="personInfo.html" id="list_btn_profile" data-ajax="false"></a></li>
+			</ul>
+			<ul id="result_personinfo" style="border-top: none;">
+				<li>
+					<div>Comments :</div>
+					<div>已自行查詢，責任自負</div>
+				</li>
+			</ul>
+			<ul id="log_result_info">
+				<li>
+					<span>
+					<p>ED Confirm :</p>
+					<p>N</p>
+					<br>
+					<p>Comments :</p>
+					<p></p>
+					</span>
+				</li>
+			</ul>
+		</div>
+		<div id="result_info" class="result_info_marginleft5">
+			<span id="div_result_infoMsg">
+				<p>本人及互換者相互同意換班並保證 :</p>
+				<p>1.本申請日前兩個曆月內全勤。</p>
+				<p>2.本申請單內填寫內容符合申請規定無誤。</p>
+			</span>
+		</div>
+		
+	</div>
+<!-- 換班紀錄查詢 End-->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>

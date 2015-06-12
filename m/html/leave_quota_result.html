@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        	//今天的日期(yyyy-m)
+			var today = new Date();
+			thisYear = today.getFullYear();
+			// var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
+			thisMonth = today.getMonth();
+			var myDate = thisYear + "年" + thisMonth + "月";
+			//document.getElementById("myDate").value = myDate;
+			// alert(myDate);
+
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+
+	<!-- Mobiscroll JS and CSS Includes -->
+	<script src="mobiscroll/mobiscroll.core.js"></script>
+	<script src="mobiscroll/mobiscroll.frame.js"></script>
+	<script src="mobiscroll/mobiscroll.scroller.js"></script>
+
+	<script src="mobiscroll/mobiscroll.util.datetime.js"></script>
+	<script src="mobiscroll/mobiscroll.datetimebase.js"></script>
+	<script src="mobiscroll/mobiscroll.datetime.js"></script>
+
+	<link href="mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+
+	<script>
+		$(function () {
+			$('#myDate').mobiscroll().date({
+				theme: '',
+				mode: 'mode',
+				display: 'modal',
+				lang: 'en',
+				dateFormat: 'yy年m月',
+				dateOrder: 'yym',
+				setText: '選擇',
+				cancelText: '取消',
+				startYear: 2000
+			});
+		});
+	</script>
+
+
+<script type="text/javascript">
+	var sBrowser, sUsrAg = navigator.userAgent;
+
+	if(sUsrAg.indexOf("Chrome") > -1) {
+	sBrowser = "Google Chrome";
+	} else if (sUsrAg.indexOf("Safari") > -1) {
+	sBrowser = "Apple Safari";
+	} else if (sUsrAg.indexOf("Opera") > -1) {
+	sBrowser = "Opera";
+	} else if (sUsrAg.indexOf("Firefox") > -1) {
+	sBrowser = "Mozilla Firefox";
+	} else if (sUsrAg.indexOf("MSIE") > -1) {
+	sBrowser = "Microsoft Internet Explorer";
+	}
+
+	// alert(sUsrAg);
+
+	var b = document.documentElement;
+	b.setAttribute('data-useragent',navigator.userAgent);
+	b.setAttribute('data-platform', navigator.platform );
+</script>
+
+</head>
+<body>
+
+<div id="leave_quota" data-role="page" class="bg_f8">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">特休假配額查詢</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 特休假配額查詢 Start-->
+	<div role="main" class="ui-content">
+		<div class="quota_result_title">
+			<p>TPE FS</p>
+			<p class="font_16_bold_a40000" style="margin: 0px 5px 0px 5px;">2015-01</p>
+			<p>AL Quota</p>
+			<br>
+			<p>Total/Left(Release)</p>
+		</div>
+
+		<div class="quota_result_calendar">
+			<!-- 放星期幾 -->
+			<ul class="calendar_week">
+				<li>日</li>
+				<li>一</li>
+				<li>二</li>
+				<li>三</li>
+				<li>四</li>
+				<li>五</li>
+				<li>六</li>
+			</ul>
+			
+			<!-- 
+			放日期 1個ul是一週 
+			today_circle的class是藍色圈圈
+			font_14_a40000是剩0的時候要變成的紅字
+			-->
+			<ul class="calendar_day">
+				<li>
+					<p class="today_circle">1</p>
+					<p class="font_14_a40000">80/0</p>
+					<p class="font_14_a40000">(0)</p>
+				</li>
+				<li>
+					<p>2</p>
+					<p>120/1</p>
+				</li>
+				<li>
+					<p>3</p>
+					<p>80/1</p>
+				</li>
+				<li>
+					<p>4</p>
+					<p>80/1</p>
+				</li>
+				<li>
+					<p>5</p>
+					<p>80/1</p>
+				</li>
+				<li>
+					<p>6</p>
+					<p>80/1</p>
+				</li>
+				<li>
+					<p>7</p>
+					<p>80/1</p>
+				</li>
+			</ul>
+			
+			<ul class="calendar_day">
+				<li>
+					<p>8</p>
+				</li>
+				<li>
+					<p>9</p>
+				</li>
+				<li>
+					<p>10</p>
+				</li>
+				<li>
+					<p>11</p>
+				</li>
+				<li>
+					<p>12</p>
+				</li>
+				<li>
+					<p>13</p>
+				</li>
+				<li>
+					<p>14</p>
+				</li>
+			</ul>
+			
+			<ul class="calendar_day">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
+			<ul class="calendar_day">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			
+			<ul class="calendar_day">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+	</div>
+<!-- 特休假配額查詢 End-->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>

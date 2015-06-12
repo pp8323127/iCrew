@@ -1,0 +1,237 @@
+@charset "UTF-8";
+/*
+  為了能以中文註解，一定要宣告為UTF-8
+  this css file is generate by sass(scss) and using compass
+*/
+/*------------------------------------------------------------------------*-
+
+/*------------------------------------------------------------------------*-
+    $Header
+-*------------------------------------------------------------------------*/
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.header-bd {
+    background: #FFFFFF !important;
+    background-repeat:repeat-x;
+    background-position:center center;
+    background-size:100% 100%;
+}
+
+.logo-img {
+    height: 44px;
+	text-align: center;
+	background: url("../images/navi_CI_Logo.png") center center;
+	background-repeat:no-repeat;    
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.logo-img{ 
+		background: url("../images/navi_CI_Logo@2x.png") center center no-repeat;
+		  -webkit-background-size:195px 45px;
+		     -moz-background-size:195px 45px;
+		       -o-background-size:195px 45px;
+          		  background-size:195px 45px;
+			 }
+}
+
+/*------------------------------------------------------------------------*-
+    $Main
+-*------------------------------------------------------------------------*/
+/*登入區域*/
+
+body {
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
+	font-weight: normal !important;
+	width: 100% !important;
+}
+a,p,table,div,input{
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
+}
+
+#loginPage{
+	width: 100%;
+    background:url("../images/index_bg_blue@2x.png");
+    background-repeat:repeat-x;
+    background-position:left center;
+    background-attachment:scroll;
+    background-size:100% 100%;
+}
+
+.iCrew-logo {
+	height: 90px;
+	margin-top: 60px;
+	margin-bottom: 130px;
+	text-align: center;
+	background: url("../images/index_title_iCrew.png") center center;
+	background-repeat:no-repeat;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.iCrew-logo{ 
+		background: url("../images/index_title_iCrew@2x.png") center center no-repeat;
+		  -webkit-background-size:175px 90px;
+		     -moz-background-size:175px 90px;
+		       -o-background-size:175px 90px;
+          		  background-size:175px 90px;
+			 }
+}
+
+#div_btn_login {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.login-btn {
+	height: 44px;
+	margin-bottom: 68px;
+	text-align: center; 
+}
+
+#sub {
+	width: 260px;
+	height: 44px;
+	background: #0067d9 !important;
+	margin-right: auto;
+	margin-left: auto;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
+	font-size: 17px;
+	font-weight: normal;
+	text-shadow:none !important;
+	color: #FFFFFF;
+	padding-top:10px;
+	border: none !important;
+	box-shadow: none !important;
+	outline: 0;	
+}
+
+#div_pwd {
+	position: absolute;
+	bottom: 111.5px;
+	width: 100%;
+	text-align: center;
+}
+
+.pwd {
+	height: 38px;
+	margin-bottom:37.5px; 
+}
+
+#txt_password {
+	padding-top: 7px;
+	padding-left: 20px;
+}
+
+#div_uid {
+	position: absolute;
+	bottom: 187px;
+	width: 100%;
+	text-align: center;
+}
+
+.uid {
+	height: 15px;
+	margin-bottom:37.5px;
+	text-align: center; 
+}
+
+#txt_userid {
+	padding-top: 7px;
+	padding-left: 20px;
+}
+
+.alert-title {
+	height: 17px;
+	margin-top: 22.5px;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
+	font-size: 17px;
+	font-weight: bold;
+	text-shadow:none !important;
+	text-align: center;
+}
+
+.alert-content {
+	margin-top: 17.5px;
+	margin-bottom: 20px;
+	margin-right: 22.5px;
+	margin-left: 22.5px;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
+	font-size: 15px;
+	font-weight: normal;
+	text-shadow:none !important;
+	text-align: center;
+}
+
+.alert-btn {
+	height: 32px;
+	text-align: center;
+	margin-top: 12px;
+}
+
+#btn_confirm {
+	height: 19px;
+	background: #FFFFFF !important;
+	font-family: "微軟正黑體","Microsoft JhengHei", helvetica !important;
+	font-size: 18px;
+	font-weight: bold !important;
+	text-shadow:none !important;
+	color: #007aff;
+	margin: 0 !important;
+	padding: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: 0;
+}
+
+/*------------------------------------------------------------------------*-
+    $Footer
+-*------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------*-
+    $Loading Page
+-*------------------------------------------------------------------------*/
+.ui-loader-background {
+    text-align: center;
+	width: 100%;
+	height: 100%;
+	top:0;
+	padding: 0;
+	margin: 0;
+	background: rgba(0, 0, 0, 0.7);
+	display:none;
+	position: fixed;
+	z-index:1000;
+}
+
+.ui-loading .ui-loader-background {
+	display: block;
+}
+
+.ui-loader-default {
+	top: 0;
+	padding: 0;
+	margin: 0;		    
+	opacity: 1 !important;
+	background: transparent !important;
+	border: none !important;
+	box-shadow: none !important;
+	position: fixed; 
+	outline: 0;		
+}
+
+.custom-spinner {
+	background-image: url("../images/loading_500.gif");
+	background-repeat:no-repeat;
+	background-size: 125px 125px;
+	width: 125px;
+	height: 125px;
+	top: 20%;
+	left: 50%;
+	right: 50%;
+	margin-left: -62.5px;	
+	opacity: 1 !important;
+	position:absolute;
+}
