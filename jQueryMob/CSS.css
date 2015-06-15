@@ -163,37 +163,31 @@ div#personinfoDetail p{
 	color: #1c1c1c;
 	font-size: 16px;
 	margin: 0px;
+	padding: 0;
 	padding-bottom: 10px;
 }
 
 
-/* btn_icon */
-.profile_btn_mail{
-    background: url("../images/profile_btn_mail.png") center center no-repeat;
-	background-color: transparent;
-	width: 50px;
-	height: 50px;
+#profile{
+	text-align: left;
 }
-@media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#profile_btn_mail{ 
-		background-color: transparent;
-		background: url("../images/profile_btn_mail@2x.png") center center no-repeat;
-		  -webkit-background-size:50px 50px;
-		     -moz-background-size:50px 50px;
-		       -o-background-size:50px 50px;
-          		  background-size:50px 50px;
-			 }
+/* profile_btn */
+.profile_btn div,
+.profile_btn.ui-navbar a{
+	margin: 0 auto;
 }
 
+
+/* profile_btn_icon */
 .profile_btn_phone{
     background: url("../images/profile_btn_phone.png") center center no-repeat;
-	background-color: transparent;
+	background-color: transparent !important;
 	width: 50px;
 	height: 50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#profile_btn_phone{ 
-		background-color: transparent;
+		background-color: transparent !important;
 		background: url("../images/profile_btn_phone@2x.png") center center no-repeat;
 		  -webkit-background-size:50px 50px;
 		     -moz-background-size:50px 50px;
@@ -202,16 +196,33 @@ div#personinfoDetail p{
 			 }
 }
 
-.profile_btn_home{
-    background: url("../images/profile_btn_home.png") center center no-repeat;
-	background-color: transparent;
+.profile_btn_call_home{
+    background: url("../images/profile_btn_call_home.png") center center no-repeat;
+	background-color: transparent !important;
 	width: 50px;
 	height: 50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#profile_btn_home{ 
-		background-color: transparent;
-		background: url("../images/profile_btn_home@2x.png") center center no-repeat;
+	#profile_btn_call_home{ 
+		background-color: transparent !important;
+		background: url("../images/profile_btn_call_home@2x.png") center center no-repeat;
+		  -webkit-background-size:50px 50px;
+		     -moz-background-size:50px 50px;
+		       -o-background-size:50px 50px;
+          		  background-size:50px 50px;
+			 }
+}
+
+.profile_btn_mail{
+    background: url("../images/profile_btn_mail.png") center center no-repeat;
+	background-color: transparent !important;
+	width: 50px;
+	height: 50px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	#profile_btn_mail{ 
+		background-color: transparent !important;
+		background: url("../images/profile_btn_mail@2x.png") center center no-repeat;
 		  -webkit-background-size:50px 50px;
 		     -moz-background-size:50px 50px;
 		       -o-background-size:50px 50px;
@@ -221,13 +232,13 @@ div#personinfoDetail p{
 
 .profile_btn_msg{
     background: url("../images/profile_btn_msg.png") center center no-repeat;
-	background-color: transparent;
+	background-color: transparent !important;
 	width: 50px;
 	height: 50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
 	#profile_btn_msg{ 
-		background-color: transparent;
+		background-color: transparent !important;
 		background: url("../images/profile_btn_msg@2x.png") center center no-repeat;
 		  -webkit-background-size:50px 50px;
 		     -moz-background-size:50px 50px;
@@ -380,10 +391,10 @@ table#change_table input{
 	height: 45px;
 }
 div#inputMon{
-	margin: 25px 15px 25px 55px;
+	margin: 25px 55px 25px 55px;
 }
 div#inputMon input{
-	width: 85%;
+	width: 100%;
 }
 .ui-input-text{
 	box-shadow: none;
@@ -395,17 +406,17 @@ table#change_table p{
 	font-size: 16px;
 }
 div.inputEMP{
-	margin: 15px 15px 20px 55px;
+	margin: 15px 55px 20px 55px;
 }
 div.inputEMP input{
 	display: inline-block;
-	min-width: 85%;
+	min-width: 100%;
 }
 div.inputEMP div{
 	display: inline-block;
 }
 div.inputEMP div:first-child{
-	width: 85%;
+	width: 100%;
 }
 /*div.inputEMP div:last-child{
 	width: 1%;

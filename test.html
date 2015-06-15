@@ -1,18 +1,14 @@
-<html lang="en" data-useragent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5" class="ui-mobile"><head><base href="http://hdqfjuap01:9901/webfz/m/change_calc.jsp">
+<html lang="en" data-useragent="Mozilla/5.0 (iPhone; U; CPU iPhone OS 4_2_1 like Mac OS X; en-us) AppleWebKit/533.17.9 (KHTML, like Gecko) Version/5.0.2 Mobile/8C148 Safari/6533.18.5" class="ui-mobile"><head><base href="http://hdqfjuap01:9901/webfz/m/change_calc_result.jsp">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css">	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css">	
 	<link rel="stylesheet" href="jQueryMob/CSS.css">
-	<script src="jQueryMob/jquery.js" language="javascript"></script><style type="text/css"></style>	
+	<style type="text/css"></style><script src="jQueryMob/jquery.js" language="javascript"></script>	
 	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-        	initDate();
-        	addEmpno();
-        	$("#addEmployee").click(addEmpno);
-        	
             $("#btn_menu").click(function(e){
                 $.ajax({
                     type: "POST",
@@ -31,133 +27,118 @@
                 e.preventDefault();
             });
             
-          //submit
-          $("#sub").click(function(e){
+            $("#sub").click(function(e){
             	var yymm = $("#myDate").val();
-            	var rEmpno =  GetInputValue("rEmpno");//document.getElementsByName("rEmpno").value;
-				//var rEmpnoArr2 = document.getElementsByName("rEmpno");
-				console.log(rEmpno);
-				//console.log(rEmpnoArr2[0]);
-            	if("" != yymm && ""!= rEmpno){
+            	var rEmpno = $("#rEmpno").val();
+            	//var aEmpnoArr = $('input:checkbox:checked[name="chkA"]').val();
+            	//var rEmpnoArr = $('input:checkbox:checked[name="chkR"]').val();
+            	//console.log(aEmpnoArr.length+rEmpnoArr.length);
+            	if("" != yymm && "" != rEmpno ){
+	            	$("#CrossToApplyform").attr("action", "change_apply.jsp");
+					$("#CrossToApplyform").submit();
+            	}else{
             		
+            	}
+            });
+			
+			 $("#naviBar_icon_Back").click(function(e){
+            	var yymm = $("#myDate").val();
+            	var rEmpno = $("#radiorEmpno").val();
+            	if("" != yymm && ""!=rEmpno ){
+	            	$("#CrossToApplyform").attr("action", "change_calc_table.jsp");
+					$("#CrossToApplyform").submit();
+					//console.log("yes:"+$("#myDate").val()+$("#rEmpno").val());
+            	}else{
+            		//console.log("error:"+$("#myDate").val()+$("#rEmpno").val());
+            	}
+        	});
+			//confirm
+			$("#popConf").click(function(e){
+				$("#alert-popup-info").popup("close");	
+	        });
+			//info
+			$("#infoA").click(function(e){
+				var aEmpno = $("#aEmpno").val();
+            	var rEmpno = $("#rEmpno").val();
+            	var yymm = $("#myDate").val();   
+        		$("#empno").val(aEmpno);
+        		console.log($("#empno").val());
+        		/*$("#CrossToApplyform").attr("action", "change_personInfo.jsp");
+				$("#CrossToApplyform").submit();
+            	*/
+            	if("" != yymm && "" != aEmpno && null != aEmpno){
+	            	
             		$.ajax({
 	        			type: "POST",
-	        			url: "chkChange_calc.jsp",
-	        			data: {rEmpno:rEmpno,myDate:yymm},
-	        			success:function(data){	
-	        				if(data.indexOf("Y") > -1){
-				            	$("#CrossMutiform").attr("action", "change_calc_compare.jsp");
-								$("#CrossMutiform").submit();
-		        			}else{
-		        				$("#strMsg").html(data);
-		        				$("#backData").val("");
-		        				$("#alert-popup-apply").popup("open");
-		        			}
+	        			url: "change_personInfo.jsp",
+	        			data: {empno:aEmpno,rEmpno:rEmpno,myDate:yymm},
+	        			success:function(data){	       
+	        				$("#strMsg").html(data);
+	        				$("#backData").val(1);
+		        			$("#alert-popup-info").popup("open");		        				
+	        				console.log(data);
 	        			},
 	        			error:function(xhr, ajaxOptions, thrownError){
 	        				console.log(xhr.status);
 	        				console.log(thrownError);
 	        				$("#strMsg").html("Error");
 	        				$("#backData").val("");
-	        				$("#alert-popup-apply").popup("open");
+	        				$("#alert-popup-info").popup("open");
 	        			}
 	        		});
 	        		e.preventDefault();
-	        		
             	}else{
-            		$("#strMsg").html("請輸入被換者");
-    				$("#backData").val("");
-    				$("#alert-popup-apply").popup("open");
+            		console.log("空值");
             	}
-            });      
-          //confirm
-			$("#popConf").click(function(e){
-				$("#alert-popup-apply").popup("close");
-         	});       
-
+        	});
+			$("#infoR").click(function(e){
+				var aEmpno = $("#aEmpno").val();
+            	var rEmpno = $("#rEmpno").val();
+            	var yymm = $("#myDate").val(); 
+            	$("#empno").val(rEmpno);
+        		//console.log($("#empno").val());
+        		/*$("#CrossToApplyform").attr("action", "change_personInfo.jsp");
+				$("#CrossToApplyform").submit();
+				
+				*/
+            	if("" != yymm && "" != rEmpno && null != rEmpno){
+            		$.ajax({
+	        			type: "POST",
+	        			url: "change_personInfo.jsp",
+	        			data: {empno:rEmpno,rEmpno:rEmpno,myDate:yymm},
+	        			success:function(data){	       
+	        				$("#strMsg").html(data);
+	        				$("#backData").val(1);
+		        			$("#alert-popup-info").popup("open");		        				
+	        				//console.log(data);
+	        			},
+	        			error:function(xhr, ajaxOptions, thrownError){
+	        				console.log(xhr.status);
+	        				console.log(thrownError);
+	        				$("#strMsg").html("Error");
+	        				$("#backData").val("");
+	        				$("#alert-popup-info").popup("open");
+	        			}
+	        		});
+	        		e.preventDefault();
+            	}else{
+            		console.log("空值");
+            	}
+        	});
         });
-		
-
-        function addEmpno(){
-  	  		var rEmpnoArr =  document.getElementsByName("rEmpno");
-  	  		//console.log(rEmpnoArr.length);
-  	  		//var countR = $("#countR").val();
-  	  		var countR = rEmpnoArr.length;
-  	  		if(countR == 0){
-  	  			$("#divEmpno:last").append("<div class='inputEMP'><input type='text' name ='rEmpno' id='employee"+countR+"'  maxlength='6'>");
-  	  			$("#employee"+countR).collapsibleset();
-  	  		}else if(countR > 0 && countR < 3){
-       			$("#divEmpno:last").append("<div class='inputEMP2'><input type='text' name ='rEmpno' id='employee"+countR+"' maxlength='6'><div id='del"+countR+"' class='delEmpno' onClick='delEmpno(\"employee"+countR+"\",\"del"+countR+"\")'></div></div>");
-       			$("#employee"+countR).collapsibleset();
-        	}else{
-        		$("#strMsg").html("試算者至多三位");
-				$("#backData").val("");
-				$("#alert-popup-apply").popup("open");
-        	}
-        	//$("#countR").val(++countR);
-    	}
-		function initDate(){
-			//今天的日期(yyyy-m)
-			var today = new Date();
-			thisYear = today.getFullYear();
-			var thisMonth = ('0'+(today.getMonth()+1)).slice(-2);
-//			thisMonth = today.getMonth();
-			var myDate = thisYear + "/" + thisMonth;
-			document.getElementById("myDate").value = myDate;
-			// alert(myDate);
-		}
-		function GetInputValue(InputName){                	
-         	return $('input[name=' + InputName + ']').map(function ()
-         	{
-         		return $(this).val();
-         	}).get().join(',');
-         }
-         function delEmpno(Idname,Idname2){
- 			$("#"+Idname+"").remove();
- 			$("#"+Idname2+"").remove();
- 		}
-
     </script>
 
-	<!-- Mobiscroll JS and CSS Includes -->
-	<script src="mobiscroll/mobiscroll.core.js"></script>
-	<script src="mobiscroll/mobiscroll.frame.js"></script>
-	<script src="mobiscroll/mobiscroll.scroller.js"></script>
-
-	<script src="mobiscroll/mobiscroll.util.datetime.js"></script>
-	<script src="mobiscroll/mobiscroll.datetimebase.js"></script>
-	<script src="mobiscroll/mobiscroll.datetime.js"></script>
-
-	<link href="mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css">
-	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
-	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
-	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css">
-
-	<script>
-		$(function () {
-			$('#myDate').mobiscroll().date({
-				theme: '',
-				mode: 'mode',
-				display: 'modal',
-				lang: 'en',
-				dateFormat: 'yy/mm',
-				dateOrder: 'yymm',
-				setText: '選擇',
-				cancelText: '取消',
-				startYear: 2000
-			});
-		});
-	</script>
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
 
-<div id="change_calc" data-role="page" data-url="change_calc" tabindex="0" class="ui-page ui-page-theme-a ui-page-header-fixed ui-page-active" style="padding-top: 44px;">
+<div id="change_calc_result" data-role="page" data-url="change_calc_result" tabindex="0" class="ui-page ui-page-theme-a ui-page-header-fixed ui-page-active" style="padding-top: 43px;">
 <!-- Header bar Start -->
-	<div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-inherit ui-header-fixed slidedown ui-fixed-hidden">
+
+	<div data-role="header" data-position="fixed" role="banner" class="ui-header ui-bar-inherit ui-header-fixed slidedown">
 		<table id="header-bar">
 			<tbody><tr>
 				<td id="header-bar-btnBak">
-					<a href="change_main.jsp" class="ui-link"><div id="naviBar_icon_Back"></div></a>
+					<a href="#" class="ui-link"><div id="naviBar_icon_Back"></div></a>
 				</td>
 				<td id="header-bar-btnAppname">換班飛時試算</td>
 				<td id="header-bar-btnMenu">
@@ -168,46 +149,174 @@
 	</div>
 <!-- Header bar End -->
 
-<!-- 換班飛時試算 Start-->
+<!-- 換班飛時試算結果 Start-->
+	<form id="CrossToApplyform" method="POST" action="" data-ajax="false">
 	<div role="main" class="ui-content">
-	 <form id="CrossMutiform" method="POST" action="" data-ajax="false">
-		<table id="change_table">
-			<tbody><tr>
-				<th colspan="1">申請月份</th>
-			</tr>
-			<tr>
-				<td>
-					<div id="inputMon">
-						<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="text" id="myDate" name="myDate" readonly=""></div>
-					</div>
-				</td>
-			</tr>
-
-			<tr>
-				<th colspan="1">被換者之員工號</th>
-			</tr>
-			<tr>
-				<td id="divEmpno">
-					<!-- <a href="" id="employee1" value="" class="ui-btn ui-corner-all">被換員工</a> 
-					<input type="hidden" id= "countR" value= "1">
-					<div class="inputEMP"><input type="text" name = "rEmpno" id="employee0" value="635863"><div  id="del0"  onClick="delEmpno('employee0','del0')">X</div></div>-->
-				<div class="inputEMP"><input type="text" name="rEmpno" id="employee0" maxlength="6" class="ui-collapsible-set ui-group-theme-inherit ui-corner-all"></div><div class="inputEMP"><input type="text" name="rEmpno" id="employee1" maxlength="6" class="ui-collapsible-set ui-group-theme-inherit ui-corner-all"><div id="del1" class="delEmpno" onclick="delEmpno(&quot;employee1&quot;,&quot;del1&quot;)"></div></div><div class="inputEMP"></div></td>
-			</tr>
-			<tr>
-				<td><p id="addEmployee">+ 新增試算人員</p></td>
-			</tr>
-		</tbody></table>
+		<div data-role="navbar" class="ui-navbar" role="navigation">
+		<input type="hidden" id="aEmpno" name="aEmpno" value="633020">
+		<input type="hidden" id="rEmpno" name="rEmpno" value="635863">
+		<input type="hidden" id="radiorEmpno" name="radiorEmpno" value="635863">
+		<input type="hidden" id="myDate" name="myDate" value="2015/06">
+		<input type="hidden" id="empno" name="empno" value="633020">
 		
-		<div id="btnOKCancel">
-			<a href="change_main.jsp" class="ui-btn ui-corner-all" data-ajax="false"><div>取消</div></a>
-			<a id="sub" href="#" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
+		
+			<ul id="result_title" class="ui-grid-a">
+				<li class="ui-block-a">Applicant</li>
+				<li class="ui-block-b">Substituent</li>				
+			</ul>
+
+			
+			<ul class="result_content ui-grid-a">
+				<li class="ui-block-a">
+					<div>	<!--申請者第1欄-->
+						<p style="font-size: 18px; font-weight: bold;">蘇晶晶(PA*)(77I)</p>
+						<!--<p style="font-size: 11px;">(FA)</p> -->
+						<br>
+						<span class="span_font11px">
+							<p>633020</p>
+							<p>11803</p>
+							<br>
+							<p>Section</p>
+							<p>5</p>
+						</span>
+						<span class="span_Exchange_Qualification">
+							<p>Exchange Count :</p>
+							<p>2</p>
+							<br>
+							<p>Qualification :</p>
+							<p>PR</p>
+						</span>
+					</div>
+				</li>
+				<li class="ui-block-b">
+					<div>	<!--被換者第1欄-->
+						<p style="font-size: 18px; font-weight: bold;">郭朗景(PA)(77I)</p>
+						<!-- <p style="font-size: 11px;">(FA)</p> -->
+						<br>
+						<span class="span_font11px">
+							<p>635863</p>
+							<p>17416</p>
+							<br>
+							<p>Section</p>
+							<p>2</p>
+						</span>
+						<span class="span_Exchange_Qualification">
+							<p>Exchange Count :</p>
+							<p>0</p>
+							<br>
+							<p>Qualification :</p>
+							<p>FF</p>
+						</span>
+					</div>
+				</li>
+			</ul>
+	
+			<ul class="result_content ui-grid-a">
+				<li class="ui-block-a">
+					
+					<div>	<!--申請者第2欄-->
+						<p style="font-size: 11px;">Trip No.</p>
+						<p style="font-size: 18px;">3254394</p>
+						<br>
+						<p style="font-size: 18px; font-weight: bold; color: #c22727;">2015/06/23</p>
+						<br>
+						<p style="font-size: 20px; font-weight: bold;">0761</p>
+						<br>
+						<span class="span_Flying">
+							<p>Flying Time :</p>
+							
+								<p>1040</p>
+							
+							
+						</span>
+					</div>
+					
+				</li>
+				<li class="ui-block-b">
+					
+					<div>	<!--被換者第2欄-->
+						<p style="font-size: 11px;">Trip No.</p>
+						<p style="font-size: 18px;">3313762</p>
+						<br>
+						<p style="font-size: 18px; font-weight: bold; color: #c22727;">2015/06/23</p>
+						<br>
+						<p style="font-size: 20px; font-weight: bold;">0006</p>
+						<br>
+						<span class="span_Flying">
+							<p>Flying Time :</p>
+							
+								<p>2555</p>
+							
+						</span>
+					</div>
+					
+				</li>
+			</ul>
+			<ul class="result_content ui-grid-a">
+				<li class="ui-block-a">
+					<div class="noborder">	<!--申請者第3欄-->
+						<p>互換班飛時 :</p>
+						<p class="pbold">1040</p>
+						<br>
+						<p>飛時差額 :</p>
+						<p class="pbold">1515</p>
+						<br>
+						<p>換班前時數 :</p>
+						<p class="pbold">7920</p>
+						<br>
+						<p>放棄AL時數 :</p>
+						<p class="pbold">0000</p>
+						<br>
+						<p>換班後時數 :</p>
+						<p class="pbold">9435</p>
+					</div>
+				</li>
+				<li class="ui-block-b">
+					<div class="noborder">	<!--被換者第3欄-->
+						<p>互換班飛時 :</p>
+						<p class="pbold">2555</p>
+						<br>
+						<p>飛時差額 :</p>
+						<p class="pbold">-1515</p>
+						<br>
+						<p>換班前時數 :</p>
+						<p class="pbold">7820</p>
+						<br>
+						<p>放棄AL時數 :</p>
+						<p class="pbold">0000</p>
+						<br>
+						<p>換班後時數 :</p>
+						<p class="pbold">6305</p>
+					</div>
+				</li>
+			</ul>
+			<ul id="result_personinfo" class="ui-grid-a">
+				<li class="ui-block-a"><a href="#" class="list_btn_profile ui-link ui-btn ui-btn-active" data-ajax="false" id="infoA"></a></li>
+				<li class="ui-block-b"><a href="#" class="list_btn_profile ui-link ui-btn" data-ajax="false" id="infoR"></a></li>
+			</ul>
+			
 		</div>
-	  </form>
+		<div id="result_info">
+			<div id="list_icon_info_20px"></div>
+			<span id="div_result_infoMsg">
+				<p>換班者互換班飛時=A</p>
+				<p>被換者互換班飛時=B</p>
+				<p>飛時差額=A-B=X</p>
+				<p>換班後時數=換班前時數±X+AL</p>
+			</span>
+		</div>
+
+		<div id="btnApply" class="result_btnApply">
+			<a id="sub" href="#" class="ui-btn ui-corner-all" data-ajax="false"><div>換班申請</div></a>
+		</div>
+	
 	</div>
-<!-- 換班飛時試算 End-->
+
+</form>
+<!-- 換班飛時試算結果 End-->
 
 <!-- popup container start -->
-<div style="display: none;" id="alert-popup-apply-placeholder"><!-- placeholder for alert-popup-apply --></div>
+<div style="display: none;" id="alert-popup-info-placeholder"><!-- placeholder for alert-popup-info --></div>
 <!-- popup container end -->
 
 <!-- navbar Slide Panel -->
@@ -216,20 +325,42 @@
         </ul></div>
     </div>
 <!-- navbar Slide Panel -->
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
+    
+	<input type="hidden" id="backData" value="1">	
+    <p id="strMsg">
+	<div id="personinfo">
+		<p>蘇晶晶(PA*)(77I)</p>
+		<p>118</p>
+		<p>TSA</p>
+		<br>
+		<p class="personinfo_p2">635863</p>
+		<p class="personinfo_p2">(11803)</p>
+	</div>
+	<div id="personinfoDetail">
+		<p>E-mail：</p>
+		<p>633020@cal.aero</p>
+		<br>
+		<p>Moblie：</p>
+		<p>0968789871</p>
+		<br>
+		<p>Home：</p>
+		<p>28223554</p>
+		<br>
+		<p>Message：</p>
+		<p>096878987109687898710968789871096878987109687898710968789871096878987109687898710968789871096878987109687898710968789871096878987109687898710968789871096878987109687898710968789871096878987109687898710968789871</p>
+		<br>
+	</div>
+<br><br><br><br>
+	<div class="div_communicate_mail">
+		<!-- <div class="div_communicate"><a id="btn_communicate" class="ui-btn" href="#"></a></div> -->
+		<div class="div_mail"><a id="btn_mail" class="ui-btn" href="https://webmail.cal.aero/login/default.aspx" data-ajax="false"></a></div>	
+	</div>
 
-<div class="ui-screen-hidden ui-popup-screen ui-overlay-b" id="alert-popup-apply-screen"></div><div class="ui-popup-container ui-popup-hidden ui-popup-truncate" id="alert-popup-apply-popup"><div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv ui-popup ui-body-inherit ui-overlay-shadow ui-corner-all" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
-    <div data-role="header" class="popup-header ui-header ui-bar-inherit" role="banner">
-       <p>換班飛時試算</p>
-    </div>
 
-    <div data-role="content" class="popup-content ui-content" role="main">    
-    	<input type="hidden" id="backData">	
-        <p id="strMsg"></p>
-        <a id="popConf" class="ui-btn btnPopOK" href="#" data-ajax="false"><div>確 認</div></a><!--  -->
-    </div>
-</div></div></div>
+</p>
+       <a id="popConf" class="ui-btn btnPopOK" href="#" data-ajax="false"><div>確 認</div></a><!--  -->
+
+</div></div>
 
 
-
-
-<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon-loading"></span><h1>loading</h1></div><div class="ui-panel-dismiss"></div></body></html>
