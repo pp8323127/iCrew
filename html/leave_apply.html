@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+        	//今天的日期(yyyy-m)
+			var today = new Date();
+			thisYear = today.getFullYear();
+			// var thisMonth=('0'+(today.getMonth()+1)).slice(-2);
+			thisMonth = today.getMonth();
+			var myDate = thisYear + "年" + thisMonth + "月";
+			//document.getElementById("myDate").value = myDate;
+			// alert(myDate);
+
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+
+	<!-- Mobiscroll JS and CSS Includes -->
+	<script src="mobiscroll/mobiscroll.core.js"></script>
+	<script src="mobiscroll/mobiscroll.frame.js"></script>
+	<script src="mobiscroll/mobiscroll.scroller.js"></script>
+
+	<script src="mobiscroll/mobiscroll.util.datetime.js"></script>
+	<script src="mobiscroll/mobiscroll.datetimebase.js"></script>
+	<script src="mobiscroll/mobiscroll.datetime.js"></script>
+
+	<link href="mobiscroll/mobiscroll.frame.css" rel="stylesheet" type="text/css" />
+	<!-- <link href="mobiscroll/mobiscroll.frame.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <link href="mobiscroll/mobiscroll.scroller.jqm.css" rel="stylesheet" type="text/css" /> -->
+	<link href="mobiscroll/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+
+	<script>
+		$(function () {
+			$('.myDate').mobiscroll().date({
+				theme: '',
+				mode: 'mode',
+				display: 'modal',
+				lang: 'en',
+				dateFormat: 'yy/mm/dd',
+				dateOrder: 'yymmdd',
+				setText: '選擇',
+				cancelText: '取消',
+				startYear: 2000
+			});
+		});
+	</script>
+
+</head>
+<body>
+
+<div id="leave_quota_result" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">特休假申請</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 特休假申請 Start-->
+	<div role="main" class="ui-content">
+
+<!-- 一整個AL_form的div，是一張休假單的表格 -->
+<div class="AL_form">
+
+	<div>
+		<p class="title_al">AL特休假</p>
+	</div>
+
+	<div>
+		<table class="leave_apply_table">
+			<tr>
+				<td class="leave_td_label">From</td>
+				<td><input type="text" class="myDate" id=""></td>
+				<td><div class="list_btn_sckedule"></div></td>
+			</tr>
+			<tr>
+				<td class="leave_td_label">To</td>
+				<td><input type="text" class="myDate" id=""></td>
+				<td><div class="list_btn_sckedule"></div></td>
+			</tr>
+			<tr>
+				<td class="leave_td_label">Off Days</td>
+				<td><input type="text" id=""></td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+
+
+
+
+
+
+	<div class="leave_apply_add">
+		<p>+新增其他休假</p>
+	</div>
+
+	<div id="result_info">
+		<div id="list_icon_info_20px"></div>
+		<span id="div_result_infoMsg">
+			<p>未扣假天數+預請假天數，不得大於30日</p>
+			<p>AL每筆連續不得超過六日，</p>
+			<p>兩筆之間至少間隔一日。</p>
+		</span>
+	</div>
+	
+	<div id="btnApply" class="leave_apply_btnApply">
+		<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>確認</div></a>
+	</div>
+		
+	
+<!-- 特休假申請 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-apply" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="window" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p>您已提出特休假申請</p>
+    </div>
+
+    <div data-role="content" class="popup-content" id="leave_apply_popup">
+		<div id="leave_apply_popup_content">
+	        <p>AL特休假</p>
+	        <p>2015/01/15-2015/01/16</p>
+	        <p>申請成功</p>
+		</div>
+
+        <a class="ui-btn btnPopOK" href="leave_main.html" data-ajax="false"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>

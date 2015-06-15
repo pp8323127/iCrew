@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="change_calc_compare" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">換班飛時試算</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 換班飛時試算-對照 Start-->
+	<div role="main" class="ui-content">
+	
+<div data-role="navbar" id="calc_navbar">
+<ul>
+<li>
+	<div id="calc_datetime">
+		<table>
+			<tr class="tr_yearmonth">
+				<th rowspan="3">
+					<p>2015</p>
+					<p>JAN.</p>
+				</th>
+			</tr>
+
+			<tr></tr>
+			<tr></tr>
+			<tr class="tr_date">
+				<td>01</td>
+			</tr>
+			<tr class="tr_date">
+				<td>02</td>
+			</tr>
+
+			<tr class="tr_select_title">
+				<td>
+				<p>選</p>
+				<p>擇</p>
+				<p>試</p>
+				<p>算</p>
+				<p>者</p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+<li>
+	<div id="compare_applicant1">
+		<table>
+			<tr class="tr_applicant">
+				<th colspan="2">Applicant</th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654320</p>
+					<p>歐陽晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_fltno_cr">
+				<td>Fltno</td>
+				<td>CR</td>
+			</tr>
+
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+
+			<!-- 表格尾 -->
+			<tr class="tr_applicant">
+				<th colspan="2">Applicant</th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654320</p>
+					<p>歐陽晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_chk">
+				<td colspan="2">
+				
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+
+
+<li>
+	<div id="compare_substitle1">
+		<table>
+			<tr class="tr_substitle">
+				<th colspan="2">Substitle</th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654321</p>
+					<p>蘇晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_fltno_cr">
+				<td>Fltno</td>
+				<td>CR</td>
+			</tr>
+
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+
+			<!-- 表格尾 -->
+			<tr class="tr_substitle">
+				<th colspan="2">Substitle</th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654320</p>
+					<p>歐陽晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_chk">
+				<td colspan="2">
+					<div id="list_btn_square"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+
+<li>
+	<div id="compare_substitle2">
+		<table>
+			<tr class="tr_substitle">
+				<th colspan="2"></th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654321</p>
+					<p>蘇晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_fltno_cr">
+				<td>Fltno</td>
+				<td>CR</td>
+			</tr>
+
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+
+			<!-- 表格尾 -->
+			<tr class="tr_substitle">
+				<th colspan="2"></th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654320</p>
+					<p>歐陽晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_chk">
+				<td colspan="2">
+					<div id="list_btn_square"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+
+<li>
+	<div id="compare_substitle3">
+		<table>
+			<tr class="tr_substitle">
+				<th colspan="2"></th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654321</p>
+					<p>蘇晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_fltno_cr">
+				<td>Fltno</td>
+				<td>CR</td>
+			</tr>
+
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+			<tr class="tr_content">
+				<td>0000</td>
+				<td>1111</td>
+			</tr>
+
+			<!-- 表格尾 -->
+			<tr class="tr_substitle">
+				<th colspan="2"></th>
+			</tr>
+			<tr class="tr_name">
+				<td colspan="2">
+					<p>654320</p>
+					<p>歐陽晶晶</p>
+				</td>
+			</tr>
+			<tr class="tr_chk">
+				<td colspan="2">
+					<div id="list_btn_square"><div id="list_icon_checkmark_blue"></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</li>
+
+</ul>
+</div>
+
+		<div id="btnOKCancel" class="btn_calc_compare">
+			<a data-rel="back" class="ui-btn ui-corner-all"><div>取消</div></a>
+			<a href="change_calc_table.html" class="ui-btn ui-corner-all" data-ajax="false"><div>確認</div></a>
+		</div>
+
+	</div>
+<!-- 換班飛時試算-對照 End-->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>

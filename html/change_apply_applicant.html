@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>iCrew</title>
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
+	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
+	<link rel="stylesheet" href="jQueryMob/CSS.css">
+	<script src="jQueryMob/jquery.js" language="javascript"></script>	
+	<script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btn_menu").click(function(e){
+                $.ajax({
+                    type: "POST",
+                    url: "navbar.jsp",
+                    success:function(data){
+                        // alert(data);
+                        $("#right-list li").remove();
+                        $("#right-list").append(data).listview("refresh");
+                    },
+                    error:function(xhr, ajaxOptions, thrownError){
+                        console.log(xhr.status);
+                        console.log(thrownError);
+                        alert("Error");
+                    }
+                });
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="change_apply_applicant" data-role="page">
+<!-- Header bar Start -->
+	<div data-role="header" data-position="fixed">
+		<table id="header-bar">
+			<tr>
+				<td id="header-bar-btnBak">
+					<a data-rel="back"><div id="naviBar_icon_Back"></div></a>
+				</td>
+				<td id="header-bar-btnAppname">換班申請-申請者</td>
+				<td id="header-bar-btnMenu">
+					<a id="btn_menu" href="#navbar"><div id="navi_icon_menu"></div></a>
+				</td>
+			</tr>
+		</table>
+	</div>
+<!-- Header bar End -->
+
+<!-- 換班申請-申請者 Start-->
+	<div role="main" class="ui-content">
+		<div id="div_change_apply_title">
+			<p>蘇晶晶</p>
+			<p>654321</p>
+			<p>(17416)</p>
+		</div>
+		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="list_btn_arrow_right_gray" data-expanded-icon="list_btn_arrow_down_gray" class="apply_col ui-nodisc-icon">
+			<h3>四次換班權利</h3>
+			<table id="choose-serv-t" style="margin-bottom: 15px;">
+				<tr>
+					<td><input type="checkbox" name="1" id="ck1" value="1"></td>
+					<td>2015年3月-1</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="1" id="ck1" value="1"></td>
+					<td>2015年3月-2</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="1" id="ck1" value="1"></td>
+					<td>2015年3月-3</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="1" id="ck1" value="1"></td>
+					<td>2015年3月-4</td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+
+		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="list_btn_arrow_right_gray" data-expanded-icon="list_btn_arrow_down_gray" class="apply_col ui-nodisc-icon">
+			<h3>積點換班權利</h3>
+			<table id="choose-serv-t">
+				<tr>
+					<td><input type="checkbox" name="1" id="ck1" value="1"></td>
+					<td>飛時破百</td>
+					<td>9876543210</td>
+					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="1" id="ck1" value="1"></td>
+					<td>額外換班單</td>
+					<td>9876543210</td>
+					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop"><div id="list_icon_info_gray_20px"></div></a></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="btnApply" class="change_btnApply">
+			<a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請換班</div></a>
+		</div>
+		
+	</div>
+
+	<!-- 定義popup顯示位置 -->
+	<div id="popupSite"></div>
+<!-- 換班申請-申請者 End-->
+
+<!-- popup container start -->
+<div data-role="popup" id="alert-popup-info" class="ui-content popupDiv" data-overlay-theme="b" data-dismissible="false" data-position-to="#popupSite" data-shadow="true" data-corners="true">
+    <div data-role="header" class="popup-header">
+       <p>飛時破百</p>
+    </div>
+	<hr style="margin-top: 17px;">
+    <div data-role="content" class="popup-content">
+        <p>9876543210</p>
+        <a class="ui-btn btnPopOK" data-rel="back"><div>確 認</div></a>
+    </div>
+</div>
+<!-- popup container end -->
+
+<!-- navbar Slide Panel -->
+    <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
+        <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
+        </ul>
+    </div>
+<!-- navbar Slide Panel -->
+
+</div>
+
+
+</body>
+</html>

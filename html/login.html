@@ -1,36 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ page import="java.io.*,java.util.*,fzAuthP.*" %>
-
-<% 
-    
-	session.removeAttribute("loginAppBobj");
-%>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<title>iCrew</title>
 <link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 <link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />
-<link rel="stylesheet" href="jQueryMob/login-style.css" />	
-<script src="jQueryMob/jquery.js" language="javascript"></script>
-
-<script type="text/javascript">
-$( document ).bind( 'mobileinit', function(){
-	$.mobile.loader.prototype.options.text = "Loading";
-	$.mobile.loader.prototype.options.textVisible = false;
-	$.mobile.loader.prototype.options.theme = "#";
-	$.mobile.loader.prototype.options.html = "<div> </div>";
-});
-</script>
-	
+<link rel="stylesheet" href="CSS/login-style.css" />	
+<script src="jQueryMob/jquery.js" language="javascript"></script>	
 <script src="jQueryMob/jquery.mobile.custom.js" language="javascript"></script>
 
 <style type="text/css">
@@ -58,7 +35,7 @@ $( document ).bind( 'mobileinit', function(){
 	}
 	
 	form .placeholder {
-		font-family: 'Microsoft JhengHei', helvetica;
+		font-family: 'Microsoft JhengHei', Helvtica;
 		font-size: 15px;
 		color: #707070;
 	}
@@ -70,66 +47,45 @@ $( document ).bind( 'mobileinit', function(){
     .ui-field-contain {
     	width: 100%;
 	    padding: 0;
-    }		
-		
+    }
+	
 </style>
 	
 <script type="text/javascript">
 $(document).ready(function () {
-
-    $('body').append("<div class='ui-loader-background'><div class='custom-spinner'></div></div>");
 	
 	$("#sub").click(function(e){
 		var userid = $("#txt_userid").val();
 		var pwd = $("#txt_password").val();
-		$.ajax({
-		    /*beforeSend: function() { showLoader(); },
-			complete: function(){ hideLoader(); },*/
-			type: "POST",
-			url: "checkUser.jsp",
-			data: {UserID:userid, Password:pwd},
-			success:function(data){
-				//alert(data);
-				if ($.trim(data) == "true"){
-					//alert("true");
-					$("#loginForm").attr("action", "MainPage.jsp");
-					$("#loginForm").submit();
+		$("#myPopupDialog").popup("open");
+// 		$.ajax({
+// 			type: "POST",
+// 			url: "checkUser.jsp",
+// 			data: {UserID:userid, Password:pwd},
+// 			success:function(data){
+// 				//alert(data);
+// 				if ($.trim(data) === "true"){
+// 					//alert("true");					
+// 					//$.mobile.changePage("index1.jsp", {transition : "slide"}, false);
+// 					$("#loginForm").attr("action", "index1.jsp");
+// 					$("#loginForm").submit();
 					
-				}
-				else{
-					//alert("false");
-					$("#myPopupDialog").popup("open");
-				}
-			},
-			error:function(xhr, ajaxOptions, thrownError){
-				console.log(xhr.status);
-				console.log(thrownError);
-				alert("Error");
-			}
-		});
+// 				}
+// 				else{
+// 					//alert("false");
+// 					$("#myPopupDialog").popup("open");
+// 				}
+// 			},
+// 			error:function(xhr, ajaxOptions, thrownError){
+// 				console.log(xhr.status);
+// 				console.log(thrownError);
+// 				alert("Error");
+// 			}
+// 		});
 		e.preventDefault();
 	});
 
 });
-
-$(document).on({
-	ajaxSend: function () { $.mobile.loading('show'); },
-	ajaxStart: function () { $.mobile.loading('show'); },
-	ajaxStop: function () { $.mobile.loading('hide'); },
-	ajaxError: function () { $.mobile.loading('hide'); }
-});
-
-/*function showLoader() {
-    window.setTimeout(function(){
-        $.mobile.loading('show');
-    }, 1);
-};
- 
-function hideLoader() {
-    window.setTimeout(function(){
-        $.mobile.loading('hide');
-    }, 100000);
-};*/
 
 // $(document).ready(init);
 // function init(){
@@ -162,24 +118,30 @@ function hideLoader() {
 </head>
 <body>
 
-<!--login page-->
+<!--login page Start -->
 	<div id="loginPage" data-role="page" data-theme="a">
+	
+    <!-- Header bar Start -->
 	  <div data-role="header" data-position="fixed" class="header-bd" style="min-height: 44px;">
 		<div class="logo-img"></div>
 	  </div>
+  
+	<!-- Header bar End -->
+	
+	<!-- login 主畫面  Start -->  
 	  <div role="main" class="ui-content">
 	 
 	   <div class="iCrew-logo"></div>
 	   
 	   <form id="loginForm" method="POST" action="" data-ajax="false">
 			 <div id="div_uid" class="uid">
-				 <input type="text" id="txt_userid" placeholder="帳號" value="">
+				 <input type="text" id="txt_userid" placeholder="帳號">
 			 </div>
 			 <div id="div_pwd" class="pwd">
-				 <input type="password" id="txt_password" data-mini="false" placeholder="密碼" value="test1234">
+				 <input type="password" id="txt_password" data-mini="false" placeholder="密碼">
 			 </div>
 			 <div id="div_btn_login" class="login-btn">
-			     <button id="sub" class="ui-btn ui-corner-all" >登 入</button>
+			     <button id="sub" class="ui-btn ui-corner-all">登 入</button>
 			 </div>
 	    </form>
 	    
@@ -188,7 +150,7 @@ function hideLoader() {
 	     <div data-role="main" class="ui-content" align="center">
 	       <div class="ui-field-contain">
 	         <div class="alert-title">登入錯誤</div>
-	         <div class="alert-content">員工號或密碼不正確</div>
+	         <div class="alert-content">員工號或EIP密碼不正確</div>
 	       </div>
 	       <div class="alert-btn">
 	         <a href="#" id="btn_confirm" class="ui-btn" data-rel="back">確 認</a>
@@ -199,7 +161,10 @@ function hideLoader() {
 	   	    
 	  </div>
 	  
+	<!-- login 主畫面  End -->  
+	  
 	</div>
+<!--login page End -->
 
 </body>
 </html>
