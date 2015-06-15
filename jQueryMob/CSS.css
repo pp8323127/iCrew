@@ -173,8 +173,19 @@ div#personinfoDetail p{
 }
 /* profile_btn */
 .profile_btn div,
+.profile_btn a,
+.profile_btn.ui-navbar div,
 .profile_btn.ui-navbar a{
 	margin: 0 auto;
+	margin: 5px;
+}
+.profile_btn div{
+	display: inline-block;
+}
+.profile_btn,
+.profile_btn.ui-navbar{
+	margin: 25px 30px;
+	text-align: center;
 }
 
 
@@ -199,7 +210,7 @@ div#personinfoDetail p{
 .profile_btn_call_home{
     background: url("../images/profile_btn_call_home.png") center center no-repeat;
 	background-color: transparent !important;
-	width: 50px;
+	width: 51px;
 	height: 50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -216,7 +227,7 @@ div#personinfoDetail p{
 .profile_btn_mail{
     background: url("../images/profile_btn_mail.png") center center no-repeat;
 	background-color: transparent !important;
-	width: 50px;
+	width: 51px;
 	height: 50px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
@@ -490,10 +501,10 @@ div.inputEMP_calc{
 div.inputEMP_calc div{
 	width: 85%;
 }
-div.inputMon_calc{
+div#inputMon_calc{
 	margin: 25px 15px 25px 55px;
 }
-div.inputMon_calc{
+div#inputMon_calc div{
 	width: 85%;
 }
 /*inputEMP2改成inputEMP_calc，inputMon margin15改成55、width 100%*/
@@ -564,7 +575,7 @@ div#change_calc_compare div#calc_navbar .ui-grid-d>.ui-block-e{
 	padding: 0;
 	text-align: center;
 	font-size: 15px;
-	background: #f8f8f8;
+	/*background: #f8f8f8;*/
 	border-right: 2px solid #4d4d4d;
 	border-bottom: 1px solid #959595;
 }
