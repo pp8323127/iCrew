@@ -185,7 +185,7 @@ try{
 		<!-- 申請單 -->
 		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="list_btn_arrow_right_gray" data-expanded-icon="list_btn_arrow_down_gray" class="apply_col ui-nodisc-icon">
     		<h3>四次換班權利</h3>
-			<table id="choose-serv-t" style="margin-bottom: 15px;">
+			<table class="choose-serv-t" style="margin-bottom: 15px;">
 		<%		//是否A全勤
 				str = csf.FullAttforA(aEmpno, year, month, csf.getaTimes());
 				if("Y".equals(str) && csf.getaTimes() < totalTimes) {		
@@ -209,7 +209,7 @@ try{
 		<!-- 積點 -->
 		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="list_btn_arrow_right_gray" data-expanded-icon="list_btn_arrow_down_gray" class="apply_col ui-nodisc-icon">
 			<h3>積點換班權利</h3>
-			<table id="choose-serv-t">
+			<table class="choose-serv-t">
 		<% //是否A有積點
 				str = csf.CreditAvlforA(aEmpno, year, month);
 				if("Y".equals(str) && null != csf.getObjAL() &&  csf.getObjAL().size() > 0){		
@@ -223,7 +223,7 @@ try{
 					<td><input type="checkbox" name="apoint" id="apck<%=i %>" value="<%=obj.getSno()%>"></td>
 					<td><%=obj.getReason()%></td>
 					<td><%=obj.getSno() %></td>
-					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=obj.getSno()%>','<%=obj.getReason()%>');"><div id="list_icon_info_gray_20px"></div></a></td>
+					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=obj.getSno()%>','<%=obj.getReason()%>');"><div class="list_icon_info_gray_20px"></div></a></td>
 				</tr>
 					
 		<%			

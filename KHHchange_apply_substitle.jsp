@@ -202,7 +202,7 @@ try{
 			//A用積點可與B申請單 or B積點換. 
 			flagN =true;
 		%>	<h3>四次換班權利</h3>
-			<table id="choose-serv-t" style="margin-bottom: 15px;">
+			<table class="choose-serv-t" style="margin-bottom: 15px;">
 			<%for(int i=rTimes;i<totalTimes;i++){ %>			
 				<tr>
 					<td><input type="checkbox" name="r_ck" id="r_ck<%=i%>" value="1"></td>
@@ -216,7 +216,7 @@ try{
 			flagC =true;
 		%>		
 			<h3>積點換班權利</h3>
-			<table id="choose-serv-t">
+			<table class="choose-serv-t">
 				<%
 				for(int i=0;i<objAL.size();i++){
 					CreditObj obj =  (CreditObj) objAL.get(i);
@@ -226,7 +226,7 @@ try{
 					<td><input type="checkbox" name="r_point" id="r_pck<%=i%>" value="<%=obj.getSno()%>"></td>
 					<td><%=obj.getReason()%></td>
 					<td><%=obj.getSno() %></td>
-					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=obj.getSno()%>','<%=obj.getReason()%>');"><div id="list_icon_info_gray_20px"></div></a></td>
+					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=obj.getSno()%>','<%=obj.getReason()%>');"><div class="list_icon_info_gray_20px"></div></a></td>
 				</tr>
 				<%
 					}

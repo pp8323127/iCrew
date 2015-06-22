@@ -238,9 +238,9 @@ for(int o=0; o<dayofmonthAL.size(); o++)
 	if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
 	{
 		//週末
-		bcolor="#ffff00";
+		bcolor="#ffcddf";
 	}else{
-		bcolor="";
+		bcolor="#f8f8f8";
 	}
 %>
 			
@@ -280,9 +280,9 @@ for(int o=0; o<dayofmonthAL.size(); o++)
 				if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
 				{
 					//週末
-					bcolor="#ffff00";
+					bcolor="#ffcddf";
 				}else{
-					bcolor="";
+					bcolor="#f8f8f8";
 				}					
 				for(int i=0 ;i<aEmpnoAL.size();i++){
 					
@@ -360,9 +360,9 @@ for(int o=0; o<dayofmonthAL.size(); o++)
 				if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
 				{
 					//週末
-					bcolor="#ffff00";
+					bcolor="#ffcddf";
 				}else{
-					bcolor="";
+					bcolor="#f8f8f8";
 				}					
 				for(int i=0 ;i<rEmpnoAL.size();i++){
 					
