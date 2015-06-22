@@ -235,13 +235,13 @@ CrewSwapRObj rObjAL = csf.getCrewSpObjAL();
 String bcolor = "";
 for(int o=0; o<dayofmonthAL.size(); o++)
 {
-	if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
+	/*if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
 	{
 		//週末
 		bcolor="#ffcddf";
 	}else{
 		bcolor="#f8f8f8";
-	}
+	}*/
 %>
 			
 			<tr class="tr_date" bgcolor="<%=bcolor%>">
@@ -277,13 +277,13 @@ for(int o=0; o<dayofmonthAL.size(); o++)
 		if(null!= aEmpnoAL && aEmpnoAL.size() > 0){
 			for(int o=0; o<dayofmonthAL.size(); o++)
 			{
-				if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
+				/*if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
 				{
 					//週末
 					bcolor="#ffcddf";
 				}else{
 					bcolor="#f8f8f8";
-				}					
+				}	*/				
 				for(int i=0 ;i<aEmpnoAL.size();i++){
 					
 					CrewSkjObj sobj = (CrewSkjObj)aEmpnoAL.get(i);
@@ -357,13 +357,13 @@ for(int o=0; o<dayofmonthAL.size(); o++)
 			if(null!= rEmpnoAL && rEmpnoAL.size() > 0){
 			for(int o=0; o<dayofmonthAL.size(); o++)
 			{
-				if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
+				/*if(((String)dayofmonthAL.get(o)).indexOf("SAT")>=0 || ((String)dayofmonthAL.get(o)).indexOf("SUN")>=0)
 				{
 					//週末
 					bcolor="#ffcddf";
 				}else{
 					bcolor="#f8f8f8";
-				}					
+				}*/				
 				for(int i=0 ;i<rEmpnoAL.size();i++){
 					
 					CrewSkjObj sobj = (CrewSkjObj)rEmpnoAL.get(i);
