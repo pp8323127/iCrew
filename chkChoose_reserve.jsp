@@ -12,7 +12,7 @@ if(null != session.getAttribute("loginAppBobj")){
 }
 if(lObj == null ) {
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 } 
 else
 {
@@ -37,7 +37,7 @@ else
 }
 catch(ClassCastException e){
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.println(e.toString());
 }

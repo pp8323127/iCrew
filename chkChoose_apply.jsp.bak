@@ -13,7 +13,7 @@ if(null != session.getAttribute("loginAppBobj")){
 }
 if(lObj == null ) {
 	out.println("請登入");
-	//response.sendRedirect("login.jsp");
+	response.sendRedirect("login.jsp");
 }
 else
 {
@@ -33,7 +33,7 @@ else
 				cpf = new CrewPickFun();		
 				CrewMsgObj msg = cpf.SendPickAttForm( uObj.getEmpno(), uObj.getBase(), sdate, edate, comment);
 				if("1".equals(msg.getResultMsg())){
-					out.println("您已成功提出申請:"+msg.getErrorMsg());//+sdate+edate
+					out.println("Successful:"+msg.getErrorMsg());//+sdate+edate
 				}else{
 					out.println(msg.getErrorMsg());
 				}
@@ -48,13 +48,13 @@ else
 				cpf = new CrewPickFun();	
 				CrewMsgObj msg = cpf.SendPickCtForm(chkItem, uObj.getEmpno(), uObj.getBase());
 				if("1".equals(msg.getResultMsg())){
-					out.println("您已成功提出申請");//+msg.getErrorMsg()
+					out.println("Successful");//+msg.getErrorMsg()
 				}else{
-					out.println("失敗:"+msg.getErrorMsg());
+					out.println("Failed:"+msg.getErrorMsg());
 				}
 				//out.println("Successful:"+pointList);
 			}else{
-				out.println("失敗:請勾選3個積點或選班單");
+				out.println("Failed:請勾選3個積點或選班單");
 			}
 		}
 	
@@ -62,7 +62,7 @@ else
 }
 catch(ClassCastException e){
 	out.println("請登入");
-	//response.sendRedirect("login.jsp");
+	response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.println(e.toString());
 }

@@ -29,7 +29,7 @@ if(null!=objAL){
 <%}
 }catch(ClassCastException e){
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.print(e.toString());
 }

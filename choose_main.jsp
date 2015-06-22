@@ -35,8 +35,12 @@ try{
                     url: "navbar.jsp",
                     success:function(data){
                         // alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);

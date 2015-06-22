@@ -1116,10 +1116,10 @@ table{
 	width: 100%;
 	border-spacing: 0px;
 }
-table#choose-serv-t tr{
+table.choose-serv-t tr{
 	height: 45px;
 }
-table#choose-serv-t td {
+table.choose-serv-t td {
 	border-bottom: solid;
 	border-width: 1px;
 	border-color: #a7a7a7;
@@ -1128,7 +1128,7 @@ table#choose-serv-t td {
 	/*width: 60%;*/
 	text-align: left;
 }
-table#choose-serv-t th{
+table.choose-serv-t th{
 	background: #e4e4e4;
 	text-align: left;
 	padding-left: 23px;
@@ -1136,22 +1136,22 @@ table#choose-serv-t th{
 	font-weight: normal;
 	height: 35px;
 }
-table#choose-serv-t td:first-child{
+table.choose-serv-t td:first-child{
 	padding-left: 17px;
 	padding-top: 5px;
 	width: 20%;
 }
-table#choose-serv-t td:last-child{
+table.choose-serv-t td:last-child{
 	min-width: 20px;
 	padding-right: 15px;
 	text-align: right;
 }
-#list_icon_info_gray_20px{
+.list_icon_info_gray_20px{
 	background: url("../images/list_icon_info_gray_20px.png") center right no-repeat;
 	height: 20px;
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
-	#list_icon_info_gray_20px{ 
+	.list_icon_info_gray_20px{ 
 		background: url("../images/list_icon_info_gray_20px@2x.png") center right no-repeat;
 		  -webkit-background-size:20px 20px;
 		     -moz-background-size:20px 20px;

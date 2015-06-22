@@ -50,7 +50,11 @@ try{
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
@@ -65,8 +69,12 @@ try{
                     url: "navbar.jsp",
                     success:function(data){
                         // alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);
@@ -111,9 +119,13 @@ try{
                             url: "send_apply.jsp",
                     		data: {myDate:yymm,aEmpno:aEmpno,rEmpno:rEmpno,ack:ack,apoint:apoint,r_ck:rck,r_point:rpoint,type:type},
                             success:function(data){
-                            	$("#strMsg").html(data);
-                            	$("#backData").val(data);	
-                				$("#alert-popup-apply").popup("open");                             
+                            	if(data.indexOf("請登入") > -1){
+									window.location.href = "login.jsp";
+								}else{
+									$("#strMsg").html(data);
+									$("#backData").val(data);	
+									$("#alert-popup-apply").popup("open");                             
+								}
                             },
                             error:function(xhr, ajaxOptions, thrownError){
                                 console.log(xhr.status);
@@ -137,8 +149,8 @@ try{
 			$("#popConf").click(function(e){
 				var msg = $("#backData").val();
 				//console.log(msg);
-				//console.log(msg.indexOf("您已成功提出申請:"));
-				//console.log(msg.match("您已成功提出申請:"));
+				//console.log(msg.indexOf("Successful"));
+				//console.log(msg.match("Successful"));
 				if(msg.indexOf("成功") > -1){
 					$("#popConf").attr("href","change_main.jsp");
 				}else{
@@ -253,14 +265,22 @@ try{
 			<%if(null!=aCrewInfoObj  && null!=rCrewInfoObj){  
 				sendObj.setMonth(month);
 				sendObj.setYear(year);
-				sendObj.setaApplyTimes((Integer.parseInt(aTimes)+1+""));
+				if(null == ack || "".equals(ack)){
+					sendObj.setaApplyTimes(aTimes);
+				}else{
+					sendObj.setaApplyTimes((Integer.parseInt(aTimes)+1+""));
+				}
 				sendObj.setaEmpno(aCrewInfoObj.getEmpno());
 				sendObj.setaCname(aCrewInfoObj.getCname());
 				sendObj.setaSern(aCrewInfoObj.getSern());
 				sendObj.setaGrps(aCrewInfoObj.getGrps());
 				sendObj.setaQual(aCrewInfoObj.getOccu());
 				
-				sendObj.setrApplyTimes((Integer.parseInt(rTimes)+1+""));
+				if(null == rck || "".equals(rck)){
+					sendObj.setrApplyTimes(rTimes);
+				}else{
+					sendObj.setrApplyTimes((Integer.parseInt(rTimes)+1+""));
+				}
 				sendObj.setrEmpno(rCrewInfoObj.getEmpno());
 				sendObj.setrCname(rCrewInfoObj.getCname());
 				sendObj.setrSern(rCrewInfoObj.getSern());				
@@ -273,7 +293,7 @@ try{
 				<li>
 					<div>	<!--申請者第1欄-->
 						<p style="font-size: 18px; font-weight: bold;"><%=aCrewInfoObj.getCname() %></p>
-						<p style="font-size: 11px;"></p>
+						<!-- <p style="font-size: 11px;"></p> -->
 						<br>
 						<span class="span_font11px">
 							<p><%=aCrewInfoObj.getEmpno() %></p>
@@ -284,7 +304,15 @@ try{
 						</span>
 						<span class="span_Exchange_Qualification">
 							<p>Exchange Count :</p>
-							<p><%if(null!=ack && !"".equals(ack)){ out.println(Integer.parseInt(rTimes)+1+"");}else{out.println("0");}%></p>
+							<p>
+							<%	
+							if(null == ack || "".equals(ack)){
+								out.println(aTimes);
+							}else{
+								out.println((Integer.parseInt(aTimes)+1));
+							}
+							
+							//if(null!=ack && !"".equals(ack)){ out.println(Integer.parseInt(rTimes)+1+"");}else{out.println("0");}%></p>
 							<br>
 							<p>Qualification :</p>
 							<p><%=aCrewInfoObj.getOccu() %></p>
@@ -294,7 +322,7 @@ try{
 				<li>
 					<div>	<!--被換者第1欄-->
 						<p style="font-size: 18px; font-weight: bold;"><%=rCrewInfoObj.getCname() %></p>
-						<p style="font-size: 11px;"></p>
+						<!-- <p style="font-size: 11px;"></p> -->
 						<br>
 						<span class="span_font11px">
 							<p><%=rCrewInfoObj.getEmpno() %></p>
@@ -305,7 +333,14 @@ try{
 						</span>
 						<span class="span_Exchange_Qualification">
 							<p>Exchange Count :</p>
-							<p><%if(null!=rck  && !"".equals(rck)){ out.println(Integer.parseInt(rTimes)+1+"");}else{out.println("0");}%></p>
+							<p>
+							<%
+							if(null == rck || "".equals(rck)){
+								out.println(rTimes);
+							}else{
+								out.println((Integer.parseInt(rTimes)+1));
+							}
+							//if(null!=rck  && !"".equals(rck)){ out.println(Integer.parseInt(rTimes)+1+"");}else{out.println("0");}%></p>
 							<br>
 							<p>Qualification :</p>
 							<p><%=rCrewInfoObj.getOccu() %></p>
@@ -321,12 +356,14 @@ try{
 						String[] aFdate = new String[aSwapSkjAL.size()];
 						String[] aFltno = new String[aSwapSkjAL.size()];
 						String[] aFlyHrs = new String[aSwapSkjAL.size()];
+						
 						for(int i=0;i<aSwapSkjAL.size();i++){ 
 							CrewSkjObj obj = (CrewSkjObj) aSwapSkjAL.get(i);
 							aTripno[i] = obj.getTripno();
 							aFdate[i] = obj.getFdate();
 							aFltno[i] = obj.getDutycode();
 							aFlyHrs[i] = obj.getCr() ;
+							
 					%>
 					<div>	<!--申請者第2欄-->
 						<p style="font-size: 11px;">Trip No.</p>

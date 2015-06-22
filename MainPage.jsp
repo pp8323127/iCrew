@@ -1,7 +1,10 @@
+<%@page import="fzAuthP.FZCrewObj"%>
 <%@page import="ws.crew.LoginAppBObj"%>
 <%@page language="java" contentType="text/html; charset=UTF-8"  pageEncoding="UTF-8"%>
 <%
 try{
+	response.setHeader("Cache-Control","no-cache");
+	response.setDateHeader ("Expires", 0);
 	LoginAppBObj lObj= null;
 	if(null != session.getAttribute("loginAppBobj")){
 		lObj= (LoginAppBObj) session.getAttribute("loginAppBobj");
@@ -12,13 +15,18 @@ try{
 	} 
 	else
 	{
+		FZCrewObj uObj = lObj.getFzCrewObj();
+		boolean cabin = ("FA,FS,ZC,PR,PU,CM".indexOf(uObj.getOccu())) > 0;
 %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 <title>iCrew</title>
 <link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 <link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />
@@ -76,8 +84,12 @@ $(document).ready(function () {
 			url: "navbar.jsp",
 			success:function(data){
 				//alert(data);
-				$("#right-list li").remove();
-				$("#right-list").append(data).listview("refresh");
+				if(data.indexOf("請登入") > -1){
+					window.location.href = "login.jsp";
+				}else{
+					$("#right-list li").remove();
+					$("#right-list").append(data).listview("refresh");
+				}
 			},
 			error:function(xhr, ajaxOptions, thrownError){
 				console.log(xhr.status);
@@ -108,6 +120,7 @@ $(document).ready(function () {
 		 </div>
 		</div>
 	  </div>
+	   <%if("N".equals(uObj.getLocked()) && cabin ){%>
 	  <div role="main" class="ui-content">
 		<div>
 		  <div class="div_change">
@@ -120,7 +133,7 @@ $(document).ready(function () {
 		    <a id="btn_leave" class="ui-btn" href="leave_main.jsp" data-ajax="false"></a>
 		  </div>		  
 		</div>
-		
+		<%}%>
 		<div style="display: block; height:180px;">
 		  <div class="div_cia_bus">
 		    <div class="div_cia"><a id="btn_cia" class="ui-btn" href="http://tpeweb04.china-airlines.com/cia/" data-ajax="false"></a></div>
@@ -136,7 +149,7 @@ $(document).ready(function () {
 		  </div>
 		</div>    
 	  </div>
-	  
+	 
 	  <div id="navbar" data-role="panel" data-position="right" data-position-fixed="false" data-display="overlay" data-theme="b">
         <ul id="right-list" data-role="listview" data-inset="true" data-icon="false">
         </ul>	    

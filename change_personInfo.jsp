@@ -18,7 +18,7 @@ try{
 	}
 	if(lObj == null ) {
 		out.println("請登入");
-		response.sendRedirect("login.jsp");
+		//response.sendRedirect("login.jsp");
 	}else{  
 	FZCrewObj uObj = lObj.getFzCrewObj();
 	String aEmpno = uObj.getEmpno();
@@ -48,7 +48,7 @@ if(objAL.size()>0){
 
 	<div data-role="content" class="popup-content">
 		<div id="personinfoDetail">
-			<p>E-mail：</p>
+			<!--<p>E-mail：</p>
 			<p><%=obj.getEmail() %></p>
 			<br>
 			<p>Moblie：</p>
@@ -56,7 +56,7 @@ if(objAL.size()>0){
 			<br>
 			<p>Home：</p>
 			<p><%=obj.getHphone() %></p>
-			<br>
+			<br>-->
 			<p>Message：</p>
 			<p><%=obj.getIcq() %></p>
 			<br>
@@ -92,7 +92,7 @@ if(objAL.size()>0){
 	}
 }catch(ClassCastException e){
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.println("Error"+e.toString());	
 }

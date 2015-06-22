@@ -6,14 +6,16 @@
 
 <%  
 try{
-LoginAppBObj lObj= null;
-if(null != session.getAttribute("loginAppBobj")){
-	lObj= (LoginAppBObj) session.getAttribute("loginAppBobj");
-}
-if(lObj == null ) {
-	out.println("請登入");
-	response.sendRedirect("login.jsp");
-} else{  
+	response.setHeader("Cache-Control","no-cache");	
+	response.setDateHeader ("Expires", 0);
+	LoginAppBObj lObj= null;
+	if(null != session.getAttribute("loginAppBobj")){
+		lObj= (LoginAppBObj) session.getAttribute("loginAppBobj");
+	}
+	if(lObj == null ) {
+		out.println("請登入");
+		//response.sendRedirect("login.jsp");
+	} else{  
     	FZCrewObj uObj = lObj.getFzCrewObj();
 		boolean cabin = ("FA,FS,ZC,PR,PU,CM".indexOf(uObj.getOccu())) > 0;
 
@@ -139,7 +141,7 @@ if(lObj == null ) {
         }
 }catch(ClassCastException e){
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.println(e.toString());
 }

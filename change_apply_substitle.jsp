@@ -36,14 +36,19 @@ try{
 	String month = "";
 	String str = "";
 	int totalTimes = 4;
-	boolean flag = false;
+	boolean flagN = false;
+	boolean flagC = false;
 	
 %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
@@ -58,8 +63,12 @@ try{
                     url: "navbar.jsp",
                     success:function(data){
                         // alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);
@@ -188,11 +197,11 @@ if(null!=yymm && !"".equals(yymm)){
 		<input type="hidden" name="ack" id="ack" value="<%=ack%>">
 		<input type="hidden" name="apoint" id="apoint" value="<%=apoint%>">
 		<div data-role="collapsible" data-iconpos="right" data-collapsed-icon="list_btn_arrow_right_gray" data-expanded-icon="list_btn_arrow_down_gray" class="apply_col ui-nodisc-icon">
-		<%if(null != rObjAL && rObjAL.getrEmpnoAvb() == 2 && rTimes < totalTimes && null!=ack &&  !"".equals(ack)) {//&& null!=apoint && !"".equals(apoint)
+		<%if(null != rObjAL && rObjAL.getrEmpnoAvb() == 2 && rTimes < totalTimes) {//&& null!=apoint && !"".equals(apoint)
 			//A用積點可與B申請單 or B積點換. 
-			flag =true;
+			flagN =true;
 		%>	<h3>四次換班權利</h3>
-			<table id="choose-serv-t" style="margin-bottom: 15px;">
+			<table class="choose-serv-t" style="margin-bottom: 15px;">
 			<%for(int i=rTimes;i<totalTimes;i++){ %>			
 				<tr>
 					<td><input type="checkbox" name="r_ck" id="r_ck<%=i%>" value="1"></td>
@@ -201,12 +210,12 @@ if(null!=yymm && !"".equals(yymm)){
 				</tr>					
 			<%}%>
 			</table>
-		<%}else if(null != rObjAL && null != cst.getObjAL() && cst.getObjAL().size()>0){
+		<%}else if(null != rObjAL && null != cst.getObjAL() && cst.getObjAL().size()>0 && (null == ack ||  "".equals(ack))){
 			ArrayList objAL = cst.getObjAL();
-			flag =true;
+			flagC =true;
 		%>		
 			<h3>積點換班權利</h3>
-			<table id="choose-serv-t">
+			<table class="choose-serv-t">
 				<%
 				for(int i=0;i<objAL.size();i++){
 					CreditObj obj =  (CreditObj) objAL.get(i);
@@ -216,7 +225,7 @@ if(null!=yymm && !"".equals(yymm)){
 					<td><input type="checkbox" name="r_point" id="r_pck<%=i%>" value="<%=obj.getSno()%>"></td>
 					<td><%=obj.getReason()%></td>
 					<td><%=obj.getSno() %></td>
-					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=obj.getSno()%>','<%=obj.getReason()%>');"><div id="list_icon_info_gray_20px"></div></a></td>
+					<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=obj.getSno()%>','<%=obj.getReason()%>');"><div class="list_icon_info_gray_20px"></div></a></td>
 				</tr>
 				<%
 					}
@@ -224,11 +233,20 @@ if(null!=yymm && !"".equals(yymm)){
 				%>
 			</table>
 		
-		<%}else{%>
-			<h3>被換者:無申請單機會或無積點換班!</h3>
-		<%}%>
+		<%
+		}else{
+			if(!flagN && (null != cst.getObjAL() && cst.getObjAL().size()>0)){
+		%>
+			<h5>被換者:無申請單機會!</h5>
+		<%
+			}else{
+		%>
+			<h5>被換者:無申請單機會或無積點 </h5>
+		<%		
+			}
+		}%>
 		</div>
-		<%if(flag){ %>
+		<%if(flagN || flagC){ %>
 		<div id="btnApply" class="change_btnApply">
 		 	<a id="sub" href="#" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請換班</div></a>
 			<!--  <a href="#alert-popup-apply" data-rel="popup" data-transition="pop" class="ui-btn ui-corner-all"><div>申請換班</div></a>-->

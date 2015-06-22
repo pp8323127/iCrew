@@ -47,7 +47,11 @@ if(lObj == null ) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
@@ -62,8 +66,12 @@ if(lObj == null ) {
                     url: "navbar.jsp",
                     success:function(data){
                         // alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);
@@ -258,14 +266,22 @@ if(lObj == null ) {
 			<%if(null!=aCrewInfoObj  && null!=rCrewInfoObj){  
 				sendObj.setMonth(month);
 				sendObj.setYear(year);
-				sendObj.setaApplyTimes((Integer.parseInt(aTimes)+1+""));
+				if(null == ack || "".equals(ack)){
+					sendObj.setaApplyTimes(aTimes);
+				}else{
+					sendObj.setaApplyTimes((Integer.parseInt(aTimes)+1+""));
+				}
 				sendObj.setaEmpno(aCrewInfoObj.getEmpno());
 				sendObj.setaCname(aCrewInfoObj.getCname());
 				sendObj.setaSern(aCrewInfoObj.getSern());
 				sendObj.setaGrps(aCrewInfoObj.getGrps());
 				sendObj.setaQual(aCrewInfoObj.getOccu());
 				
-				sendObj.setrApplyTimes((Integer.parseInt(rTimes)+1+""));
+				if(null == rck || "".equals(rck)){
+					sendObj.setrApplyTimes(rTimes);
+				}else{
+					sendObj.setrApplyTimes((Integer.parseInt(rTimes)+1+""));
+				}
 				sendObj.setrEmpno(rCrewInfoObj.getEmpno());
 				sendObj.setrCname(rCrewInfoObj.getCname());
 				sendObj.setrSern(rCrewInfoObj.getSern());				
@@ -278,7 +294,7 @@ if(lObj == null ) {
 				<li>
 					<div>	<!--申請者第1欄-->
 						<p style="font-size: 18px; font-weight: bold;"><%=aCrewInfoObj.getCname() %></p>
-						<p style="font-size: 11px;">(FA)</p>
+						<!-- <p style="font-size: 11px;"></p> -->
 						<br>
 						<span class="span_font11px">
 							<p><%=aCrewInfoObj.getEmpno() %></p>
@@ -289,7 +305,16 @@ if(lObj == null ) {
 						</span>
 						<span class="span_Exchange_Qualification">
 							<p>Exchange Count :</p>
-							<p><%=(Integer.parseInt(aTimes)+1+"") %></p>
+							<p>
+							<%
+							if(null == ack || "".equals(ack)){
+								out.println(aTimes);
+							}else{
+								out.println((Integer.parseInt(aTimes)+1));
+							}
+							%>
+							</p>
+							
 							<br>
 							<p>Qualification :</p>
 							<p><%=aCrewInfoObj.getOccu() %></p>
@@ -299,7 +324,7 @@ if(lObj == null ) {
 				<li>
 					<div>	<!--被換者第1欄-->
 						<p style="font-size: 18px; font-weight: bold;"><%=rCrewInfoObj.getCname() %></p>
-						<p style="font-size: 11px;">(FA)</p>
+						<!-- <p style="font-size: 11px;"></p> -->
 						<br>
 						<span class="span_font11px">
 							<p><%=rCrewInfoObj.getEmpno() %></p>
@@ -310,7 +335,14 @@ if(lObj == null ) {
 						</span>
 						<span class="span_Exchange_Qualification">
 							<p>Exchange Count :</p>
-							<p><%=(Integer.parseInt(rTimes)+1+"")%></p>
+							<p>
+							<%
+							if(null == rck || "".equals(rck)){
+								out.println(rTimes);
+							}else{
+								out.println((Integer.parseInt(rTimes)+1));
+							}%>
+							</p>
 							<br>
 							<p>Qualification :</p>
 							<p><%=rCrewInfoObj.getOccu() %></p>
@@ -326,12 +358,15 @@ if(lObj == null ) {
 						String[] aFdate = new String[aSwapSkjAL.size()];
 						String[] aFltno = new String[aSwapSkjAL.size()];
 						String[] aFlyHrs = new String[aSwapSkjAL.size()];
+						String[] aActp = new String[aSwapSkjAL.size()];
 						for(int i=0;i<aSwapSkjAL.size();i++){ 
 							CrewSkjObj obj = (CrewSkjObj) aSwapSkjAL.get(i);
 							aTripno[i] = obj.getTripno();
 							aFdate[i] = obj.getFdate();
 							aFltno[i] = obj.getDutycode();
 							aFlyHrs[i] = obj.getCr() ;
+							aActp[i] = obj.getActp();
+							
 					%>
 					<div>	<!--申請者第2欄-->
 						<p style="font-size: 11px;">Trip No.</p>
@@ -339,7 +374,7 @@ if(lObj == null ) {
 						<br>
 						<p style="font-size: 18px; font-weight: bold; color: #c22727;"><%=obj.getFdate() %></p>
 						<br>
-						<p style="font-size: 20px; font-weight: bold;"><%=obj.getDutycode() %></p>
+						<p style="font-size: 20px; font-weight: bold;"><%=obj.getDutycode() %><%if("77W".equals(obj.getActp())){out.print("&nbsp;"+obj.getActp());}%></p>
 						<br>
 						<span class="span_Flying">
 							<p>Flying Time :</p>
@@ -359,7 +394,7 @@ if(lObj == null ) {
 						sendObj.setaFdate(aFdate);					
 						sendObj.setaFltno(aFltno);						
 						sendObj.setaFlyHrs(aFlyHrs);
-						
+						sendObj.setaActp(aActp);
 					}%>
 				</li>
 				<li>
@@ -368,12 +403,15 @@ if(lObj == null ) {
 						String[] rFdate = new String[rSwapSkjAL.size()];
 						String[] rFltno = new String[rSwapSkjAL.size()];
 						String[] rFlyHrs = new String[rSwapSkjAL.size()];
+						String[] rActp = new String[rSwapSkjAL.size()];
 						for(int i=0;i<rSwapSkjAL.size();i++){ 
 							CrewSkjObj obj = (CrewSkjObj) rSwapSkjAL.get(i);
 							rTripno[i] = obj.getTripno();
 							rFdate[i] = obj.getFdate();
 							rFltno[i] = obj.getDutycode();
 							rFlyHrs[i] = obj.getCr() ;
+							rActp[i] = obj.getActp();
+							
 					%>
 					<div>	<!--被換者第2欄-->
 						<p style="font-size: 11px;">Trip No.</p>
@@ -381,7 +419,7 @@ if(lObj == null ) {
 						<br>
 						<p style="font-size: 18px; font-weight: bold; color: #c22727;"><%=obj.getFdate() %></p>
 						<br>
-						<p style="font-size: 20px; font-weight: bold;"><%=obj.getDutycode() %></p>
+						<p style="font-size: 20px; font-weight: bold;"><%=obj.getDutycode() %><%if("77W".equals(obj.getActp())){out.print("&nbsp;"+obj.getActp());}%></p>
 						<br>
 						<span class="span_Flying">
 							<p>Flying Time :</p>
@@ -401,6 +439,7 @@ if(lObj == null ) {
 						sendObj.setrFdate(rFdate);
 						sendObj.setrFltno(rFltno);
 						sendObj.setrFlyHrs(rFlyHrs);
+						sendObj.setrActp(rActp);
 					}%>
 				</li>
 			</ul>

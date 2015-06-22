@@ -11,7 +11,7 @@ try{
 	}
 	if(lObj == null ) {
 		out.println("請登入");
-		response.sendRedirect("login.jsp");
+		//response.sendRedirect("login.jsp");
 	} 
 else
 {
@@ -34,15 +34,12 @@ else
 	int flag = 0;//錯誤
 	CrewALFun fun = new CrewALFun();
 	CrewMsgObj obj = fun.sendAL(off_type, lObj.getFzCrewObj().getEmpno() , offsdate, offedate);
-	if("0".equals(obj.getResultMsg())){
-		out.println("您已成功提出申請");//:+obj.getErrorMsg()
-	}else{
-		out.println("失敗<br>"+obj.getErrorMsg());
-	}
+	out.println(obj.getErrorMsg());//:
+	
 }
 }catch(ClassCastException e){
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.println("Error"+e.toString());	
 }

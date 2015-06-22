@@ -44,7 +44,11 @@ if(lObj == null ) {
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
@@ -100,8 +104,12 @@ if(lObj == null ) {
                     url: "navbar.jsp",
                     success:function(data){
                         // alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);
@@ -127,7 +135,9 @@ if(lObj == null ) {
 		        			data: {sdate:sdate,edate:edate,off_type:off_type},
 		        			success:function(data){
 		        				//$('#loadingmessage').hide();
-		        				if(data.indexOf("失敗") > -1){
+		        				if(data.indexOf("請登入") > -1){
+									window.location.href = "login.jsp";
+								}else if(data.indexOf("失敗") > -1){
 		        					$("#strMsg").html(data);
 			        				$("#backData").val("0");
 			        				$("#alert-popup-apply").popup("open");
@@ -199,7 +209,7 @@ if(lObj == null ) {
     					"</tr>"+
     					"<tr>"+
     					"<td class='leave_td_label'>Off Days</td>"+
-    					"<td><input type='text' id='countOff"+countR+"'  onFocus ='getDays("+countR+");'></td>"+
+    					"<td><input type='text' id='countOff"+countR+"'  onFocus ='getDays("+countR+");' readonly='true'></td>"+
     					"</tr>");
   				$("#AL_div:last").trigger('create');
   	  		}else if(countR > 0 && countR < 6){
@@ -219,7 +229,7 @@ if(lObj == null ) {
   					"</tr>"+
   					"<tr>"+
   					"<td class='leave_td_label'>Off Days</td>"+
-  					"<td><input type='text' id='countOff"+countR+"'  onFocus ='getDays("+countR+");'></td>"+
+  					"<td><input type='text' id='countOff"+countR+"'  onFocus ='getDays("+countR+");' readonly='true'></td>"+
   					//"<td><div id='del"+countR+"' class='delEmpno' onClick='delAL(\"tr1"+countR+"\",\"tr2"+countR+"\",\"tr3"+countR+"\",\"tr4"+countR+"\",\"del"+countR+"\");'>X</div></td>"+
   					"<td><div id='rst"+countR+"' class='list_btn_close' onClick='resetDate(\""+countR+"\");'></div></td>"+
   					"</tr>");
@@ -374,7 +384,7 @@ if(lObj == null ) {
 		<option value="0">AL 特休假</option>
 		</select> -->
 		<p class="title_al">AL特休假</p>
-		<input type="hidden"  name="off_type" id="off_type"  value="0">
+		<input type="hidden"  name="off_type" id="off_type"  value="0" >
 	</div>
 	<div>
 		<table class="leave_apply_table"  id="AL_div">

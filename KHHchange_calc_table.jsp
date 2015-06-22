@@ -43,7 +43,11 @@ try{
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
@@ -58,8 +62,12 @@ try{
                     url: "navbar.jsp",
                     success:function(data){
                         // alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);
@@ -109,11 +117,15 @@ try{
                     data: {spCode:spCode, tripNo:tripNo},
                     success:function(data){
                     	//console.log(data);
-                        flag = true;
-                    	$("#tripno_show").html("tripNo : "+tripNo);
-                    	$("#strMsg2").html(data);
-                		//$("#backData").val("");
-                		$("#alert-popup-info").popup("open");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+							flag = true;
+							$("#tripno_show").html("tripNo : "+tripNo);
+							$("#strMsg2").html(data);
+							//$("#backData").val("");
+							$("#alert-popup-info").popup("open");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);

@@ -12,7 +12,7 @@ try{
 	}
 	if(lObj == null ) {
 		out.println("請登入");
-		response.sendRedirect("login.jsp");
+		//response.sendRedirect("login.jsp");
 	} 
 	else
 	{
@@ -37,7 +37,7 @@ try{
 	}
 }catch(ClassCastException e){
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }catch(Exception e){
 	out.println("Error"+e.toString());	
 }

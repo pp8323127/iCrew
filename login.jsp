@@ -90,13 +90,14 @@ $(document).ready(function () {
 			data: {UserID:userid, Password:pwd},
 			success:function(data){
 				//alert(data);
-				if ($.trim(data) == "true"){
+				if(data.indexOf("請登入") > -1){
+					window.location.href = "login.jsp"
+				}else if ($.trim(data) == "true"){
 					//alert("true");
 					$("#loginForm").attr("action", "MainPage.jsp");
 					$("#loginForm").submit();
 					
-				}
-				else{
+				}else{
 					//alert("false");
 					$("#myPopupDialog").popup("open");
 				}
@@ -173,10 +174,10 @@ function hideLoader() {
 	   
 	   <form id="loginForm" method="POST" action="" data-ajax="false">
 			 <div id="div_uid" class="uid">
-				 <input type="text" id="txt_userid" placeholder="帳號" value="">
+				 <input type="text" id="txt_userid" placeholder="帳號">
 			 </div>
 			 <div id="div_pwd" class="pwd">
-				 <input type="password" id="txt_password" data-mini="false" placeholder="密碼" value="test1234">
+				 <input type="password" id="txt_password" data-mini="false" placeholder="密碼" >
 			 </div>
 			 <div id="div_btn_login" class="login-btn">
 			     <button id="sub" class="ui-btn ui-corner-all" >登 入</button>

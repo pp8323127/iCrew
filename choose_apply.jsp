@@ -11,7 +11,7 @@ if(null != session.getAttribute("loginAppBobj")){
 }
 if(lObj == null ) {
 	out.println("請登入");
-	response.sendRedirect("login.jsp");
+	//response.sendRedirect("login.jsp");
 }else{  
 	FZCrewObj uObj = lObj.getFzCrewObj();
 	/*全勤*/
@@ -32,6 +32,9 @@ if(lObj == null ) {
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>iCrew</title>
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.structure.css" />	
 	<link rel="stylesheet" href="jQueryMob/jquery.mobile.custom.theme.css" />	
@@ -47,8 +50,12 @@ if(lObj == null ) {
                     url: "navbar.jsp",
                     success:function(data){
                         //alert(data);
-                        $("#right-list li").remove();
-                        $("#right-list").append(data).listview("refresh");
+                        if(data.indexOf("請登入") > -1){
+							window.location.href = "login.jsp";
+						}else{
+                        	$("#right-list li").remove();
+                        	$("#right-list").append(data).listview("refresh");
+						}
                     },
                     error:function(xhr, ajaxOptions, thrownError){
                         console.log(xhr.status);
@@ -91,10 +98,14 @@ if(lObj == null ) {
 	        			url: "chkChoose_apply.jsp",
 	        			data: {type:type,att:att,pointList:pointList,sdate:sdate,edate:edate,comment:comment},
 	        			success:function(data){	       
-	        				$("#strMsg").html(data);
-	        				$("#backData").val(data);
-		        			$("#alert-popup-apply").popup("open");		        				
-	        				//console.log(data);
+							if(data.indexOf("請登入") > -1){
+								window.location.href = "login.jsp";
+							}else{
+								$("#strMsg").html(data);
+								$("#backData").val(data);
+								$("#alert-popup-apply").popup("open");		        				
+								//console.log(data);
+							}
 	        			},
 	        			error:function(xhr, ajaxOptions, thrownError){
 	        				console.log(xhr.status);
@@ -171,7 +182,7 @@ if(lObj == null ) {
 <!-- 選班資格申請 Start-->
 	<div role="main" class="ui-content">
 
-		<table id="choose-serv-t">
+		<table class="choose-serv-t">
 			<tr>
 				<th colspan="3">全勤選班權利</th>
 			</tr>
@@ -185,7 +196,7 @@ if(lObj == null ) {
 				<input type="hidden" name="comment"  id="comment" value="<%=aObj[i].getComments()%>">
 				</td>
 				<td><%=aObj[i].getCheck_range_start()%>~<%=aObj[i].getCheck_range_final_end() %></td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=aObj[i].getCheck_range_start()%>','<%=aObj[i].getCheck_range_final_end()%>','<%=aObj[i].getComments()%>');"><div id="list_icon_info_gray_20px"></div></a></td>
+				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('<%=aObj[i].getCheck_range_start()%>','<%=aObj[i].getCheck_range_final_end()%>','<%=aObj[i].getComments()%>');"><div class="list_icon_info_gray_20px"></div></a></td>
 			</tr>
 			<%}
 			}else{%>
@@ -197,7 +208,7 @@ if(lObj == null ) {
 			<%}%>
 		</table>
 	<% if(null != cObj && cObj.length > 0){%>	
-		<table id="choose-serv-t" style="margin-top: 15px;">
+		<table class="choose-serv-t" style="margin-top: 15px;">
 			<tr>
 				<th colspan="4">積點選班權利</th>
 			</tr>
@@ -207,7 +218,7 @@ if(lObj == null ) {
 				<input type="checkbox" name="point" id="point<%=i%>" value="<%=cObj[i].getSno()%>"></td>
 				<td><%=(i+1)%>:<%=cObj[i].getReason() %></td>
 				<td><%=cObj[i].getFormno() %></td>
-				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('','','<%=cObj[i].getComments()%>');"><div id="list_icon_info_gray_20px"></div></a></td>
+				<td><a href="#alert-popup-info" data-rel="popup" data-transition="pop" onClick="PopFunction('','','<%=cObj[i].getComments()%>');"><div class="list_icon_info_gray_20px"></div></a></td>
 			</tr>
 			<%} %>				
 		</table>
